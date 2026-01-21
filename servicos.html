@@ -1,100 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <meta charset="UTF-8">
   <title>Serviços | Nova Alvorada Serviços</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Conheça os serviços de facilities e terceirização da Nova Alvorada Serviços.">
 
- <style>
-  body {
-    margin: 0;
-    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
-    background-color: #f2f2f2;
-    color: #2a2a2a;
-    line-height: 1.7;
-  }
+  <link rel="icon" href="assets/favicon.png" type="image/png">
 
-  nav {
-    background-color: #000000;
-    border-bottom: 1px solid #1a1a1a;
-  }
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      background-color: #f2f4f7;
+      color: #2a2a2a;
+      line-height: 1.7;
+    }
 
-  nav .container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 18px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+    nav {
+      background-color: #000000;
+      border-bottom: 1px solid #1a1a1a;
+    }
 
-  nav strong {
-    color: #a27613;
-    font-size: 1.1em;
-    letter-spacing: 1px;
-  }
+    nav .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-  nav a {
-    margin-left: 18px;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-  }
+    nav a {
+      margin-left: 18px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-  nav a:hover {
-    color: #a27613;
-  }
+    nav a:hover {
+      color: #a27613;
+    }
 
-  header {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 80px 20px;
-    text-align: center;
-  }
+    .brand {
+      background-color: #ffffff;
+      padding: 6px 14px;
+      border-radius: 4px;
+      border: 1px solid #a27613;
+    }
 
-  header h1 {
-    color: #a27613;
-    margin-bottom: 20px;
-  }
+    .logo {
+      height: 42px;
+      display: block;
+    }
 
-  section {
-    max-width: 1100px;
-    margin: auto;
-    padding: 90px 20px;
-  }
+    header {
+      background-color: #ffffff;
+      color: #2a2a2a;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-  .box {
-    background: #ffffff;
-    padding: 40px;
-    margin-bottom: 35px;
-    border-radius: 10px;
-  }
+    header h1 {
+      color: #a27613;
+      margin-bottom: 10px;
+    }
 
-  h2 {
-    color: #a27613;
-    margin-bottom: 15px;
-  }
+    section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 90px 20px;
+    }
 
-  footer {
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
-    padding: 40px 20px;
-    font-size: 0.9em;
-  }
-</style>
+    .box {
+      background: #ffffff;
+      padding: 40px;
+      margin-bottom: 35px;
+      border-radius: 10px;
+    }
 
+    h2 {
+      color: #1f2a36;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background-color: #1f2a36;
+      color: #ffffff;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9em;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #000000;
+      color: #a27613;
+      padding: 14px 26px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 2px solid #a27613;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+      z-index: 999;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #a27613;
+      color: #000000;
+    }
+
+    @media (max-width: 768px) {
+      nav .container {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <nav>
   <div class="container">
-    <strong>Nova Alvorada Serviços</strong>
+    <div class="brand">
+      <img src="assets/logo.png" alt="Nova Alvorada Serviços" class="logo">
+    </div>
     <div>
       <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
       <a href="servicos.html">Serviços</a>
       <a href="contato.html">Contato</a>
     </div>
@@ -109,29 +145,50 @@
 <section>
   <div class="box">
     <h2>Portaria e Controle de Acesso</h2>
-    <p>Profissionais treinados para controle de entrada e saída, recepção e vigilância não armada.</p>
+    <p>
+      Profissionais treinados para controle de entrada e saída,
+      recepção de visitantes, orientação e apoio à segurança patrimonial,
+      sempre com postura ética e comunicação clara.
+    </p>
   </div>
 
   <div class="box">
     <h2>Limpeza e Conservação Predial</h2>
-    <p>Serviços de limpeza técnica e conservação para ambientes corporativos, condominiais e institucionais.</p>
+    <p>
+      Serviços de limpeza técnica, conservação e higienização
+      para ambientes corporativos, condominiais e institucionais,
+      seguindo rotinas definidas e padrões de qualidade.
+    </p>
   </div>
 
   <div class="box">
     <h2>Zeladoria e Jardinagem</h2>
-    <p>Manutenção de áreas comuns, suporte operacional e conservação de jardins.</p>
+    <p>
+      Apoio operacional, manutenção de áreas comuns,
+      acompanhamento de serviços e conservação de jardins,
+      contribuindo para ambientes organizados e bem cuidados.
+    </p>
   </div>
 
   <div class="box">
     <h2>Recepção e Apoio Administrativo</h2>
-    <p>Atendimento profissional e suporte às rotinas administrativas e operacionais.</p>
+    <p>
+      Profissionais preparados para atendimento,
+      rotinas administrativas básicas e suporte operacional,
+      reforçando a organização e a imagem institucional do cliente.
+    </p>
   </div>
 </section>
 
 <footer>
-  <p>Nova Alvorada Serviços</p>
+  <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
   <p>São Paulo – SP</p>
+  <p>contato@novaalvoradaservicos.com.br</p>
 </footer>
+
+<a href="https://wa.me/5511921827683" target="_blank" class="whatsapp-float">
+  Fale conosco
+</a>
 
 </body>
 </html>
