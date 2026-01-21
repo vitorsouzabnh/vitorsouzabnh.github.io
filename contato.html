@@ -84,30 +84,6 @@
       margin-bottom: 15px;
     }
 
-    form input, form textarea, form button {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 20px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1em;
-      box-sizing: border-box;
-    }
-
-    form button {
-      background-color: #000000;
-      color: #a27613;
-      border: 2px solid #a27613;
-      font-weight: bold;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    form button:hover {
-      background-color: #a27613;
-      color: #000000;
-    }
-
     footer {
       background-color: #1f2a36;
       color: #ffffff;
@@ -169,13 +145,16 @@
 <section>
   <div class="box">
     <h2>Formulário de Contato</h2>
-    <form action="mailto:contato@novaalvoradaservicos.com.br" method="post" enctype="text/plain">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu e-mail" required>
-      <input type="tel" name="telefone" placeholder="Seu telefone" required>
-      <textarea name="mensagem" placeholder="Sua mensagem" rows="6" required></textarea>
-      <button type="submit">Enviar Mensagem</button>
-    </form>
+
+    <!-- Formulário Zoho responsivo -->
+    <div class="zoho-form-container" style="position:relative;width:100%;height:0;padding-bottom:150%;">
+      <iframe id="zohoForm" 
+              src="https://forms.zohopublic.com/contatonovaalvora1/form/ContatoNovaAlvorada/formperma/ACxISn_ti2ttoUT4rdDs15Xb1CpNbK_0fKqZXxV3ZkM" 
+              style="position:absolute;top:0;left:0;width:100%;height:100%;border:none;" 
+              aria-label="Formulário de contato">
+      </iframe>
+    </div>
+
     <p>Ou entre em contato diretamente pelo WhatsApp:</p>
     <a href="https://wa.me/5511921827683" target="_blank" class="whatsapp-float">
       Fale conosco
@@ -188,6 +167,18 @@
   <p>São Paulo – SP</p>
   <p>contato@novaalvoradaservicos.com.br</p>
 </footer>
+
+<script>
+  // Ajuste automático da altura do iframe em dispositivos móveis
+  window.addEventListener('message', function(event) {
+    var iframe = document.getElementById('zohoForm');
+    if (event.origin.includes("zoho")) {
+      if (event.data.height) {
+        iframe.style.height = event.data.height + 'px';
+      }
+    }
+  });
+</script>
 
 </body>
 </html>
