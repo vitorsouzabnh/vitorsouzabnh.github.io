@@ -9,14 +9,12 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
-  <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    /* CARDS DE SERVIÇOS */
+    /* CARDS */
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -63,9 +61,54 @@
       color: #2a2a2a;
     }
 
+    /* CTA CENTRAL */
+    .cta {
+      background: linear-gradient(135deg, #000000, #1f2a36);
+      color: #ffffff;
+      padding: 60px 30px;
+      border-radius: 16px;
+      text-align: center;
+      margin: 70px 0;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    }
+
+    .cta h2 {
+      color: #a27613;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+    }
+
+    .cta p {
+      max-width: 720px;
+      margin: 0 auto 30px;
+      line-height: 1.7;
+      font-size: 1.05em;
+    }
+
+    .cta a {
+      display: inline-block;
+      background-color: #a27613;
+      color: #000;
+      padding: 16px 34px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #ffffff;
+      color: #000;
+      transform: scale(1.05);
+    }
+
     @media (max-width: 900px) {
       .cards {
         grid-template-columns: 1fr;
+      }
+
+      .cta h2 {
+        font-size: 1.5em;
       }
     }
   </style>
@@ -106,8 +149,19 @@
     </p>
   </div>
 
-  <div class="box">
+  <!-- CTA NO MEIO DA PÁGINA -->
+  <div class="cta">
+    <h2>Vamos conversar sobre a sua operação?</h2>
+    <p>
+      Cada estrutura tem suas particularidades. Entender o seu cenário é o
+      primeiro passo para oferecer uma solução eficiente, organizada e segura.
+    </p>
+    <a href="https://wa.me/5511921827683" target="_blank">
+      Falar com a Nova Alvorada
+    </a>
+  </div>
 
+  <div class="box">
     <div class="cards">
 
       <div class="card">
@@ -115,7 +169,7 @@
         <h3>Portaria e Controle de Acesso</h3>
         <p>
           Profissionais treinados para controle de entrada e saída,
-          recepção e vigilância não armada, garantindo segurança e organização.
+          recepção e vigilância não armada.
         </p>
       </div>
 
@@ -123,8 +177,8 @@
         <i class="fa-solid fa-broom"></i>
         <h3>Limpeza e Conservação</h3>
         <p>
-          Serviços de limpeza técnica e conservação predial para ambientes
-          corporativos, condominiais e institucionais.
+          Limpeza técnica e conservação predial para ambientes corporativos
+          e condominiais.
         </p>
       </div>
 
@@ -132,8 +186,7 @@
         <i class="fa-solid fa-tree"></i>
         <h3>Zeladoria e Jardinagem</h3>
         <p>
-          Manutenção de áreas comuns, apoio operacional e conservação
-          de jardins, com rotinas bem definidas.
+          Manutenção de áreas comuns, apoio operacional e conservação de jardins.
         </p>
       </div>
 
@@ -141,8 +194,7 @@
         <i class="fa-solid fa-headset"></i>
         <h3>Recepção e Apoio Administrativo</h3>
         <p>
-          Atendimento profissional e suporte às rotinas administrativas,
-          contribuindo para a organização e fluidez dos processos.
+          Atendimento profissional e suporte às rotinas administrativas.
         </p>
       </div>
 
@@ -150,8 +202,7 @@
         <i class="fa-solid fa-gears"></i>
         <h3>Apoio Operacional</h3>
         <p>
-          Equipes treinadas para suporte operacional em atividades
-          essenciais do dia a dia.
+          Equipes treinadas para suporte operacional em atividades essenciais.
         </p>
       </div>
 
@@ -159,13 +210,11 @@
         <i class="fa-solid fa-building-circle-check"></i>
         <h3>Gestão de Facilities</h3>
         <p>
-          Planejamento, supervisão e controle dos serviços terceirizados,
-          garantindo eficiência, qualidade e previsibilidade operacional.
+          Planejamento, supervisão e controle dos serviços terceirizados.
         </p>
       </div>
 
     </div>
-
   </div>
 
 </section>
