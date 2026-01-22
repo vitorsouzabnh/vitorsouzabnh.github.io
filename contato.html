@@ -4,145 +4,12 @@
   <meta charset="UTF-8">
   <title>Contato | Nova Alvorada Serviços</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Entre em contato com a Nova Alvorada Serviços para soluções em facilities e terceirização.">
+  <meta name="description" content="Entre em contato com a Nova Alvorada Serviços.">
 
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
-  <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- Ícones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <style>
-    section {
-      max-width: 680px;
-      margin: 70px auto;
-      padding: 0 20px;
-    }
-
-    .form-box {
-      background: #ffffff;
-      padding: 45px 40px;
-      border-radius: 18px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.08);
-      animation: fadeUp 0.6s ease;
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .form-box h2 {
-      text-align: center;
-      color: #1f2a36;
-      margin-bottom: 35px;
-      font-size: 1.8em;
-      font-weight: 600;
-    }
-
-    .form-group {
-      position: relative;
-      margin-bottom: 22px;
-    }
-
-    .form-group i {
-      position: absolute;
-      top: 50%;
-      left: 16px;
-      transform: translateY(-50%);
-      color: #a27613;
-      font-size: 0.95em;
-      pointer-events: none;
-    }
-
-    /* CORREÇÃO CRÍTICA AQUI */
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 14px 16px 14px 42px;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      font-size: 0.95em;
-      outline: none;
-      background: transparent;
-      transition: all 0.25s ease;
-    }
-
-    .form-group textarea {
-      padding-top: 16px;
-      resize: vertical;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: #a27613;
-      box-shadow: 0 0 0 4px rgba(162,118,19,0.15);
-    }
-
-    .form-group label {
-      position: absolute;
-      top: 50%;
-      left: 42px;
-      transform: translateY(-50%);
-      color: #999;
-      font-size: 0.85em;
-      pointer-events: none;
-      background: #fff;
-      padding: 0 6px;
-      transition: all 0.25s ease;
-    }
-
-    .form-group input:focus + label,
-    .form-group input:not(:placeholder-shown) + label,
-    .form-group textarea:focus + label,
-    .form-group textarea:not(:placeholder-shown) + label {
-      top: -9px;
-      font-size: 0.75em;
-      color: #a27613;
-    }
-
-    button {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 16px;
-      border-radius: 14px;
-      border: 2px solid #a27613;
-      background: #000;
-      color: #a27613;
-      font-size: 1em;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      margin-top: 10px;
-    }
-
-    button:hover {
-      background: #a27613;
-      color: #000;
-      transform: translateY(-2px);
-    }
-
-    .success-message {
-      display: none;
-      text-align: center;
-      background: #e6f4ea;
-      color: #1e7e34;
-      padding: 22px;
-      border-radius: 14px;
-      margin-top: 30px;
-      font-weight: 600;
-    }
-
-    @media (max-width: 768px) {
-      .form-box {
-        padding: 35px 25px;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -154,7 +21,6 @@
     </div>
     <div>
       <a href="index.html">Início</a>
-      <a href="sobre.html">Sobre</a>
       <a href="servicos.html">Serviços</a>
       <a href="contato.html">Contato</a>
     </div>
@@ -163,86 +29,34 @@
 
 <header>
   <h1>Fale Conosco</h1>
-  <p>Vamos entender sua necessidade e construir a melhor solução.</p>
+  <p>Estamos prontos para atender você</p>
 </header>
 
 <section>
   <div class="form-box">
+    <form>
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" placeholder="Seu nome" required>
 
-    <h2>Formulário de Contato</h2>
+      <label for="email">E-mail</label>
+      <input type="email" id="email" placeholder="Seu e-mail" required>
 
-    <form id="contact-form" action="https://formspree.io/f/mjggdoeq" method="POST">
-
-      <div class="form-group">
-        <i class="fa-solid fa-user"></i>
-        <input type="text" name="nome" placeholder=" " required>
-        <label>Seu nome</label>
-      </div>
-
-      <div class="form-group">
-        <i class="fa-solid fa-envelope"></i>
-        <input type="email" name="email" placeholder=" " required>
-        <label>Seu e-mail</label>
-      </div>
-
-      <div class="form-group">
-        <i class="fa-solid fa-phone"></i>
-        <input type="tel" name="telefone" placeholder=" " required>
-        <label>Seu telefone</label>
-      </div>
-
-      <div class="form-group">
-        <i class="fa-solid fa-message"></i>
-        <textarea name="mensagem" rows="4" placeholder=" " required></textarea>
-        <label>Sua mensagem</label>
-      </div>
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem" required></textarea>
 
       <button type="submit">Enviar Mensagem</button>
     </form>
-
-    <div class="success-message" id="success-message">
-      Mensagem enviada com sucesso. Em breve entraremos em contato.
-    </div>
-
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
+  <p>Nova Alvorada Serviços</p>
   <p>São Paulo – SP</p>
-  <p>contato@novaalvoradaservicos.com.br</p>
 </footer>
 
-<a href="https://wa.me/5511921827683" target="_blank" class="whatsapp-float">
-  Fale conosco
+<a class="whatsapp-float" href="https://wa.me/5500000000000" target="_blank">
+  WhatsApp
 </a>
-
-<script>
-const form = document.getElementById('contact-form');
-const successMessage = document.getElementById('success-message');
-
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const data = new FormData(form);
-
-  try {
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (response.ok) {
-      form.style.display = 'none';
-      successMessage.style.display = 'block';
-    } else {
-      alert('Erro ao enviar. Tente novamente.');
-    }
-  } catch {
-    alert('Erro de conexão.');
-  }
-});
-</script>
 
 </body>
 </html>
