@@ -20,6 +20,7 @@
     nav {
       background-color: #000000;
       border-bottom: 1px solid #1a1a1a;
+      padding: 15px 20px;
     }
 
     nav .container {
@@ -38,20 +39,18 @@
       font-weight: 500;
     }
 
-    nav a:hover {
-      color: #a27613;
-    }
+    nav a:hover { color: #a27613; }
 
+    /* Fundo branco do logo e tamanho maior */
     .brand {
       background-color: #ffffff;
       padding: 6px 14px;
       border-radius: 4px;
       border: 1px solid #a27613;
+      display: inline-block;
     }
 
-    .logo {
-      height: 42px;
-      display: block;
+    .brand img { height: 90px; } /* logo 50% maior */
     }
 
     header {
@@ -93,29 +92,30 @@
     }
 
     .whatsapp-float {
-      position: fixed;
-      bottom: 25px;
-      right: 25px;
-      background-color: #000000;
-      color: #a27613;
-      padding: 14px 26px;
-      border-radius: 50px;
-      font-weight: bold;
-      text-decoration: none;
-      border: 2px solid #a27613;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-      z-index: 999;
-    }
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: #000;
+    color: #a27613;
+    padding: 14px 26px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #a27613;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease;
+    z-index: 999;
+}
 
     .whatsapp-float:hover {
       background-color: #a27613;
-      color: #000000;
+      color: #000;
+      transform: scale(1.05);
     }
 
-    @media (max-width: 768px) {
-      nav .container {
-        flex-direction: column;
-        gap: 12px;
+    @media(max-width: 768px) {
+      header h1 { font-size: 1.8em; }
+      .form-box { padding: 30px 20px; }
       }
     }
   </style>
