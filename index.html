@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Nova Alvorada Serviços | Facilities e Terceirização</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Soluções em facilities, portaria, limpeza e terceirização com gestão próxima e responsabilidade.">
+  <meta name="description" content="Facilities e terceirização com gestão próxima, processos claros e equipes qualificadas.">
 
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -12,8 +12,8 @@
   <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Animações locais -->
   <style>
+    /* ===== Animações ===== */
     .fade-up {
       animation: fadeUp 0.6s ease forwards;
       opacity: 0;
@@ -23,15 +23,15 @@
     .delay-2 { animation-delay: 0.3s; }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
+      from { opacity: 0; transform: translateY(20px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* CTA */
+    /* ===== CTA ===== */
     .cta-home {
       display: inline-block;
       margin-top: 35px;
-      padding: 16px 34px;
+      padding: 16px 36px;
       border-radius: 50px;
       border: 2px solid #a27613;
       background: #000;
@@ -47,29 +47,55 @@
       transform: translateY(-2px);
     }
 
-    /* Cards */
+    /* ===== Cards ===== */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 30px;
-      margin-top: 40px;
+      margin-top: 50px;
     }
 
     .card {
       background: #ffffff;
-      padding: 35px 30px;
-      border-radius: 14px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-      transition: all 0.3s ease;
+      padding: 38px 32px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      position: relative;
     }
 
+    /* Efeito flutuante */
     .card:hover {
-      transform: translateY(-6px);
+      transform: translateY(-10px);
+      box-shadow: 0 22px 45px rgba(0,0,0,0.12);
     }
 
     .card h3 {
       color: #a27613;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      font-size: 1.25em;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+
+    /* ===== Mobile ===== */
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        box-shadow: 0 10px 22px rgba(0,0,0,0.07);
+      }
+
+      /* remove "flutuação agressiva" no mobile */
+      .card:hover {
+        transform: none;
+        box-shadow: 0 10px 22px rgba(0,0,0,0.07);
+      }
     }
   </style>
 </head>
@@ -96,8 +122,8 @@
   </h1>
 
   <p class="fade-up delay-1">
-    Soluções em facilities e terceirização para empresas, condomínios e instituições
-    que valorizam organização, constância e confiança.
+    Facilities e terceirização com acompanhamento constante, processos claros
+    e foco total na tranquilidade do cliente.
   </p>
 
   <a href="contato.html" class="cta-home fade-up delay-2">
@@ -108,37 +134,36 @@
 <section>
 
   <div class="box fade-up">
-    <h2>Quem Somos</h2>
+    <h2>Por que escolher a Nova Alvorada</h2>
     <p>
-      Atuamos com soluções completas em facilities e terceirização,
-      oferecendo gestão próxima, processos claros e acompanhamento contínuo.
+      Mais do que fornecer mão de obra, entregamos gestão, previsibilidade
+      e confiança em cada operação.
     </p>
   </div>
 
-  <!-- CARDS -->
   <div class="cards">
 
     <div class="card fade-up">
-      <h3>Gestão Próxima</h3>
+      <h3>Gestão Próxima e Ativa</h3>
       <p>
-        Acompanhamento constante das operações, com supervisão ativa
-        e comunicação direta com o cliente.
+        Supervisão constante, comunicação direta e resolução rápida de demandas,
+        evitando surpresas e falhas operacionais.
       </p>
     </div>
 
     <div class="card fade-up delay-1">
-      <h3>Processos Definidos</h3>
+      <h3>Processos e Conformidade</h3>
       <p>
-        Rotinas organizadas, padronização de serviços e conformidade
-        com normas e obrigações legais.
+        Serviços organizados, rotinas padronizadas e total atenção às
+        obrigações legais e operacionais.
       </p>
     </div>
 
     <div class="card fade-up delay-2">
-      <h3>Pessoas em Primeiro Lugar</h3>
+      <h3>Equipes Preparadas</h3>
       <p>
-        Valorização das equipes, treinamento contínuo e cuidado com quem
-        executa o serviço no dia a dia.
+        Profissionais treinados, valorizados e alinhados ao padrão de qualidade
+        que o seu ambiente exige.
       </p>
     </div>
 
