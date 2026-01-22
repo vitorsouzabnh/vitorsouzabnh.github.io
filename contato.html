@@ -15,7 +15,7 @@
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAV -->
 <nav>
   <div class="container">
     <div class="brand">
@@ -33,7 +33,7 @@
 <!-- HEADER -->
 <header>
   <h1>Fale Conosco</h1>
-  <p>Estamos prontos para entender sua necessidade e oferecer a melhor solução.</p>
+  <p>Entre em contato para soluções em facilities e terceirização.</p>
 </header>
 
 <!-- CONTEÚDO -->
@@ -42,27 +42,35 @@
 
     <h2>Formulário de Contato</h2>
 
-    <!-- FORMULÁRIO -->
+    <!-- FORMULÁRIO COM ANIMAÇÃO -->
     <form id="contact-form" action="https://formspree.io/f/mjggdoeq" method="POST">
 
-      <label for="nome">Seu nome</label>
-      <input type="text" id="nome" name="nome" required>
+      <div class="form-group">
+        <input type="text" name="nome" id="nome" placeholder=" " required>
+        <label for="nome">Seu nome</label>
+      </div>
 
-      <label for="email">Seu e-mail</label>
-      <input type="email" id="email" name="email" required>
+      <div class="form-group">
+        <input type="email" name="email" id="email" placeholder=" " required>
+        <label for="email">Seu e-mail</label>
+      </div>
 
-      <label for="telefone">Seu telefone</label>
-      <input type="tel" id="telefone" name="telefone" required>
+      <div class="form-group">
+        <input type="tel" name="telefone" id="telefone" placeholder=" " required>
+        <label for="telefone">Seu telefone</label>
+      </div>
 
-      <label for="mensagem">Sua mensagem</label>
-      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+      <div class="form-group">
+        <textarea name="mensagem" id="mensagem" rows="5" placeholder=" " required></textarea>
+        <label for="mensagem">Sua mensagem</label>
+      </div>
 
       <button type="submit">Enviar Mensagem</button>
     </form>
 
     <!-- MENSAGEM DE SUCESSO -->
     <div class="success-message" id="success-message">
-      <h3>Mensagem enviada com sucesso!</h3>
+      <h3>Mensagem enviada com sucesso</h3>
       <p>
         Obrigado pelo contato. Em breve nossa equipe retornará para entender
         melhor sua necessidade.
@@ -79,12 +87,12 @@
   <p>contato@novaalvoradaservicos.com.br</p>
 </footer>
 
-<!-- BOTÃO WHATSAPP -->
+<!-- WHATSAPP -->
 <a href="https://wa.me/5511921827683" target="_blank" class="whatsapp-float">
   Fale conosco
 </a>
 
-<!-- SCRIPT DE ENVIO -->
+<!-- SCRIPT -->
 <script>
 const form = document.getElementById('contact-form');
 const successMessage = document.getElementById('success-message');
@@ -105,14 +113,13 @@ form.addEventListener('submit', async (e) => {
       form.style.display = 'none';
       successMessage.style.display = 'block';
 
-      // opcional: redirecionar após 5 segundos
       setTimeout(() => {
         window.location.href = 'index.html';
       }, 5000);
     } else {
-      alert('Ocorreu um erro ao enviar. Tente novamente.');
+      alert('Erro ao enviar. Tente novamente.');
     }
-  } catch (error) {
+  } catch {
     alert('Erro de conexão. Tente novamente.');
   }
 });
