@@ -11,6 +11,47 @@
 
   <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* CARDS DE DIFERENCIAIS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 35px 30px;
+      border-radius: 14px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+    }
+
+    .card h3 {
+      color: #a27613;
+      margin-bottom: 15px;
+      font-size: 1.15em;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      line-height: 1.7;
+      color: #2a2a2a;
+    }
+
+    @media (max-width: 900px) {
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
@@ -61,29 +102,37 @@
     </p>
   </div>
 
-  <!-- DIFERENCIAIS -->
+  <!-- DIFERENCIAIS EM CARDS -->
   <div class="box">
     <h2>Por que escolher a Nova Alvorada</h2>
 
-    <ul style="margin-top: 25px; padding-left: 20px; line-height: 1.9;">
-      <li>
-        <strong>Gestão próxima e acompanhamento contínuo:</strong>
-        presença ativa na operação, com atenção constante à qualidade do serviço
-        e às rotinas do cliente.
-      </li>
+    <div class="cards">
 
-      <li>
-        <strong>Organização, processos e previsibilidade:</strong>
-        atuação estruturada, com definição clara de responsabilidades,
-        evitando improvisos e retrabalhos.
-      </li>
+      <div class="card">
+        <h3>Gestão próxima</h3>
+        <p>
+          Acompanhamento contínuo das operações, com presença ativa e atenção
+          constante à qualidade do serviço e às rotinas do cliente.
+        </p>
+      </div>
 
-      <li>
-        <strong>Responsabilidade legal e tranquilidade operacional:</strong>
-        foco no cumprimento das obrigações e na segurança jurídica,
-        protegendo o cliente no dia a dia da terceirização.
-      </li>
-    </ul>
+      <div class="card">
+        <h3>Organização e processos</h3>
+        <p>
+          Atuação estruturada, com definição clara de responsabilidades,
+          rotinas bem estabelecidas e foco em previsibilidade operacional.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Responsabilidade legal</h3>
+        <p>
+          Compromisso com conformidade, segurança jurídica e boas práticas,
+          garantindo tranquilidade na terceirização dos serviços.
+        </p>
+      </div>
+
+    </div>
   </div>
 
 </section>
