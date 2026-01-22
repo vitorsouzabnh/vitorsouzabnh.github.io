@@ -62,16 +62,17 @@
     header p { font-size: 1.05em; color: #2a2a2a; }
 
     section {
-      max-width: 600px; /* seção centralizada */
+      max-width: 600px; /* formulário centralizado */
       margin: 60px auto;
       padding: 0 20px;
     }
 
+    /* Formulário Premium */
     .form-box {
       background: #fff;
-      padding: 40px 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+      padding: 50px 35px; /* mais espaçamento interno */
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08); /* sombra mais suave */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -80,24 +81,24 @@
     .form-box h2 {
       text-align: center;
       color: #1f2a36;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
       font-weight: 700;
-      font-size: 1.8em;
+      font-size: 1.9em;
     }
 
     .form-group {
       width: 100%;
-      max-width: 520px; /* largura ajustada */
-      margin-bottom: 20px;
+      max-width: 520px;
+      margin-bottom: 25px; /* maior espaçamento entre campos */
       position: relative;
     }
 
     .form-group input,
     .form-group textarea {
       width: 100%;
-      padding: 14px 15px;
+      padding: 16px 18px; /* campos mais altos */
       border: 1px solid #ccc;
-      border-radius: 8px;
+      border-radius: 10px;
       font-size: 1em;
       outline: none;
       transition: all 0.3s ease;
@@ -109,7 +110,7 @@
     .form-group label {
       position: absolute;
       top: 50%;
-      left: 15px;
+      left: 18px;
       transform: translateY(-50%);
       color: #999;
       font-size: 0.95em;
@@ -130,14 +131,14 @@
 
     button {
       width: 100%;
-      max-width: 520px; /* botão alinhado aos campos */
-      padding: 16px;
+      max-width: 520px;
+      padding: 18px; /* botão um pouco maior */
       border: 2px solid #a27613;
-      border-radius: 10px;
+      border-radius: 12px;
       background: #000;
       color: #a27613;
       font-weight: bold;
-      font-size: 1em;
+      font-size: 1.05em;
       cursor: pointer;
       transition: all 0.3s ease;
     }
@@ -151,9 +152,9 @@
     .success-message {
       display: none;
       text-align: center;
-      padding: 15px;
-      margin-top: 20px;
-      border-radius: 10px;
+      padding: 18px;
+      margin-top: 25px;
+      border-radius: 12px;
       background-color: #d4edda;
       color: #155724;
       font-weight: bold;
@@ -194,7 +195,7 @@
 
     @media(max-width: 768px) {
       header h1 { font-size: 1.8em; }
-      .form-box { padding: 30px 20px; }
+      .form-box { padding: 35px 20px; }
       .form-group { max-width: 100%; }
       button { max-width: 100%; }
       .success-message { max-width: 100%; }
