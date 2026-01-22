@@ -39,9 +39,11 @@
 <!-- CONTEÚDO -->
 <section>
   <div class="form-box">
+
     <h2>Formulário de Contato</h2>
 
-    <form action="https://formspree.io/f/mjggdoeq" method="POST">
+    <!-- FORMULÁRIO -->
+    <form id="contact-form" action="https://formspree.io/f/mjggdoeq" method="POST">
 
       <label for="nome">Seu nome</label>
       <input type="text" id="nome" name="nome" required>
@@ -53,10 +55,20 @@
       <input type="tel" id="telefone" name="telefone" required>
 
       <label for="mensagem">Sua mensagem</label>
-      <textarea id="mensagem" name="mensagem" required></textarea>
+      <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
       <button type="submit">Enviar Mensagem</button>
     </form>
+
+    <!-- MENSAGEM DE SUCESSO -->
+    <div class="success-message" id="success-message">
+      <h3>Mensagem enviada com sucesso!</h3>
+      <p>
+        Obrigado pelo contato. Em breve nossa equipe retornará para entender
+        melhor sua necessidade.
+      </p>
+    </div>
+
   </div>
 </section>
 
@@ -71,6 +83,40 @@
 <a href="https://wa.me/5511921827683" target="_blank" class="whatsapp-float">
   Fale conosco
 </a>
+
+<!-- SCRIPT DE ENVIO -->
+<script>
+const form = document.getElementById('contact-form');
+const successMessage = document.getElementById('success-message');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      form.style.display = 'none';
+      successMessage.style.display = 'block';
+
+      // opcional: redirecionar após 5 segundos
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 5000);
+    } else {
+      alert('Ocorreu um erro ao enviar. Tente novamente.');
+    }
+  } catch (error) {
+    alert('Erro de conexão. Tente novamente.');
+  }
+});
+</script>
 
 </body>
 </html>
