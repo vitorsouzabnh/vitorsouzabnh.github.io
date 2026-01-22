@@ -61,7 +61,7 @@
       color: #2a2a2a;
     }
 
-    /* CTA CENTRAL */
+    /* CTA DO MEIO */
     .cta {
       background: linear-gradient(135deg, #000000, #1f2a36);
       color: #ffffff;
@@ -102,12 +102,56 @@
       transform: scale(1.05);
     }
 
+    /* CTA FINAL (FECHAMENTO) */
+    .cta-final {
+      background-color: #ffffff;
+      border: 2px solid #a27613;
+      border-radius: 18px;
+      padding: 70px 30px;
+      text-align: center;
+      margin-top: 90px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .cta-final h2 {
+      color: #1f2a36;
+      font-size: 1.9em;
+      margin-bottom: 20px;
+    }
+
+    .cta-final p {
+      max-width: 760px;
+      margin: 0 auto 35px;
+      font-size: 1.05em;
+      line-height: 1.7;
+      color: #2a2a2a;
+    }
+
+    .cta-final a {
+      display: inline-block;
+      background-color: #000;
+      color: #a27613;
+      padding: 18px 38px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 2px solid #a27613;
+      transition: all 0.3s ease;
+    }
+
+    .cta-final a:hover {
+      background-color: #a27613;
+      color: #000;
+      transform: translateY(-3px);
+    }
+
     @media (max-width: 900px) {
       .cards {
         grid-template-columns: 1fr;
       }
 
-      .cta h2 {
+      .cta h2,
+      .cta-final h2 {
         font-size: 1.5em;
       }
     }
@@ -149,7 +193,7 @@
     </p>
   </div>
 
-  <!-- CTA NO MEIO DA PÁGINA -->
+  <!-- CTA CONSULTIVO -->
   <div class="cta">
     <h2>Vamos conversar sobre a sua operação?</h2>
     <p>
@@ -167,54 +211,52 @@
       <div class="card">
         <i class="fa-solid fa-door-open"></i>
         <h3>Portaria e Controle de Acesso</h3>
-        <p>
-          Profissionais treinados para controle de entrada e saída,
-          recepção e vigilância não armada.
-        </p>
+        <p>Controle de entrada, recepção e vigilância não armada.</p>
       </div>
 
       <div class="card">
         <i class="fa-solid fa-broom"></i>
         <h3>Limpeza e Conservação</h3>
-        <p>
-          Limpeza técnica e conservação predial para ambientes corporativos
-          e condominiais.
-        </p>
+        <p>Limpeza técnica e conservação predial.</p>
       </div>
 
       <div class="card">
         <i class="fa-solid fa-tree"></i>
         <h3>Zeladoria e Jardinagem</h3>
-        <p>
-          Manutenção de áreas comuns, apoio operacional e conservação de jardins.
-        </p>
+        <p>Manutenção de áreas comuns e apoio operacional.</p>
       </div>
 
       <div class="card">
         <i class="fa-solid fa-headset"></i>
         <h3>Recepção e Apoio Administrativo</h3>
-        <p>
-          Atendimento profissional e suporte às rotinas administrativas.
-        </p>
+        <p>Atendimento profissional e suporte administrativo.</p>
       </div>
 
       <div class="card">
         <i class="fa-solid fa-gears"></i>
         <h3>Apoio Operacional</h3>
-        <p>
-          Equipes treinadas para suporte operacional em atividades essenciais.
-        </p>
+        <p>Equipes treinadas para rotinas essenciais.</p>
       </div>
 
       <div class="card">
         <i class="fa-solid fa-building-circle-check"></i>
         <h3>Gestão de Facilities</h3>
-        <p>
-          Planejamento, supervisão e controle dos serviços terceirizados.
-        </p>
+        <p>Planejamento, supervisão e controle dos serviços.</p>
       </div>
 
     </div>
+  </div>
+
+  <!-- CTA FINAL DE FECHAMENTO -->
+  <div class="cta-final">
+    <h2>Pronto para profissionalizar sua operação?</h2>
+    <p>
+      Se você busca mais organização, redução de riscos e um parceiro confiável
+      para cuidar da sua estrutura, o próximo passo é simples.
+    </p>
+    <a href="contato.html">
+      Solicitar contato
+    </a>
   </div>
 
 </section>
