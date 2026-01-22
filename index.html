@@ -12,7 +12,7 @@
   <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Micro animações locais -->
+  <!-- Animações locais -->
   <style>
     .fade-up {
       animation: fadeUp 0.6s ease forwards;
@@ -23,22 +23,11 @@
     .delay-2 { animation-delay: 0.3s; }
 
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(18px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
-    header p {
-      max-width: 780px;
-      margin: 0 auto;
-    }
-
-    /* CTA da Home */
+    /* CTA */
     .cta-home {
       display: inline-block;
       margin-top: 35px;
@@ -56,6 +45,31 @@
       background: #a27613;
       color: #000;
       transform: translateY(-2px);
+    }
+
+    /* Cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 35px 30px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card h3 {
+      color: #a27613;
+      margin-bottom: 12px;
     }
   </style>
 </head>
@@ -83,7 +97,7 @@
 
   <p class="fade-up delay-1">
     Soluções em facilities e terceirização para empresas, condomínios e instituições
-    que valorizam organização, constância e confiança no dia a dia.
+    que valorizam organização, constância e confiança.
   </p>
 
   <a href="contato.html" class="cta-home fade-up delay-2">
@@ -96,21 +110,38 @@
   <div class="box fade-up">
     <h2>Quem Somos</h2>
     <p>
-      A Nova Alvorada Serviços atua com soluções completas em facilities e terceirização,
-      atendendo ambientes condominiais, corporativos e institucionais.
-    </p>
-    <p>
-      Nosso foco está na gestão próxima, no acompanhamento constante das operações
-      e na responsabilidade com cada detalhe do serviço prestado.
+      Atuamos com soluções completas em facilities e terceirização,
+      oferecendo gestão próxima, processos claros e acompanhamento contínuo.
     </p>
   </div>
 
-  <div class="box fade-up delay-1">
-    <h2>O que Fazemos</h2>
-    <p>
-      Portaria, limpeza, apoio operacional e gestão de facilities, sempre com processos
-      bem definidos e comunicação clara com nossos clientes.
-    </p>
+  <!-- CARDS -->
+  <div class="cards">
+
+    <div class="card fade-up">
+      <h3>Gestão Próxima</h3>
+      <p>
+        Acompanhamento constante das operações, com supervisão ativa
+        e comunicação direta com o cliente.
+      </p>
+    </div>
+
+    <div class="card fade-up delay-1">
+      <h3>Processos Definidos</h3>
+      <p>
+        Rotinas organizadas, padronização de serviços e conformidade
+        com normas e obrigações legais.
+      </p>
+    </div>
+
+    <div class="card fade-up delay-2">
+      <h3>Pessoas em Primeiro Lugar</h3>
+      <p>
+        Valorização das equipes, treinamento contínuo e cuidado com quem
+        executa o serviço no dia a dia.
+      </p>
+    </div>
+
   </div>
 
 </section>
