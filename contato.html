@@ -12,10 +12,9 @@
   <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Ícones (Font Awesome – gratuito) -->
+  <!-- Ícones -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- CSS EXCLUSIVO DO FORMULÁRIO -->
   <style>
     section {
       max-width: 680px;
@@ -32,14 +31,8 @@
     }
 
     @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
     }
 
     .form-box h2 {
@@ -65,9 +58,11 @@
       pointer-events: none;
     }
 
+    /* CORREÇÃO CRÍTICA AQUI */
     .form-group input,
     .form-group textarea {
       width: 100%;
+      box-sizing: border-box;
       padding: 14px 16px 14px 42px;
       border: 1px solid #ccc;
       border-radius: 12px;
@@ -112,6 +107,7 @@
 
     button {
       width: 100%;
+      box-sizing: border-box;
       padding: 16px;
       border-radius: 14px;
       border: 2px solid #a27613;
