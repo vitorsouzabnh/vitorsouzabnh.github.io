@@ -12,6 +12,9 @@
   <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="style.css">
 
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <style>
     /* ===== Animações ===== */
     .fade-up {
@@ -57,23 +60,27 @@
 
     .card {
       background: #ffffff;
-      padding: 38px 32px;
+      padding: 40px 34px;
       border-radius: 16px;
       box-shadow: 0 12px 30px rgba(0,0,0,0.08);
       transition: transform 0.35s ease, box-shadow 0.35s ease;
-      position: relative;
     }
 
-    /* Efeito flutuante */
     .card:hover {
       transform: translateY(-10px);
       box-shadow: 0 22px 45px rgba(0,0,0,0.12);
     }
 
-    .card h3 {
+    .card-icon {
+      font-size: 1.9em;
       color: #a27613;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
       margin-bottom: 14px;
       font-size: 1.25em;
+      color: #1f2a36;
     }
 
     .card p {
@@ -87,14 +94,9 @@
         grid-template-columns: 1fr;
       }
 
-      .card {
-        box-shadow: 0 10px 22px rgba(0,0,0,0.07);
-      }
-
-      /* remove "flutuação agressiva" no mobile */
       .card:hover {
         transform: none;
-        box-shadow: 0 10px 22px rgba(0,0,0,0.07);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.08);
       }
     }
   </style>
@@ -144,26 +146,35 @@
   <div class="cards">
 
     <div class="card fade-up">
+      <div class="card-icon">
+        <i class="fa-solid fa-people-group"></i>
+      </div>
       <h3>Gestão Próxima e Ativa</h3>
       <p>
         Supervisão constante, comunicação direta e resolução rápida de demandas,
-        evitando surpresas e falhas operacionais.
+        evitando falhas e retrabalho.
       </p>
     </div>
 
     <div class="card fade-up delay-1">
+      <div class="card-icon">
+        <i class="fa-solid fa-clipboard-check"></i>
+      </div>
       <h3>Processos e Conformidade</h3>
       <p>
-        Serviços organizados, rotinas padronizadas e total atenção às
-        obrigações legais e operacionais.
+        Rotinas padronizadas, controle operacional e atenção total às
+        exigências legais e contratuais.
       </p>
     </div>
 
     <div class="card fade-up delay-2">
+      <div class="card-icon">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
       <h3>Equipes Preparadas</h3>
       <p>
-        Profissionais treinados, valorizados e alinhados ao padrão de qualidade
-        que o seu ambiente exige.
+        Profissionais treinados, alinhados ao padrão de qualidade
+        e à cultura de responsabilidade da empresa.
       </p>
     </div>
 
