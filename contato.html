@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <meta charset="UTF-8">
   <title>Contato | Nova Alvorada Serviços</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Entre em contato com a Nova Alvorada Serviços para soluções em facilities e terceirização.">
 
- <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
+  <!-- CSS CENTRALIZADO -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- NAVBAR -->
 <nav>
   <div class="container">
-    <div class="brand"><img src="assets/logo.png" alt="Nova Alvorada Serviços"></div>
+    <div class="brand">
+      <img src="assets/logo.png" alt="Nova Alvorada Serviços">
+    </div>
     <div>
       <a href="index.html">Início</a>
       <a href="sobre.html">Sobre</a>
@@ -25,79 +30,47 @@
   </div>
 </nav>
 
+<!-- HEADER -->
 <header>
   <h1>Fale Conosco</h1>
-  <p>Entre em contato com a Nova Alvorada Serviços para soluções em facilities e terceirização.</p>
+  <p>Estamos prontos para entender sua necessidade e oferecer a melhor solução.</p>
 </header>
 
+<!-- CONTEÚDO -->
 <section>
   <div class="form-box">
     <h2>Formulário de Contato</h2>
-    <form id="contact-form" action="https://formspree.io/f/mjggdoeq" method="POST">
-      <div class="form-group">
-        <input type="text" name="nome" placeholder=" " required>
-        <label>Seu nome</label>
-      </div>
-      <div class="form-group">
-        <input type="email" name="email" placeholder=" " required>
-        <label>Seu e-mail</label>
-      </div>
-      <div class="form-group">
-        <input type="tel" name="telefone" placeholder=" " required>
-        <label>Seu telefone</label>
-      </div>
-      <div class="form-group">
-        <textarea name="mensagem" placeholder=" " rows="5" required></textarea>
-        <label>Sua mensagem</label>
-      </div>
+
+    <form action="https://formspree.io/f/mjggdoeq" method="POST">
+
+      <label for="nome">Seu nome</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">Seu e-mail</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefone">Seu telefone</label>
+      <input type="tel" id="telefone" name="telefone" required>
+
+      <label for="mensagem">Sua mensagem</label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
+
       <button type="submit">Enviar Mensagem</button>
     </form>
-
-    <div class="success-message" id="success-message">
-      Obrigado! Sua mensagem foi enviada com sucesso.
-    </div>
-
-    <p style="text-align:center; margin-top:20px;">Ou entre em contato diretamente pelo WhatsApp:</p>
-    <a href="https://wa.me/5511921827683" target="_blank" class="whatsapp-float">Fale conosco</a>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
   <p>São Paulo – SP</p>
   <p>contato@novaalvoradaservicos.com.br</p>
 </footer>
 
-<script>
-const form = document.getElementById('contact-form');
-const successMessage = document.getElementById('success-message');
-
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const data = new FormData(form);
-
-  try {
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (response.ok) {
-      form.style.display = 'none';
-      successMessage.style.display = 'block';
-
-      setTimeout(() => {
-        window.location.href = 'index.html';
-      }, 5000);
-    } else {
-      alert('Ocorreu um erro. Tente novamente mais tarde.');
-    }
-  } catch (error) {
-    alert('Ocorreu um erro. Tente novamente mais tarde.');
-  }
-});
-</script>
+<!-- BOTÃO WHATSAPP -->
+<a href="https://wa.me/5511921827683" target="_blank" class="whatsapp-float">
+  Fale conosco
+</a>
 
 </body>
 </html>
