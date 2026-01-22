@@ -5,92 +5,145 @@
   <title>Contato | Nova Alvorada Serviços</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Entre em contato com a Nova Alvorada Serviços para soluções em facilities e terceirização.">
-
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      font-family: 'Segoe UI', Arial, sans-serif;
       background-color: #f2f4f7;
       color: #2a2a2a;
-      line-height: 1.7;
+      line-height: 1.6;
     }
 
     nav {
-      background-color: #000000;
-      border-bottom: 1px solid #1a1a1a;
+      background-color: #000;
+      padding: 15px 20px;
     }
 
     nav .container {
       max-width: 1100px;
       margin: auto;
-      padding: 18px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     nav a {
-      margin-left: 18px;
-      color: #ffffff;
+      color: #fff;
       text-decoration: none;
+      margin-left: 18px;
       font-weight: 500;
+      transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: #a27613;
-    }
+    nav a:hover { color: #a27613; }
 
-    /* CORREÇÃO DO LOGO */
-    .brand {
-      background-color: #ffffff; /* fundo branco como index.html */
-      padding: 6px 14px;
-      border-radius: 4px;
-      border: 1px solid #a27613;
-    }
-
-    .logo {
-      height: 63px; /* 50% maior que 42px */
-      display: block;
-    }
+    .brand img { height: 60px; } /* logo 50% maior */
 
     header {
-      background-color: #ffffff;
-      color: #2a2a2a;
-      padding: 60px 20px;
       text-align: center;
+      padding: 60px 20px;
+      background: #fff;
     }
 
-    header h1 {
-      color: #a27613;
-      margin-bottom: 10px;
+    header h1 { color: #a27613; font-size: 2.2em; margin-bottom: 10px; }
+    header p { font-size: 1.05em; color: #2a2a2a; }
+
+    section { max-width: 700px; margin: 60px auto; padding: 0 20px; }
+
+    .form-box {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.07);
     }
 
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 90px 20px;
-    }
-
-    .box {
-      background: #ffffff;
-      padding: 40px;
-      margin-bottom: 35px;
-      border-radius: 10px;
-    }
-
-    h2 {
+    .form-box h2 {
+      text-align: center;
       color: #1f2a36;
-      margin-bottom: 15px;
+      margin-bottom: 30px;
+      font-weight: 700;
+      font-size: 1.8em;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus { border-color: #a27613; }
+
+    .form-group label {
+      position: absolute;
+      top: 50%;
+      left: 15px;
+      transform: translateY(-50%);
+      color: #999;
+      font-size: 0.95em;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      background: #fff;
+      padding: 0 4px;
+    }
+
+    input:focus + label,
+    input:not(:placeholder-shown) + label,
+    textarea:focus + label,
+    textarea:not(:placeholder-shown) + label {
+      top: -10px;
+      font-size: 0.8em;
+      color: #a27613;
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      border: 2px solid #a27613;
+      border-radius: 10px;
+      background: #000;
+      color: #a27613;
+      font-weight: bold;
+      font-size: 1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #a27613;
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    .success-message {
+      display: none;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 10px;
+      background-color: #d4edda;
+      color: #155724;
+      font-weight: bold;
     }
 
     footer {
-      background-color: #1f2a36;
-      color: #ffffff;
       text-align: center;
       padding: 40px 20px;
+      background: #1f2a36;
+      color: #fff;
       font-size: 0.9em;
     }
 
@@ -98,7 +151,7 @@
       position: fixed;
       bottom: 25px;
       right: 25px;
-      background-color: #000000;
+      background-color: #000;
       color: #a27613;
       padding: 14px 26px;
       border-radius: 50px;
@@ -106,30 +159,27 @@
       text-decoration: none;
       border: 2px solid #a27613;
       box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+      transition: all 0.3s ease;
       z-index: 999;
     }
 
     .whatsapp-float:hover {
       background-color: #a27613;
-      color: #000000;
+      color: #000;
+      transform: scale(1.05);
     }
 
-    @media (max-width: 768px) {
-      nav .container {
-        flex-direction: column;
-        gap: 12px;
-      }
+    @media(max-width: 768px) {
+      header h1 { font-size: 1.8em; }
+      .form-box { padding: 30px 20px; }
     }
   </style>
 </head>
-
 <body>
 
 <nav>
   <div class="container">
-    <div class="brand">
-      <img src="assets/logo.png" alt="Nova Alvorada Serviços" class="logo">
-    </div>
+    <div class="brand"><img src="assets/logo.png" alt="Nova Alvorada Serviços"></div>
     <div>
       <a href="index.html">Início</a>
       <a href="sobre.html">Sobre</a>
@@ -145,18 +195,34 @@
 </header>
 
 <section>
-  <div class="box">
+  <div class="form-box">
     <h2>Formulário de Contato</h2>
-    <!-- FORMULÁRIO PERMANECE INALTERADO -->
-    <div class="zoho-form-container">
-      <iframe aria-label="Formulário de contato" 
-              src="https://forms.zohopublic.com/contatonovaalvora1/form/ContatoNovaAlvorada/formperma/ACxISn_ti2ttoUT4rdDs15Xb1CpNbK_0fKqZXxV3ZkM">
-      </iframe>
+    <form id="contact-form" action="https://formspree.io/f/mjggdoeq" method="POST">
+      <div class="form-group">
+        <input type="text" name="nome" placeholder=" " required>
+        <label>Seu nome</label>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder=" " required>
+        <label>Seu e-mail</label>
+      </div>
+      <div class="form-group">
+        <input type="tel" name="telefone" placeholder=" " required>
+        <label>Seu telefone</label>
+      </div>
+      <div class="form-group">
+        <textarea name="mensagem" placeholder=" " rows="5" required></textarea>
+        <label>Sua mensagem</label>
+      </div>
+      <button type="submit">Enviar Mensagem</button>
+    </form>
+
+    <div class="success-message" id="success-message">
+      Obrigado! Sua mensagem foi enviada com sucesso.
     </div>
-    <p>Ou entre em contato diretamente pelo WhatsApp:</p>
-    <a href="https://wa.me/5511921827683" target="_blank" class="whatsapp-float">
-      Fale conosco
-    </a>
+
+    <p style="text-align:center; margin-top:20px;">Ou entre em contato diretamente pelo WhatsApp:</p>
+    <a href="https://wa.me/5511921827683" target="_blank" class="whatsapp-float">Fale conosco</a>
   </div>
 </section>
 
@@ -165,6 +231,37 @@
   <p>São Paulo – SP</p>
   <p>contato@novaalvoradaservicos.com.br</p>
 </footer>
+
+<script>
+const form = document.getElementById('contact-form');
+const successMessage = document.getElementById('success-message');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      form.style.display = 'none';
+      successMessage.style.display = 'block';
+
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 5000);
+    } else {
+      alert('Ocorreu um erro. Tente novamente mais tarde.');
+    }
+  } catch (error) {
+    alert('Ocorreu um erro. Tente novamente mais tarde.');
+  }
+});
+</script>
 
 </body>
 </html>
