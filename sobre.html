@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <meta charset="UTF-8">
-  <title>Sobre Nós | Nova Alvorada Serviços</title>
+  <title>Sobre | Nova Alvorada Serviços</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conheça a Nova Alvorada Serviços, nossa missão, valores e forma de atuação.">
+  <meta name="description" content="Conheça a história e os valores da Nova Alvorada Serviços.">
 
-    <style>
+  <style>
     body {
       margin: 0;
       font-family: "Segoe UI", Arial, Helvetica, sans-serif;
@@ -18,14 +18,14 @@
     }
 
     nav {
-      background-color: #000000;
+      background-color: #000;
       border-bottom: 1px solid #1a1a1a;
+      padding: 15px 20px;
     }
 
     nav .container {
       max-width: 1100px;
       margin: auto;
-      padding: 18px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -36,23 +36,20 @@
       color: #ffffff;
       text-decoration: none;
       font-weight: 500;
+      transition: color 0.3s;
     }
 
-    nav a:hover {
-      color: #a27613;
-    }
+    nav a:hover { color: #a27613; }
 
     .brand {
       background-color: #ffffff;
       padding: 6px 14px;
       border-radius: 4px;
       border: 1px solid #a27613;
+      display: inline-block;
     }
 
-    .logo {
-      height: 42px;
-      display: block;
-    }
+    .brand img { height: 90px; }
 
     header {
       background-color: #ffffff;
@@ -61,16 +58,8 @@
       text-align: center;
     }
 
-    header h1 {
-      color: #a27613;
-      margin-bottom: 10px;
-    }
-
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 90px 20px;
-    }
+    header h1 { color: #a27613; margin-bottom: 20px; }
+    section { max-width: 1100px; margin: auto; padding: 90px 20px; }
 
     .box {
       background: #ffffff;
@@ -79,10 +68,7 @@
       border-radius: 10px;
     }
 
-    h2 {
-      color: #1f2a36;
-      margin-bottom: 15px;
-    }
+    h2 { color: #1f2a36; margin-bottom: 15px; }
 
     footer {
       background-color: #1f2a36;
@@ -92,21 +78,39 @@
       font-size: 0.9em;
     }
 
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #000;
+      color: #a27613;
+      padding: 14px 26px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      border: 2px solid #a27613;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+      transition: all 0.3s ease;
+      z-index: 999;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #a27613;
+      color: #000;
+      transform: scale(1.05);
+    }
+
     @media (max-width: 768px) {
-      nav .container {
-        flex-direction: column;
-        gap: 12px;
-      }
+      header h1 { font-size: 1.8em; }
     }
   </style>
 </head>
-
 <body>
 
 <nav>
   <div class="container">
     <div class="brand">
-      <img src="assets/logo.png" alt="Nova Alvorada Serviços" class="logo">
+      <img src="assets/logo.png" alt="Nova Alvorada Serviços">
     </div>
     <div>
       <a href="index.html">Início</a>
@@ -118,49 +122,35 @@
 </nav>
 
 <header>
-  <h1>Sobre a Nova Alvorada</h1>
-  <p>Compromisso, proximidade e responsabilidade</p>
+  <h1>Quem Somos</h1>
+  <p>Conheça a história, valores e missão da Nova Alvorada Serviços.</p>
 </header>
 
 <section>
   <div class="box">
+    <h2>Nossa História</h2>
     <p>
-      A Nova Alvorada Serviços nasce com o propósito de oferecer soluções
-      eficientes e responsáveis em facilities, unindo organização,
-      proximidade e confiança em cada contrato firmado.
+      A Nova Alvorada Serviços foi criada com o objetivo de oferecer soluções completas em facilities e terceirização de mão de obra, sempre com foco em eficiência, segurança e proximidade com o cliente.
     </p>
+  </div>
 
+  <div class="box">
+    <h2>Nossos Valores</h2>
     <p>
-      Atuamos com foco na terceirização de serviços essenciais para
-      condomínios, empresas e instituições que buscam tranquilidade
-      operacional e parceiros comprometidos com resultados consistentes.
-    </p>
-
-    <h2>Missão</h2>
-    <p>
-      Prestar serviços com excelência, responsabilidade e transparência,
-      contribuindo para o bom funcionamento e valorização dos ambientes
-      onde atuamos.
-    </p>
-
-    <h2>Valores</h2>
-    <p>
-      Ética nas relações, respeito às pessoas, compromisso com o que foi
-      acordado, proximidade com o cliente e melhoria contínua dos processos.
-    </p>
-
-    <h2>Nosso Jeito de Trabalhar</h2>
-    <p>
-      Acreditamos em relações claras, comunicação direta e gestão próxima.
-      Cada cliente é acompanhado de forma personalizada, com atenção
-      constante à qualidade do serviço prestado.
+      Ética, transparência, compromisso com a qualidade e atenção aos detalhes são princípios que norteiam todas as nossas operações, garantindo confiança e excelência aos nossos clientes.
     </p>
   </div>
 </section>
 
 <footer>
   <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
+  <p>São Paulo – SP</p>
+  <p>contato@novaalvoradaservicos.com.br</p>
 </footer>
+
+<a href="https://wa.me/5511921827683" target="_blank" class="whatsapp-float">
+  Fale conosco
+</a>
 
 </body>
 </html>
