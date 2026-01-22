@@ -11,6 +11,45 @@
 
   <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Animações locais (mesmo padrão do site) -->
+  <style>
+    .fade-up {
+      animation: fadeUp 0.6s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+    .delay-4 { animation-delay: 0.4s; }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .cards-grid .box {
+      margin: 0;
+    }
+
+    .cards-grid h3 {
+      color: #a27613;
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
 
 <body>
@@ -36,7 +75,7 @@
 
 <section>
 
-  <div class="box">
+  <div class="box fade-up">
     <h2>Quem Somos</h2>
     <p>
       A Nova Alvorada Serviços atua com soluções completas em facilities e terceirização,
@@ -50,7 +89,7 @@
     </p>
   </div>
 
-  <div class="box">
+  <div class="box fade-up delay-1">
     <h2>Nosso Compromisso</h2>
     <p>
       Assumimos o compromisso de atuar com clareza, presença e responsabilidade.
@@ -63,34 +102,34 @@
     </p>
   </div>
 
-  <div class="box">
+  <div class="box fade-up delay-2">
     <h2>Como Trabalhamos</h2>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 30px;">
+    <div class="cards-grid">
 
-      <div class="box" style="margin: 0;">
-        <h3 style="color:#a27613; margin-bottom:10px;">Gestão Próxima</h3>
+      <div class="box fade-up delay-1">
+        <h3>Gestão Próxima</h3>
         <p>
           Acompanhamento constante das operações e presença ativa na rotina dos serviços.
         </p>
       </div>
 
-      <div class="box" style="margin: 0;">
-        <h3 style="color:#a27613; margin-bottom:10px;">Processos Claros</h3>
+      <div class="box fade-up delay-2">
+        <h3>Processos Claros</h3>
         <p>
           Definições objetivas, comunicação direta e alinhamento desde o início do contrato.
         </p>
       </div>
 
-      <div class="box" style="margin: 0;">
-        <h3 style="color:#a27613; margin-bottom:10px;">Pessoas Preparadas</h3>
+      <div class="box fade-up delay-3">
+        <h3>Pessoas Preparadas</h3>
         <p>
           Equipes treinadas, orientadas e acompanhadas para manter padrão e constância.
         </p>
       </div>
 
-      <div class="box" style="margin: 0;">
-        <h3 style="color:#a27613; margin-bottom:10px;">Responsabilidade Legal</h3>
+      <div class="box fade-up delay-4">
+        <h3>Responsabilidade Legal</h3>
         <p>
           Atenção à conformidade trabalhista, operacional e contratual em todas as frentes.
         </p>
@@ -99,27 +138,16 @@
     </div>
   </div>
 
-  <div class="box" style="text-align:center;">
+  <div class="box fade-up delay-3" style="text-align:center;">
     <h2>Relações de Longo Prazo</h2>
     <p>
       Acreditamos em parcerias duradouras, construídas com confiança, transparência
       e entrega consistente. Cada cliente é acompanhado de forma personalizada,
       respeitando sua estrutura, suas necessidades e seus objetivos.
     </p>
+
     <p style="margin-top:25px;">
-      <a href="servicos.html" style="
-        display:inline-block;
-        padding:14px 32px;
-        border-radius:50px;
-        border:2px solid #a27613;
-        color:#a27613;
-        text-decoration:none;
-        font-weight:bold;
-        transition:all .3s;
-      "
-      onmouseover="this.style.background='#a27613'; this.style.color='#000';"
-      onmouseout="this.style.background='transparent'; this.style.color='#a27613';"
-      >
+      <a href="servicos.html" class="whatsapp-float" style="position:static; display:inline-block;">
         Conheça nossos serviços
       </a>
     </p>
