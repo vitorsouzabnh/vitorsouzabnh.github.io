@@ -2,9 +2,9 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Nova Alvorada Serviços | Facilities e Terceirização em São Paulo</title>
+  <title>Nova Alvorada Serviços | Facilities e Terceirização</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A Nova Alvorada Serviços oferece soluções em facilities e terceirização em São Paulo, com gestão responsável e proximidade.">
+  <meta name="description" content="Soluções em facilities, portaria, limpeza e terceirização com gestão próxima e responsabilidade.">
 
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -12,85 +12,30 @@
   <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- Ícones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <!-- Micro animações locais -->
   <style>
-    /* CARDS */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      margin-top: 40px;
-    }
-
-    .card {
-      background: #ffffff;
-      padding: 35px 30px;
-      border-radius: 14px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-      transition: all 0.35s ease;
+    .fade-up {
+      animation: fadeUp 0.6s ease forwards;
       opacity: 0;
-      transform: translateY(25px);
     }
 
-    .card.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .delay-1 { animation-delay: 0.15s; }
+    .delay-2 { animation-delay: 0.3s; }
 
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 14px 35px rgba(0,0,0,0.12);
-    }
-
-    .card i {
-      font-size: 1.6em;
-      color: #a27613;
-      margin-bottom: 18px;
-      display: block;
-    }
-
-    .card h3 {
-      color: #a27613;
-      margin-bottom: 15px;
-      font-size: 1.15em;
-    }
-
-    .card p {
-      font-size: 0.95em;
-      line-height: 1.7;
-      color: #2a2a2a;
-    }
-
-    /* CTA */
-    .cta-box {
-      text-align: center;
-      margin-top: 50px;
-    }
-
-    .cta-box a {
-      display: inline-block;
-      padding: 16px 34px;
-      border-radius: 50px;
-      border: 2px solid #a27613;
-      background: #000;
-      color: #a27613;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .cta-box a:hover {
-      background: #a27613;
-      color: #000;
-      transform: translateY(-3px);
-    }
-
-    @media (max-width: 900px) {
-      .cards {
-        grid-template-columns: 1fr;
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
       }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header p {
+      max-width: 780px;
+      margin: 0 auto;
     }
   </style>
 </head>
@@ -112,74 +57,42 @@
 </nav>
 
 <header>
-  <h1>Gestão de serviços essenciais com responsabilidade e proximidade</h1>
-  <p>
-    Soluções em facilities e terceirização para empresas, condomínios e
-    instituições que valorizam organização, confiança e constância.
+  <h1 class="fade-up">
+    Gestão de serviços essenciais com responsabilidade e proximidade
+  </h1>
+
+  <p class="fade-up delay-1">
+    Soluções em facilities e terceirização para empresas, condomínios e instituições
+    que valorizam organização, constância e confiança no dia a dia.
+  </p>
+
+  <p class="fade-up delay-2" style="margin-top:30px;">
+    <a href="contato.html" class="whatsapp-float" style="position:static; display:inline-block;">
+      Fale conosco
+    </a>
   </p>
 </header>
 
 <section>
 
-  <div class="box">
+  <div class="box fade-up">
     <h2>Quem Somos</h2>
     <p>
-      A Nova Alvorada Serviços atua com soluções completas em facilities e
-      terceirização de mão de obra, atendendo ambientes condominiais,
-      corporativos e institucionais.
+      A Nova Alvorada Serviços atua com soluções completas em facilities e terceirização,
+      atendendo ambientes condominiais, corporativos e institucionais.
     </p>
     <p>
-      Nosso trabalho é pautado pela proximidade com o cliente, pela gestão
-      responsável e pelo compromisso com a conformidade legal.
+      Nosso foco está na gestão próxima, no acompanhamento constante das operações
+      e na responsabilidade com cada detalhe do serviço prestado.
     </p>
   </div>
 
-  <div class="box">
+  <div class="box fade-up delay-1">
     <h2>O que Fazemos</h2>
     <p>
-      Portaria, limpeza, apoio operacional e gestão de facilities com
-      acompanhamento constante e processos bem definidos.
+      Portaria, limpeza, apoio operacional e gestão de facilities, sempre com processos
+      bem definidos e comunicação clara com nossos clientes.
     </p>
-  </div>
-
-  <div class="box">
-    <h2>Por que escolher a Nova Alvorada</h2>
-
-    <div class="cards">
-
-      <div class="card">
-        <i class="fa-solid fa-handshake"></i>
-        <h3>Gestão próxima</h3>
-        <p>
-          Acompanhamento contínuo das operações, com presença ativa e atenção
-          constante à qualidade do serviço.
-        </p>
-      </div>
-
-      <div class="card">
-        <i class="fa-solid fa-list-check"></i>
-        <h3>Organização e processos</h3>
-        <p>
-          Atuação estruturada, com rotinas claras, previsibilidade operacional
-          e controle efetivo.
-        </p>
-      </div>
-
-      <div class="card">
-        <i class="fa-solid fa-shield-halved"></i>
-        <h3>Responsabilidade legal</h3>
-        <p>
-          Conformidade, segurança jurídica e boas práticas que trazem
-          tranquilidade ao cliente.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="cta-box">
-      <a href="contato.html">Solicite um orçamento</a>
-    </div>
-
   </div>
 
 </section>
@@ -193,20 +106,6 @@
 <a href="https://wa.me/5511921827683" target="_blank" class="whatsapp-float">
   Fale conosco
 </a>
-
-<script>
-  const cards = document.querySelectorAll('.card');
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  cards.forEach(card => observer.observe(card));
-</script>
 
 </body>
 </html>
