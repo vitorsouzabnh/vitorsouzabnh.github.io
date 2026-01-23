@@ -299,8 +299,9 @@ footer {
   }
 }
 /* ===============================
-   FOOTER – REDES SOCIAIS
-=============================== */
+   INSTAGRAM – FOOTER SOCIAL
+================================ */
+
 .footer-social {
   margin-top: 18px;
 }
@@ -308,19 +309,34 @@ footer {
 .footer-social a {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: 2px solid #a27613;
-  color: #a27613;
+  gap: 10px;
+
   text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95em;
+
+  color: #ffffff;
   transition: all 0.3s ease;
 }
 
+/* Ícone Instagram com gradiente elegante */
+.footer-social i {
+  font-size: 1.2em;
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hover discreto e corporativo */
 .footer-social a:hover {
-  background-color: #a27613;
-  color: #000;
-  transform: translateY(-3px);
+  opacity: 0.85;
+  transform: translateY(-2px);
 }
 
