@@ -180,35 +180,31 @@ footer {
     padding: 30px 20px;
   }
 }
-/* ===== AJUSTE APENAS PARA MOBILE: LOGO + MENU ===== */
+/* ===== AJUSTE MOBILE PRECISO: SEM ALTERAR PROPORÇÕES ===== */
 @media (max-width: 768px) {
 
   nav .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
   }
 
+  /* LOGO: mantém exatamente como está */
   nav .brand {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    margin-bottom: 10px;
   }
 
-  nav .brand img {
-    max-height: 48px;
-  }
-
+  /* MENU: uma única linha, lado a lado */
   nav .container > div:last-child {
     display: flex;
-    gap: 18px;
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 16px;
+    white-space: nowrap;
   }
 
   nav a {
-    padding: 6px 4px;
+    margin-left: 0;
+    font-size: 0.95em;
   }
 
 }
