@@ -11,11 +11,17 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <!-- CSS ISOLADO APENAS PARA ESTA PÁGINA -->
   <style>
-    /* ANIMAÇÃO FADE-UP */
+    /* =========================
+       ANIMAÇÃO FADE-UP
+    ========================== */
     .fade-up {
       opacity: 0;
       transform: translateY(18px);
+    }
+
+    .fade-up.show {
       animation: fadeUp 0.6s ease forwards;
     }
 
@@ -24,27 +30,45 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    /* DELAYS PARA BOXES */
     .delay-1 { animation-delay: 0.1s; }
     .delay-2 { animation-delay: 0.2s; }
     .delay-3 { animation-delay: 0.3s; }
     .delay-4 { animation-delay: 0.4s; }
 
-    /* GRID DE DIFERENCIAIS */
+    /* =========================
+       GRID "COMO TRABALHAMOS"
+       RESPONSIVO E ISOLADO
+    ========================== */
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
       margin-top: 30px;
     }
 
     .cards-grid .box {
       margin: 0;
+      padding: 30px 25px;
+      background: #f9fafb;
+      border-radius: 8px;
+      text-align: center;
     }
 
     .cards-grid h3 {
       color: #a27613;
       margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .cards-grid {
+        gap: 18px;
+      }
+
+      .cards-grid .box {
+        padding: 25px 20px;
+      }
     }
   </style>
 </head>
@@ -82,54 +106,41 @@
       </p>
       <p>
         Nosso trabalho nasce da combinação entre experiência prática, gestão próxima
-        e responsabilidade com cada detalhe da operação. Não acreditamos em serviços
-        genéricos, mas em estruturas bem acompanhadas e ajustadas à realidade de cada cliente.
+        e responsabilidade com cada detalhe da operação.
       </p>
     </div>
 
     <div class="box fade-up delay-1">
       <h2>Nosso Compromisso</h2>
       <p>
-        Assumimos o compromisso de atuar com clareza, presença e responsabilidade.
-        Isso significa acompanhamento constante das equipes, comunicação direta
-        com o cliente e atenção permanente à qualidade do serviço prestado.
-      </p>
-      <p>
-        Para nós, terceirizar não é apenas delegar tarefas, mas garantir que a operação
-        funcione de forma organizada, segura e alinhada às normas e expectativas acordadas.
+        Assumimos o compromisso de atuar com clareza, presença e responsabilidade,
+        garantindo acompanhamento constante e comunicação direta.
       </p>
     </div>
 
     <div class="box fade-up delay-2">
       <h2>Como Trabalhamos</h2>
+
       <div class="cards-grid">
 
         <div class="box fade-up delay-1">
           <h3>Gestão Próxima</h3>
-          <p>
-            Acompanhamento constante das operações e presença ativa na rotina dos serviços.
-          </p>
+          <p>Acompanhamento constante das operações.</p>
         </div>
 
         <div class="box fade-up delay-2">
           <h3>Processos Claros</h3>
-          <p>
-            Definições objetivas, comunicação direta e alinhamento desde o início do contrato.
-          </p>
+          <p>Alinhamento objetivo desde o início do contrato.</p>
         </div>
 
         <div class="box fade-up delay-3">
           <h3>Pessoas Preparadas</h3>
-          <p>
-            Equipes treinadas, orientadas e acompanhadas para manter padrão e constância.
-          </p>
+          <p>Equipes treinadas e acompanhadas.</p>
         </div>
 
         <div class="box fade-up delay-4">
           <h3>Responsabilidade Legal</h3>
-          <p>
-            Atenção à conformidade trabalhista, operacional e contratual em todas as frentes.
-          </p>
+          <p>Conformidade trabalhista e operacional.</p>
         </div>
 
       </div>
@@ -138,9 +149,8 @@
     <div class="box fade-up delay-3" style="text-align:center;">
       <h2>Relações de Longo Prazo</h2>
       <p>
-        Acreditamos em parcerias duradouras, construídas com confiança, transparência
-        e entrega consistente. Cada cliente é acompanhado de forma personalizada,
-        respeitando sua estrutura, suas necessidades e seus objetivos.
+        Acreditamos em parcerias duradouras, construídas com confiança,
+        transparência e entrega consistente.
       </p>
 
       <p style="margin-top:25px;">
@@ -164,17 +174,18 @@
 </a>
 
 <script>
-  const boxes = document.querySelectorAll('.box.fade-up');
+  const elements = document.querySelectorAll('.fade-up');
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
+        observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.2 });
 
-  boxes.forEach(box => observer.observe(box));
+  elements.forEach(el => observer.observe(el));
 </script>
 
 </body>
