@@ -12,7 +12,7 @@
 
   <style>
     /* ===============================
-       FADE-UP (APENAS CONTAINERS)
+       FADE-UP (CONTAINERS)
     =============================== */
     .fade-up {
       opacity: 0;
@@ -42,28 +42,33 @@
     }
 
     /* ===============================
-       CARD ISOLADO
+       CARD INDIVIDUAL
     =============================== */
     .work-card {
       background: #ffffff;
       border-radius: 18px;
       padding: 32px 26px;
 
-      /* sombra base suave */
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+      /* sombra base em duas camadas */
+      box-shadow:
+        0 8px 16px rgba(0, 0, 0, 0.10),
+        0 2px 4px rgba(0, 0, 0, 0.08);
 
-      transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0) scale(1);
       transition:
         transform 0.35s ease,
         box-shadow 0.35s ease;
     }
 
-    /* HOVER – ELEVAÇÃO SUAVE */
+    /* ===============================
+       HOVER – ELEVAÇÃO PREMIUM
+    =============================== */
     .work-card:hover {
-      transform: translate3d(0, -12px, 0);
+      transform: translate3d(0, -14px, 0) scale(1.02);
 
-      /* sombra mais aberta e clara */
-      box-shadow: 0 26px 46px rgba(0, 0, 0, 0.18);
+      box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.16),
+        0 12px 18px rgba(0, 0, 0, 0.10);
     }
 
     .work-card h3 {
