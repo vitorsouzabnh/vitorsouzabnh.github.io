@@ -162,6 +162,27 @@
 
   cards.forEach(card => observer.observe(card));
 </script>
- 
+
+  <script>
+  const whatsappBtn = document.querySelector('.whatsapp-float');
+  const footer = document.querySelector('footer');
+
+  function handleScroll() {
+    const footerTop = footer.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (footerTop <= windowHeight) {
+      whatsappBtn.classList.add('stop');
+      whatsappBtn.style.bottom = (windowHeight - footerTop + 25) + 'px';
+    } else {
+      whatsappBtn.classList.remove('stop');
+      whatsappBtn.style.bottom = '25px';
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll);
+</script>
+
+  
 </body>
 </html>
