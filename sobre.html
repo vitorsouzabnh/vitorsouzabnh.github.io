@@ -42,14 +42,15 @@
     }
 
     /* ===============================
-       CARD ISOLADO (SEM FADE-UP)
+       CARD ISOLADO
     =============================== */
     .work-card {
       background: #ffffff;
       border-radius: 18px;
       padding: 32px 26px;
 
-      box-shadow: 0 18px 28px rgba(0, 0, 0, 0.18);
+      /* sombra base suave */
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
 
       transform: translate3d(0, 0, 0);
       transition:
@@ -57,10 +58,12 @@
         box-shadow 0.35s ease;
     }
 
-    /* HOVER – AGORA SOBE DE VERDADE */
+    /* HOVER – ELEVAÇÃO SUAVE */
     .work-card:hover {
-      transform: translate3d(0, -16px, 0);
-      box-shadow: 0 38px 70px rgba(0, 0, 0, 0.32);
+      transform: translate3d(0, -12px, 0);
+
+      /* sombra mais aberta e clara */
+      box-shadow: 0 26px 46px rgba(0, 0, 0, 0.18);
     }
 
     .work-card h3 {
