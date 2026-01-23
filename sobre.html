@@ -13,11 +13,11 @@
 
   <style>
     /* =====================
-       FADE-UP ANIMAÇÃO
+       FADE-UP SCROLL
     ====================== */
     .fade-up {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(18px);
     }
 
     .fade-up.show {
@@ -52,8 +52,7 @@
       border-radius: 10px;
       padding: 35px 25px;
       text-align: center;
-      transition: all 0.3s ease;
-      cursor: default;
+      transition: transform 0.35s ease-out, box-shadow 0.35s ease-out;
     }
 
     .cards-grid .card-box h3 {
@@ -62,10 +61,10 @@
       font-size: 1.1em;
     }
 
-    /* HOVER INTERATIVO */
+    /* HOVER IGUAL À HOME */
     .cards-grid .card-box:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
     }
 
     /* RESPONSIVO */
