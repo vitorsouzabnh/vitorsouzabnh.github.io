@@ -167,13 +167,14 @@
   const whatsappBtn = document.querySelector('.whatsapp-float');
   const footer = document.querySelector('footer');
   const margin = 25;
+  const maxLift = 140; // limite máximo de subida em px
 
   function handleScroll() {
     const footerRect = footer.getBoundingClientRect();
-    const btnHeight = whatsappBtn.offsetHeight;
 
     if (footerRect.top < window.innerHeight) {
-      const overlap = window.innerHeight - footerRect.top + margin;
+      let overlap = window.innerHeight - footerRect.top + margin;
+      overlap = Math.min(overlap, maxLift);
       whatsappBtn.style.transform = `translateY(-${overlap}px)`;
     } else {
       whatsappBtn.style.transform = 'translateY(0)';
@@ -183,7 +184,6 @@
   window.addEventListener('scroll', handleScroll);
   window.addEventListener('resize', handleScroll);
 </script>
-
   
 </body>
 </html>
