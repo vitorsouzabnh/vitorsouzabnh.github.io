@@ -180,7 +180,7 @@ footer {
     padding: 30px 20px;
   }
 }
-/* ===== AJUSTE MOBILE PRECISO: SEM ALTERAR PROPORÇÕES ===== */
+/* ===== AJUSTE MOBILE DEFINITIVO – SEM QUEBRA DE LINHA ===== */
 @media (max-width: 768px) {
 
   nav .container {
@@ -189,22 +189,23 @@ footer {
     align-items: center;
   }
 
-  /* LOGO: mantém exatamente como está */
+  /* Logo 100% intocado */
   nav .brand {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
-  /* MENU: uma única linha, lado a lado */
+  /* Menu forçado em UMA linha */
   nav .container > div:last-child {
     display: flex;
     justify-content: center;
-    gap: 16px;
-    white-space: nowrap;
+    flex-wrap: nowrap;          /* impede quebra */
+    white-space: nowrap;        /* impede quebra */
+    width: 100%;
   }
 
   nav a {
-    margin-left: 0;
-    font-size: 0.95em;
+    margin: 0 8px;              /* reduz espaço lateral */
+    font-size: 0.85em;          /* ajuste fino só no mobile */
   }
 
 }
