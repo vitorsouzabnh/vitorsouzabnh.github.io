@@ -2,18 +2,24 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Nova Alvorada Serviços | Facilities e Terceirização</title>
+  <title>Nova Alvorada Serviços | Facilities e Terceirização em São Paulo</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Facilities e terceirização com gestão próxima, processos claros e equipes qualificadas.">
+
+  <meta name="description"
+    content="Empresa de facilities e terceirização de serviços em São Paulo e Grande ABC. Gestão próxima, equipes qualificadas e processos confiáveis.">
+
+  <meta name="keywords"
+    content="facilities São Paulo, terceirização de serviços, facilities Grande ABC, serviços terceirizados SP, limpeza terceirizada, portaria terceirizada">
 
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
   <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="style.css">
 
   <!-- Ícones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     /* ===== Animações ===== */
@@ -24,10 +30,11 @@
 
     .delay-1 { animation-delay: 0.15s; }
     .delay-2 { animation-delay: 0.3s; }
+    .delay-3 { animation-delay: 0.45s; }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* ===== CTA ===== */
@@ -59,7 +66,7 @@
     }
 
     .card {
-      background: #ffffff;
+      background: #fff;
       padding: 40px 34px;
       border-radius: 16px;
       box-shadow: 0 12px 30px rgba(0,0,0,0.08);
@@ -77,26 +84,42 @@
       margin-bottom: 18px;
     }
 
-    .card h3 {
-      margin-bottom: 14px;
-      font-size: 1.25em;
-      color: #1f2a36;
+    /* ===== Como Funciona ===== */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
     }
 
-    .card p {
-      font-size: 0.95em;
-      line-height: 1.6;
+    .step {
+      background: #f7f7f7;
+      padding: 36px 30px;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .step span {
+      display: inline-block;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #a27613;
+      color: #000;
+      font-weight: bold;
+      line-height: 42px;
+      margin-bottom: 16px;
     }
 
     /* ===== Mobile ===== */
     @media (max-width: 900px) {
-      .cards {
+      .cards,
+      .steps {
         grid-template-columns: 1fr;
       }
 
       .card:hover {
         transform: none;
-        box-shadow: 0 12px 30px rgba(0,0,0,0.08);
       }
     }
   </style>
@@ -120,12 +143,12 @@
 
 <header>
   <h1 class="fade-up">
-    Gestão de serviços essenciais com responsabilidade e proximidade
+    Facilities e terceirização de serviços em São Paulo e Grande ABC
   </h1>
 
   <p class="fade-up delay-1">
-    Facilities e terceirização com acompanhamento constante, processos claros
-    e foco total na tranquilidade do cliente.
+    Gestão próxima, processos claros e equipes preparadas para garantir
+    tranquilidade operacional em empresas, condomínios e indústrias.
   </p>
 
   <a href="contato.html" class="cta-home fade-up delay-2">
@@ -138,43 +161,78 @@
   <div class="box fade-up">
     <h2>Por que escolher a Nova Alvorada</h2>
     <p>
-      Mais do que fornecer mão de obra, entregamos gestão, previsibilidade
-      e confiança em cada operação.
+      Atuamos em São Paulo e região do ABC com foco em confiabilidade,
+      acompanhamento constante e soluções sob medida em facilities
+      e serviços terceirizados.
     </p>
   </div>
 
   <div class="cards">
 
     <div class="card fade-up">
-      <div class="card-icon">
-        <i class="fa-solid fa-people-group"></i>
-      </div>
-      <h3>Gestão Próxima e Ativa</h3>
+      <div class="card-icon"><i class="fa-solid fa-people-group"></i></div>
+      <h3>Gestão Próxima</h3>
       <p>
-        Supervisão constante, comunicação direta e resolução rápida de demandas,
-        evitando falhas e retrabalho.
+        Supervisão ativa e contato direto com o cliente, evitando falhas
+        e garantindo continuidade operacional.
       </p>
     </div>
 
     <div class="card fade-up delay-1">
-      <div class="card-icon">
-        <i class="fa-solid fa-clipboard-check"></i>
-      </div>
-      <h3>Processos e Conformidade</h3>
+      <div class="card-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+      <h3>Processos Confiáveis</h3>
       <p>
-        Rotinas padronizadas, controle operacional e atenção total às
-        exigências legais e contratuais.
+        Padronização, controle e conformidade legal em todos os contratos
+        e rotinas de trabalho.
       </p>
     </div>
 
     <div class="card fade-up delay-2">
-      <div class="card-icon">
-        <i class="fa-solid fa-shield-halved"></i>
-      </div>
+      <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
       <h3>Equipes Preparadas</h3>
       <p>
-        Profissionais treinados, alinhados ao padrão de qualidade
-        e à cultura de responsabilidade da empresa.
+        Profissionais treinados e alinhados ao padrão de qualidade exigido
+        por empresas e condomínios.
+      </p>
+    </div>
+
+  </div>
+
+  <!-- COMO FUNCIONA -->
+  <div class="box fade-up" style="margin-top:70px;">
+    <h2>Como funciona nossa contratação</h2>
+    <p>
+      Um processo simples, transparente e pensado para reduzir riscos
+      e garantir eficiência desde o primeiro dia.
+    </p>
+  </div>
+
+  <div class="steps">
+
+    <div class="step fade-up">
+      <span>1</span>
+      <h3>Entendimento da demanda</h3>
+      <p>
+        Analisamos a necessidade do cliente, o ambiente e o perfil da operação
+        em São Paulo ou Grande ABC.
+      </p>
+    </div>
+
+    <div class="step fade-up delay-1">
+      <span>2</span>
+      <h3>Estruturação da solução</h3>
+      <p>
+        Definimos equipes, processos e gestão adequada para garantir
+        eficiência e conformidade.
+      </p>
+    </div>
+
+    <div class="step fade-up delay-2">
+      <span>3</span>
+      <h3>Acompanhamento contínuo</h3>
+      <p>
+        Supervisão constante, ajustes rápidos e comunicação direta
+        com o cliente.
       </p>
     </div>
 
@@ -184,7 +242,7 @@
 
 <footer>
   <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
-  <p>São Paulo – SP</p>
+  <p>Atendimento em São Paulo e Grande ABC</p>
   <p>contato@novaalvoradaservicos.com.br</p>
 </footer>
 
