@@ -251,11 +251,13 @@ footer {
 }
 
 .whatsapp-float {
-  transition: transform 0.25s ease;
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  z-index: 999;
+  transition: none; /* ISSO MATA O EFEITO ELÁSTICO */
 }
-.whatsapp-float {
-  transition: transform 0.2s linear;
-}
+
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 900px) {
