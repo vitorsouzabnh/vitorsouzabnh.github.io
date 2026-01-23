@@ -11,14 +11,13 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- CSS ISOLADO APENAS PARA ESTA PÁGINA -->
   <style>
-    /* =========================
-       ANIMAÇÃO FADE-UP
-    ========================== */
+    /* =====================
+       FADE-UP ANIMAÇÃO
+    ====================== */
     .fade-up {
       opacity: 0;
-      transform: translateY(18px);
+      transform: translateY(20px);
     }
 
     .fade-up.show {
@@ -26,8 +25,10 @@
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(18px); }
-      to   { opacity: 1; transform: translateY(0); }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .delay-1 { animation-delay: 0.1s; }
@@ -35,39 +36,48 @@
     .delay-3 { animation-delay: 0.3s; }
     .delay-4 { animation-delay: 0.4s; }
 
-    /* =========================
-       GRID "COMO TRABALHAMOS"
-       RESPONSIVO E ISOLADO
-    ========================== */
+    /* =====================
+       GRID COMO TRABALHAMOS
+       PADRÃO HOME
+    ====================== */
     .cards-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-      margin-top: 30px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-top: 35px;
     }
 
-    .cards-grid .box {
-      margin: 0;
-      padding: 30px 25px;
-      background: #f9fafb;
-      border-radius: 8px;
+    .cards-grid .card-box {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 35px 25px;
       text-align: center;
+      transition: all 0.3s ease;
+      cursor: default;
     }
 
-    .cards-grid h3 {
+    .cards-grid .card-box h3 {
       color: #a27613;
-      margin-bottom: 10px;
-      font-size: 1.1rem;
+      margin-bottom: 12px;
+      font-size: 1.1em;
     }
 
-    /* MOBILE */
-    @media (max-width: 600px) {
-      .cards-grid {
-        gap: 18px;
-      }
+    /* HOVER INTERATIVO */
+    .cards-grid .card-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+    }
 
-      .cards-grid .box {
-        padding: 25px 20px;
+    /* RESPONSIVO */
+    @media (max-width: 900px) {
+      .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 540px) {
+      .cards-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -100,21 +110,15 @@
     <div class="box fade-up">
       <h2>Quem Somos</h2>
       <p>
-        A Nova Alvorada Serviços atua com soluções completas em facilities e terceirização,
-        atendendo condomínios, empresas e instituições que buscam organização,
-        previsibilidade e tranquilidade operacional.
-      </p>
-      <p>
-        Nosso trabalho nasce da combinação entre experiência prática, gestão próxima
-        e responsabilidade com cada detalhe da operação.
+        Atuamos com soluções completas em facilities e terceirização,
+        garantindo organização, previsibilidade e tranquilidade operacional.
       </p>
     </div>
 
     <div class="box fade-up delay-1">
       <h2>Nosso Compromisso</h2>
       <p>
-        Assumimos o compromisso de atuar com clareza, presença e responsabilidade,
-        garantindo acompanhamento constante e comunicação direta.
+        Presença constante, comunicação clara e responsabilidade em cada detalhe da operação.
       </p>
     </div>
 
@@ -123,22 +127,22 @@
 
       <div class="cards-grid">
 
-        <div class="box fade-up delay-1">
+        <div class="card-box fade-up delay-1">
           <h3>Gestão Próxima</h3>
           <p>Acompanhamento constante das operações.</p>
         </div>
 
-        <div class="box fade-up delay-2">
+        <div class="card-box fade-up delay-2">
           <h3>Processos Claros</h3>
-          <p>Alinhamento objetivo desde o início do contrato.</p>
+          <p>Definições objetivas e alinhamento desde o início.</p>
         </div>
 
-        <div class="box fade-up delay-3">
+        <div class="card-box fade-up delay-3">
           <h3>Pessoas Preparadas</h3>
-          <p>Equipes treinadas e acompanhadas.</p>
+          <p>Equipes treinadas e supervisionadas.</p>
         </div>
 
-        <div class="box fade-up delay-4">
+        <div class="card-box fade-up delay-4">
           <h3>Responsabilidade Legal</h3>
           <p>Conformidade trabalhista e operacional.</p>
         </div>
@@ -149,8 +153,7 @@
     <div class="box fade-up delay-3" style="text-align:center;">
       <h2>Relações de Longo Prazo</h2>
       <p>
-        Acreditamos em parcerias duradouras, construídas com confiança,
-        transparência e entrega consistente.
+        Parcerias construídas com confiança, presença e entrega consistente.
       </p>
 
       <p style="margin-top:25px;">
@@ -174,7 +177,7 @@
 </a>
 
 <script>
-  const elements = document.querySelectorAll('.fade-up');
+  const items = document.querySelectorAll('.fade-up');
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -185,7 +188,7 @@
     });
   }, { threshold: 0.2 });
 
-  elements.forEach(el => observer.observe(el));
+  items.forEach(item => observer.observe(item));
 </script>
 
 </body>
