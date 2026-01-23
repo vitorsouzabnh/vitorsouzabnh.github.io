@@ -12,7 +12,7 @@
 
   <style>
     /* ===============================
-       ANIMAÇÃO FADE-UP
+       FADE-UP (APENAS CONTAINERS)
     =============================== */
     .fade-up {
       opacity: 0;
@@ -30,7 +30,6 @@
     .delay-1 { animation-delay: 0.1s; }
     .delay-2 { animation-delay: 0.2s; }
     .delay-3 { animation-delay: 0.3s; }
-    .delay-4 { animation-delay: 0.4s; }
 
     /* ===============================
        GRID – COMO TRABALHAMOS
@@ -43,27 +42,25 @@
     }
 
     /* ===============================
-       CARD ISOLADO (SEM .box)
+       CARD ISOLADO (SEM FADE-UP)
     =============================== */
     .work-card {
       background: #ffffff;
       border-radius: 18px;
       padding: 32px 26px;
 
-      box-shadow:
-        0 18px 30px rgba(0, 0, 0, 0.18);
+      box-shadow: 0 18px 28px rgba(0, 0, 0, 0.18);
 
-      transform: translateY(0);
+      transform: translate3d(0, 0, 0);
       transition:
         transform 0.35s ease,
         box-shadow 0.35s ease;
     }
 
-    /* HOVER – SUBIDA + SOMBRA FORTE */
+    /* HOVER – AGORA SOBE DE VERDADE */
     .work-card:hover {
-      transform: translateY(-14px);
-      box-shadow:
-        0 35px 65px rgba(0, 0, 0, 0.28);
+      transform: translate3d(0, -16px, 0);
+      box-shadow: 0 38px 70px rgba(0, 0, 0, 0.32);
     }
 
     .work-card h3 {
@@ -117,22 +114,22 @@
 
       <div class="work-grid">
 
-        <div class="work-card fade-up delay-1">
+        <div class="work-card">
           <h3>Gestão Próxima</h3>
           <p>Acompanhamento contínuo e presença ativa nas operações.</p>
         </div>
 
-        <div class="work-card fade-up delay-2">
+        <div class="work-card">
           <h3>Processos Claros</h3>
           <p>Comunicação objetiva e alinhamento desde o início do contrato.</p>
         </div>
 
-        <div class="work-card fade-up delay-3">
+        <div class="work-card">
           <h3>Pessoas Preparadas</h3>
           <p>Equipes treinadas e orientadas para manter padrão e constância.</p>
         </div>
 
-        <div class="work-card fade-up delay-4">
+        <div class="work-card">
           <h3>Responsabilidade Legal</h3>
           <p>Conformidade trabalhista e contratual em todas as frentes.</p>
         </div>
