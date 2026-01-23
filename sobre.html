@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <title>Sobre Nós | Nova Alvorada Serviços</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conheça a Nova Alvorada Serviços, nossa forma de atuação, compromisso e diferenciais em facilities e terceirização.">
+  <meta name="description" content="Conheça a Nova Alvorada Serviços, nossa forma de atuação, compromisso e diferenciais.">
 
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
 
@@ -16,7 +16,7 @@
     =============================== */
     .fade-up {
       opacity: 0;
-      transform: translateY(18px);
+      transform: translateY(24px);
       animation: fadeUp 0.6s ease forwards;
     }
 
@@ -35,21 +35,23 @@
     /* ===============================
        GRID – COMO TRABALHAMOS
     =============================== */
-    .cards-grid {
+    .work-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-      margin-top: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      margin-top: 40px;
     }
 
     /* ===============================
-       CARD
+       CARD ISOLADO (SEM .box)
     =============================== */
-    .cards-grid .box {
+    .work-card {
       background: #ffffff;
-      border-radius: 16px;
-      padding: 28px 24px;
-      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+      border-radius: 18px;
+      padding: 32px 26px;
+
+      box-shadow:
+        0 18px 30px rgba(0, 0, 0, 0.18);
 
       transform: translateY(0);
       transition:
@@ -57,15 +59,16 @@
         box-shadow 0.35s ease;
     }
 
-    /* HOVER – SUBIDA SUAVE */
-    .cards-grid .box:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 22px 44px rgba(0, 0, 0, 0.15);
+    /* HOVER – SUBIDA + SOMBRA FORTE */
+    .work-card:hover {
+      transform: translateY(-14px);
+      box-shadow:
+        0 35px 65px rgba(0, 0, 0, 0.28);
     }
 
-    .cards-grid h3 {
+    .work-card h3 {
       color: #a27613;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
   </style>
 </head>
@@ -88,7 +91,7 @@
 
 <header>
   <h1>Sobre a Nova Alvorada</h1>
-  <p>Responsabilidade, proximidade e gestão consciente de serviços essenciais.</p>
+  <p>Responsabilidade, proximidade e gestão consciente.</p>
 </header>
 
 <main>
@@ -97,55 +100,41 @@
     <div class="box fade-up">
       <h2>Quem Somos</h2>
       <p>
-        A Nova Alvorada Serviços atua com soluções completas em facilities e terceirização,
-        atendendo condomínios, empresas e instituições que buscam organização,
-        previsibilidade e tranquilidade operacional.
-      </p>
-      <p>
-        Nosso trabalho nasce da combinação entre experiência prática, gestão próxima
-        e responsabilidade com cada detalhe da operação.
+        Atuamos com soluções completas em facilities e terceirização,
+        garantindo organização, previsibilidade e tranquilidade operacional.
       </p>
     </div>
 
     <div class="box fade-up delay-1">
       <h2>Nosso Compromisso</h2>
       <p>
-        Atuamos com clareza, presença e responsabilidade, mantendo comunicação direta
-        e acompanhamento constante das equipes.
+        Presença constante, comunicação clara e responsabilidade em cada detalhe da operação.
       </p>
     </div>
 
     <div class="box fade-up delay-2">
       <h2>Como Trabalhamos</h2>
 
-      <div class="cards-grid">
+      <div class="work-grid">
 
-        <div class="box fade-up delay-1">
+        <div class="work-card fade-up delay-1">
           <h3>Gestão Próxima</h3>
-          <p>
-            Presença ativa na rotina das operações e acompanhamento constante.
-          </p>
+          <p>Acompanhamento contínuo e presença ativa nas operações.</p>
         </div>
 
-        <div class="box fade-up delay-2">
+        <div class="work-card fade-up delay-2">
           <h3>Processos Claros</h3>
-          <p>
-            Comunicação direta, alinhamento e definições objetivas desde o início.
-          </p>
+          <p>Comunicação objetiva e alinhamento desde o início do contrato.</p>
         </div>
 
-        <div class="box fade-up delay-3">
+        <div class="work-card fade-up delay-3">
           <h3>Pessoas Preparadas</h3>
-          <p>
-            Equipes treinadas e orientadas para manter padrão e constância.
-          </p>
+          <p>Equipes treinadas e orientadas para manter padrão e constância.</p>
         </div>
 
-        <div class="box fade-up delay-4">
+        <div class="work-card fade-up delay-4">
           <h3>Responsabilidade Legal</h3>
-          <p>
-            Atenção total à conformidade trabalhista, contratual e operacional.
-          </p>
+          <p>Conformidade trabalhista e contratual em todas as frentes.</p>
         </div>
 
       </div>
@@ -154,14 +143,7 @@
     <div class="box fade-up delay-3" style="text-align:center;">
       <h2>Relações de Longo Prazo</h2>
       <p>
-        Construímos parcerias duradouras baseadas em confiança, transparência
-        e entrega consistente.
-      </p>
-
-      <p style="margin-top:25px;">
-        <a href="servicos.html" class="whatsapp-float" style="position:static; display:inline-block;">
-          Conheça nossos serviços
-        </a>
+        Parcerias construídas com confiança, transparência e entrega consistente.
       </p>
     </div>
 
