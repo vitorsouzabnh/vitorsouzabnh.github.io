@@ -250,13 +250,10 @@ footer {
   z-index: 999;
 }
 
-/* Quando encostar no footer */
-.whatsapp-float.stop {
-  position: absolute;
+.whatsapp-float {
+  transition: transform 0.25s ease;
 }
-.whatsapp-float.stop {
-  position: absolute;
-}
+
 
 
 /* ===== RESPONSIVO ===== */
