@@ -361,4 +361,69 @@ footer {
   opacity: 0.85;
   transform: translateY(-2px);
 }
+/* ===============================
+   SOBRE.HTML – COMO TRABALHAMOS
+   ESCOPADO (SEGURO)
+================================ */
+
+body.sobre .cards-grid {
+  display: flex;
+  gap: 25px;
+  width: 100%;
+}
+
+/* Cards */
+body.sobre .cards-grid .box {
+  flex: 1;
+  background: #ffffff;
+  padding: 35px 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.10);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+/* Entrada */
+body.sobre .cards-grid .box.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover – sobe visivelmente */
+body.sobre .cards-grid .box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14);
+}
+
+/* Títulos */
+body.sobre .cards-grid .box h3 {
+  color: #a27613;
+  margin-bottom: 12px;
+  font-size: 1.15em;
+}
+
+/* Texto */
+body.sobre .cards-grid .box p {
+  font-size: 0.95em;
+  line-height: 1.7;
+  color: #2a2a2a;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  body.sobre .cards-grid {
+    flex-wrap: wrap;
+  }
+
+  body.sobre .cards-grid .box {
+    flex: 0 0 calc(50% - 12.5px);
+  }
+}
+
+@media (max-width: 600px) {
+  body.sobre .cards-grid .box {
+    flex: 0 0 100%;
+  }
+}
 
