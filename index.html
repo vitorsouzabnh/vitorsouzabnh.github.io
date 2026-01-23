@@ -13,6 +13,7 @@
     content="facilities São Paulo, terceirização de serviços, facilities Grande ABC, serviços terceirizados SP, limpeza terceirizada, portaria terceirizada">
 
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
   <!-- CSS GLOBAL -->
   <link rel="stylesheet" href="style.css">
@@ -35,26 +36,6 @@
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ===== CTA ===== */
-    .cta-home {
-      display: inline-block;
-      margin-top: 35px;
-      padding: 16px 36px;
-      border-radius: 50px;
-      border: 2px solid #a27613;
-      background: #000;
-      color: #a27613;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .cta-home:hover {
-      background: #a27613;
-      color: #000;
-      transform: translateY(-2px);
     }
 
     /* ===== Cards ===== */
@@ -84,6 +65,17 @@
       margin-bottom: 18px;
     }
 
+    .card h3 {
+      margin-bottom: 14px;
+      font-size: 1.25em;
+      color: #1f2a36;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+
     /* ===== Como Funciona ===== */
     .steps {
       display: grid;
@@ -109,6 +101,28 @@
       font-weight: bold;
       line-height: 42px;
       margin-bottom: 16px;
+    }
+
+    .final-cta {
+      display: inline-block;
+      margin: 50px auto 80px;
+      padding: 18px 40px;
+      border-radius: 50px;
+      border: 2px solid #a27613;
+      background: #000;
+      color: #a27613;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      text-align: center;
+      display: block;
+      max-width: 220px;
+    }
+
+    .final-cta:hover {
+      background: #a27613;
+      color: #000;
+      transform: translateY(-2px);
     }
 
     /* ===== Mobile ===== */
@@ -150,10 +164,6 @@
     Gestão próxima, processos claros e equipes preparadas para garantir
     tranquilidade operacional em empresas, condomínios e indústrias.
   </p>
-
-  <a href="contato.html" class="cta-home fade-up delay-2">
-    Solicitar contato
-  </a>
 </header>
 
 <section>
@@ -237,6 +247,11 @@
     </div>
 
   </div>
+
+  <!-- CTA FINAL -->
+  <a href="contato.html" class="final-cta fade-up delay-3">
+    Solicitar contato
+  </a>
 
 </section>
 
