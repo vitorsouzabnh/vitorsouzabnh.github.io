@@ -166,24 +166,24 @@
 <script>
   const whatsappBtn = document.querySelector('.whatsapp-float');
   const footer = document.querySelector('footer');
+  const margin = 25;
 
   function handleScroll() {
     const footerRect = footer.getBoundingClientRect();
     const btnHeight = whatsappBtn.offsetHeight;
-    const margin = 25;
 
-    if (footerRect.top <= window.innerHeight - btnHeight - margin) {
-      whatsappBtn.classList.add('stop');
-      whatsappBtn.style.bottom = (footerRect.height + margin) + 'px';
+    if (footerRect.top < window.innerHeight) {
+      const overlap = window.innerHeight - footerRect.top + margin;
+      whatsappBtn.style.transform = `translateY(-${overlap}px)`;
     } else {
-      whatsappBtn.classList.remove('stop');
-      whatsappBtn.style.bottom = margin + 'px';
+      whatsappBtn.style.transform = 'translateY(0)';
     }
   }
 
   window.addEventListener('scroll', handleScroll);
   window.addEventListener('resize', handleScroll);
 </script>
+
   
 </body>
 </html>
