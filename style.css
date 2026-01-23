@@ -250,11 +250,11 @@ footer {
   z-index: 999;
 }
 
-.whatsapp-float:hover {
-  background-color: #a27613;
-  color: #000;
-  transform: scale(1.05);
+/* Quando encostar no footer */
+.whatsapp-float.stop {
+  position: absolute;
 }
+
 
 /* ===== RESPONSIVO ===== */
 @media (max-width: 900px) {
@@ -406,4 +406,3 @@ body.sobre .cards-grid .box p {
     flex: 0 0 100%;
   }
 }
-
