@@ -2,13 +2,13 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nova Alvorada Serviços | Facilities e Terceirização</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Soluções completas em facilities e terceirização para condomínios, empresas e instituições em São Paulo.">
-  
+
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  
+
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -35,6 +35,7 @@
 </header>
 
 <main>
+  <!-- Seção de Destaques -->
   <section>
     <div class="box">
       <h2>Por que escolher a Nova Alvorada?</h2>
@@ -44,50 +45,55 @@
       </p>
     </div>
 
-    <div class="cards">
-      <div class="card">
-        <i class="fa-solid fa-door-open"></i>
-        <h3>Portaria e Controle de Acesso</h3>
-        <p>Controle de entrada, recepção e vigilância não armada.</p>
-      </div>
+    <!-- Cards de Serviços -->
+    <div class="box">
+      <div class="cards">
+        <div class="card">
+          <i class="fa-solid fa-door-open"></i>
+          <h3>Portaria e Controle de Acesso</h3>
+          <p>Controle de entrada, recepção e vigilância não armada.</p>
+        </div>
 
-      <div class="card">
-        <i class="fa-solid fa-broom"></i>
-        <h3>Limpeza e Conservação</h3>
-        <p>Limpeza técnica e conservação predial.</p>
-      </div>
+        <div class="card">
+          <i class="fa-solid fa-broom"></i>
+          <h3>Limpeza e Conservação</h3>
+          <p>Limpeza técnica e conservação predial.</p>
+        </div>
 
-      <div class="card">
-        <i class="fa-solid fa-tree"></i>
-        <h3>Zeladoria e Jardinagem</h3>
-        <p>Manutenção de áreas comuns e apoio operacional.</p>
-      </div>
+        <div class="card">
+          <i class="fa-solid fa-tree"></i>
+          <h3>Zeladoria e Jardinagem</h3>
+          <p>Manutenção de áreas comuns e apoio operacional.</p>
+        </div>
 
-      <div class="card">
-        <i class="fa-solid fa-headset"></i>
-        <h3>Recepção e Apoio Administrativo</h3>
-        <p>Atendimento profissional e suporte administrativo.</p>
-      </div>
+        <div class="card">
+          <i class="fa-solid fa-headset"></i>
+          <h3>Recepção e Apoio Administrativo</h3>
+          <p>Atendimento profissional e suporte administrativo.</p>
+        </div>
 
-      <div class="card">
-        <i class="fa-solid fa-gears"></i>
-        <h3>Apoio Operacional</h3>
-        <p>Equipes treinadas para rotinas essenciais.</p>
-      </div>
+        <div class="card">
+          <i class="fa-solid fa-gears"></i>
+          <h3>Apoio Operacional</h3>
+          <p>Equipes treinadas para rotinas essenciais.</p>
+        </div>
 
-      <div class="card">
-        <i class="fa-solid fa-building-circle-check"></i>
-        <h3>Gestão de Facilities</h3>
-        <p>Planejamento, supervisão e controle dos serviços.</p>
+        <div class="card">
+          <i class="fa-solid fa-building-circle-check"></i>
+          <h3>Gestão de Facilities</h3>
+          <p>Planejamento, supervisão e controle dos serviços.</p>
+        </div>
       </div>
     </div>
 
+    <!-- CTA Consultivo -->
     <div class="cta">
       <h2>Vamos conversar sobre a sua operação?</h2>
       <p>Cada estrutura tem suas particularidades. Entender seu cenário é o primeiro passo para oferecer uma solução eficiente, organizada e segura.</p>
       <a href="https://wa.me/5511921827683" target="_blank">Falar com a Nova Alvorada</a>
     </div>
 
+    <!-- Seção de Diferenciais -->
     <div class="box">
       <h2>Nossos Diferenciais</h2>
       <div class="cards-grid">
@@ -110,6 +116,7 @@
       </div>
     </div>
 
+    <!-- CTA Final -->
     <div class="cta-final">
       <h2>Pronto para profissionalizar sua operação?</h2>
       <p>Se você busca mais organização, redução de riscos e um parceiro confiável para cuidar da sua estrutura, o próximo passo é simples.</p>
@@ -125,16 +132,59 @@
   <p>contato@novaalvoradaservicos.com.br</p>
 
   <div class="footer-social">
-    <a href="https://www.instagram.com/novaalvoradaservicos" target="_blank" aria-label="Instagram Nova Alvorada Serviços">
+    <a
+      href="https://www.instagram.com/novaalvoradaservicos"
+      target="_blank"
+      aria-label="Instagram Nova Alvorada Serviços"
+    >
       <i class="fa-brands fa-instagram"></i>
       <span>novaalvoradaservicos</span>
     </a>
   </div>
 </footer>
 
+
 <a href="https://wa.me/5511921827683" target="_blank" class="whatsapp-float">
   Fale conosco
 </a>
 
+<!-- Animação Cards -->
+<script>
+  const cards = document.querySelectorAll('.card');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  cards.forEach(card => observer.observe(card));
+</script>
+
+<script>
+  const btn = document.querySelector('.whatsapp-float');
+  const footer = document.querySelector('footer');
+
+  const baseBottom = 25; // posição padrão
+  const gap = 20;        // distância entre botão e footer
+
+  function updateButtonPosition() {
+    const footerRect = footer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (footerRect.top < windowHeight) {
+      const overlap = windowHeight - footerRect.top + gap;
+      btn.style.bottom = `${overlap}px`;
+    } else {
+      btn.style.bottom = `${baseBottom}px`;
+    }
+  }
+
+  window.addEventListener('scroll', updateButtonPosition);
+  window.addEventListener('resize', updateButtonPosition);
+</script>
+  
 </body>
 </html>
