@@ -500,7 +500,8 @@ footer p {
   border: 3px solid var(--color-gold);
   box-shadow: var(--shadow-xl);
   z-index: 999;
-  transition: var(--transition);
+  /* Removido transition para evitar efeito elástico no scroll */
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   align-items: center;
   gap: 8px;
