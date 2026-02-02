@@ -1,168 +1,132 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11422616490"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'AW-11422616490');
 </script>
 
-<!-- Event snippet for Compra conversion page -->
-<script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-11422616490/_80ECNv42PkYEKqX3cYq',
-      'transaction_id': ''
-  });
-</script>
+<meta charset="UTF-8">
+<title>Contato | Nova Alvorada Serviços</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Entre em contato com a Nova Alvorada Serviços para soluções em facilities e terceirização.">
 
-  
-  
-  <meta charset="UTF-8">
-  <title>Contato | Nova Alvorada Serviços</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Entre em contato com a Nova Alvorada Serviços para soluções em facilities e terceirização.">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- CSS GLOBAL -->
-  <link rel="stylesheet" href="style.css">
+<style>
 
-  <!-- Ícones -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+section {
+  max-width: 680px;
+  margin: 70px auto;
+  padding: 0 20px;
+}
 
-  <style>
-    section {
-      max-width: 680px;
-      margin: 70px auto;
-      padding: 0 20px;
-    }
+.form-box {
+  background: #ffffff;
+  padding: 45px 40px;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+}
 
-    .form-box {
-      background: #ffffff;
-      padding: 45px 40px;
-      border-radius: 18px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.08);
-      animation: fadeUp 0.6s ease;
-    }
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 1.8em;
+}
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
+.form-group {
+  position: relative;
+  margin-bottom: 22px;
+}
 
-    .form-box h2 {
-      text-align: center;
-      color: #1f2a36;
-      margin-bottom: 35px;
-      font-size: 1.8em;
-      font-weight: 600;
-    }
+.form-group i {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  color: #a27613;
+}
 
-    .form-group {
-      position: relative;
-      margin-bottom: 22px;
-    }
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px 14px 42px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 0.95em;
+  outline: none;
+}
 
-    .form-group i {
-      position: absolute;
-      top: 50%;
-      left: 16px;
-      transform: translateY(-50%);
-      color: #a27613;
-      font-size: 0.95em;
-      pointer-events: none;
-    }
+.form-group textarea {
+  resize: vertical;
+}
 
-    /* CORREÇÃO CRÍTICA AQUI */
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 14px 16px 14px 42px;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      font-size: 0.95em;
-      outline: none;
-      background: transparent;
-      transition: all 0.25s ease;
-    }
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #a27613;
+  box-shadow: 0 0 0 4px rgba(162,118,19,0.15);
+}
 
-    .form-group textarea {
-      padding-top: 16px;
-      resize: vertical;
-    }
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 0.85em;
+  background: #fff;
+  padding: 0 6px;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
 
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: #a27613;
-      box-shadow: 0 0 0 4px rgba(162,118,19,0.15);
-    }
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -9px;
+  font-size: 0.75em;
+  color: #a27613;
+}
 
-    .form-group label {
-      position: absolute;
-      top: 50%;
-      left: 42px;
-      transform: translateY(-50%);
-      color: #999;
-      font-size: 0.85em;
-      pointer-events: none;
-      background: #fff;
-      padding: 0 6px;
-      transition: all 0.25s ease;
-    }
+button {
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  border: 2px solid #a27613;
+  background: #000;
+  color: #a27613;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    .form-group input:focus + label,
-    .form-group input:not(:placeholder-shown) + label,
-    .form-group textarea:focus + label,
-    .form-group textarea:not(:placeholder-shown) + label {
-      top: -9px;
-      font-size: 0.75em;
-      color: #a27613;
-    }
+button:hover {
+  background: #a27613;
+  color: #000;
+}
 
-    button {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 16px;
-      border-radius: 14px;
-      border: 2px solid #a27613;
-      background: #000;
-      color: #a27613;
-      font-size: 1em;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      margin-top: 10px;
-    }
+.success-message {
+  display: none;
+  text-align: center;
+  background: #e6f4ea;
+  color: #1e7e34;
+  padding: 22px;
+  border-radius: 14px;
+  margin-top: 30px;
+  font-weight: 600;
+}
 
-    button:hover {
-      background: #a27613;
-      color: #000;
-      transform: translateY(-2px);
-    }
+</style>
 
-    .success-message {
-      display: none;
-      text-align: center;
-      background: #e6f4ea;
-      color: #1e7e34;
-      padding: 22px;
-      border-radius: 14px;
-      margin-top: 30px;
-      font-weight: 600;
-    }
-
-    @media (max-width: 768px) {
-      .form-box {
-        padding: 35px 25px;
-      }
-    }
-  </style>
 </head>
 
 <body>
@@ -187,86 +151,100 @@
 </header>
 
 <section>
-  <div class="form-box">
 
-    <h2>Formulário de Contato</h2>
+<div class="form-box">
 
-    <form id="contact-form" action="https://formspree.io/f/mjggdoeq" method="POST">
+<h2>Formulário de Contato</h2>
 
-      <div class="form-group">
-        <i class="fa-solid fa-user"></i>
-        <input type="text" name="nome" placeholder=" " required>
-        <label>Seu nome</label>
-      </div>
+<form id="contact-form" action="https://formspree.io/f/mjggdoeq" method="POST">
 
-      <div class="form-group">
-        <i class="fa-solid fa-envelope"></i>
-        <input type="email" name="email" placeholder=" " required>
-        <label>Seu e-mail</label>
-      </div>
-
-      <div class="form-group">
-        <i class="fa-solid fa-phone"></i>
-        <input type="tel" name="telefone" placeholder=" " required>
-        <label>Seu telefone</label>
-      </div>
-
-      <div class="form-group">
-        <i class="fa-solid fa-message"></i>
-        <textarea name="mensagem" rows="4" placeholder=" " required></textarea>
-        <label>Sua mensagem</label>
-      </div>
-
-      <button type="submit">Enviar Mensagem</button>
-    </form>
-
-    <div class="success-message" id="success-message">
-      Mensagem enviada com sucesso. Em breve entraremos em contato.
-    </div>
-
+  <div class="form-group">
+    <i class="fa-solid fa-user"></i>
+    <input type="text" name="nome" placeholder=" " required>
+    <label>Seu nome</label>
   </div>
+
+  <div class="form-group">
+    <i class="fa-solid fa-envelope"></i>
+    <input type="email" name="email" placeholder=" " required>
+    <label>Seu e-mail</label>
+  </div>
+
+  <div class="form-group">
+    <i class="fa-solid fa-phone"></i>
+    <input type="tel" name="telefone" placeholder=" " required>
+    <label>Seu telefone</label>
+  </div>
+
+  <div class="form-group">
+    <i class="fa-solid fa-message"></i>
+    <textarea name="mensagem" rows="4" placeholder=" " required></textarea>
+    <label>Sua mensagem</label>
+  </div>
+
+  <button type="submit">Enviar Mensagem</button>
+
+</form>
+
+<div class="success-message" id="success-message">
+Mensagem enviada com sucesso. Em breve entraremos em contato.
+</div>
+
+</div>
+
 </section>
 
 <footer>
-  <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
-  <p>São Paulo – SP</p>
-  <p>contato@novaalvoradaservicos.com.br</p>
 
-  <div class="footer-social">
-    <a
-      href="https://www.instagram.com/novaalvoradaservicos"
-      target="_blank"
-      aria-label="Instagram Nova Alvorada Serviços"
-    >
-      <i class="fa-brands fa-instagram"></i>
-      <span>novaalvoradaservicos</span>
-    </a>
-  </div>
+<p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
+<p>São Paulo – SP</p>
+<p>contato@novaalvoradaservicos.com.br</p>
+
+<div class="footer-social">
+  <a href="https://www.instagram.com/novaalvoradaservicos" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+    <span>novaalvoradaservicos</span>
+  </a>
+</div>
+
 </footer>
 
-<!-- BOTÃO WHATSAPP OTIMIZADO -->
+
+<!-- BOTÃO WHATSAPP -->
 <a 
-  href="https://wa.me/5511921827683?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." 
-  target="_blank" 
-  class="whatsapp-float"
-  aria-label="Falar no WhatsApp"
->
-  <svg class="whatsapp-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16 0C7.164 0 0 7.164 0 16c0 2.824.738 5.48 2.028 7.78L.696 30.2l6.672-1.752A15.93 15.93 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0z" fill="#25D366"/>
-    <path d="M25.36 22.64c-.388 1.092-1.928 2-3.152 2.268-.836.18-1.928.324-5.604-1.204-4.708-1.956-7.748-6.704-7.984-7.016-.228-.312-1.892-2.516-1.892-4.8 0-2.284 1.196-3.404 1.62-3.868.424-.464.924-.58 1.232-.58.308 0 .616.004.884.016.284.012.664-.108.996.76.424.884 1.372 3.34 1.492 3.584.12.244.2.528.04.84-.16.312-.24.508-.476.784-.236.276-.496.616-.708.828-.236.236-.48.492-.208.964.272.472 1.212 1.996 2.6 3.232 1.788 1.592 3.292 2.088 3.76 2.32.468.232.74.196.996-.124.26-.32 1.088-1.272 1.376-1.712.288-.44.58-.368.98-.22.4.148 2.548 1.2 2.984 1.42.436.22.728.328.832.508.104.18.104 1.04-.284 2.132z" fill="#fff"/>
-  </svg>
-  <span class="whatsapp-text">Orçamento no WhatsApp</span>
+href="https://wa.me/5511921827683?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento."
+target="_blank"
+class="whatsapp-float">
+
+<svg class="whatsapp-icon" viewBox="0 0 32 32">
+<path fill="#25D366" d="M16 0C7.164 0 0 7.164 0 16c0 2.824.738 5.48 2.028 7.78L.696 30.2l6.672-1.752A15.93 15.93 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0z"/>
+<path fill="#fff" d="M25.36 22.64c-.388 1.092-1.928 2-3.152 2.268-.836.18-1.928.324-5.604-1.204-4.708-1.956-7.748-6.704-7.984-7.016-.228-.312-1.892-2.516-1.892-4.8 0-2.284 1.196-3.404 1.62-3.868.424-.464.924-.58 1.232-.58.308 0 .616.004.884.016.284.012.664-.108.996.76.424.884 1.372 3.34 1.492 3.584.12.244.2.528.04.84-.16.312-.24.508-.476.784-.236.276-.496.616-.708.828-.236.236-.48.492-.208.964.272.472 1.212 1.996 2.6 3.232 1.788 1.592 3.292 2.088 3.76 2.32.468.232.74.196.996-.124.26-.32 1.088-1.272 1.376-1.712.288-.44.58-.368.98-.22.4.148 2.548 1.2 2.984 1.42.436.22.728.328.832.508.104.18.104 1.04-.284 2.132z"/>
+</svg>
+
+<span>Orçamento no WhatsApp</span>
 </a>
 
+
+<!-- TRACKING CONVERSÃO FORM -->
 <script>
+
+function reportConversion() {
+  gtag('event', 'conversion', {
+    'send_to': 'AW-11422616490/_80ECNv42PkYEKqX3cYq'
+  });
+}
+
 const form = document.getElementById('contact-form');
-const successMessage = document.getElementById('success-message');
+const success = document.getElementById('success-message');
 
 form.addEventListener('submit', async (e) => {
+
   e.preventDefault();
+
   const data = new FormData(form);
 
   try {
+
     const response = await fetch(form.action, {
       method: form.method,
       body: data,
@@ -274,40 +252,23 @@ form.addEventListener('submit', async (e) => {
     });
 
     if (response.ok) {
+
+      reportConversion(); // ✅ CONVERSÃO AQUI
+
       form.style.display = 'none';
-      successMessage.style.display = 'block';
+      success.style.display = 'block';
+
     } else {
-      alert('Erro ao enviar. Tente novamente.');
+      alert('Erro ao enviar.');
     }
+
   } catch {
     alert('Erro de conexão.');
   }
+
 });
+
 </script>
 
-<script>
-  const btn = document.querySelector('.whatsapp-float');
-  const footer = document.querySelector('footer');
-
-  const baseBottom = 24; // Ajustado para 24px (mesmo do CSS)
-  const gap = 20;
-
-  function updateButtonPosition() {
-    const footerRect = footer.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
-
-    if (footerRect.top < windowHeight) {
-      const overlap = windowHeight - footerRect.top + gap;
-      btn.style.bottom = `${overlap}px`;
-    } else {
-      btn.style.bottom = `${baseBottom}px`;
-    }
-  }
-
-  window.addEventListener('scroll', updateButtonPosition);
-  window.addEventListener('resize', updateButtonPosition);
-</script>
-
-  
 </body>
 </html>
