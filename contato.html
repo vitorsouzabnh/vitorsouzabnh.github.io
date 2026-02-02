@@ -229,9 +229,14 @@ class="whatsapp-float">
 <script>
 
 function reportConversion() {
+
+  const leadId = 'lead_' + Date.now();
+
   gtag('event', 'conversion', {
-    'send_to': 'AW-11422616490/_80ECNv42PkYEKqX3cYq'
+    'send_to': 'AW-11422616490/_80ECNv42PkYEKqX3cYq',
+    'transaction_id': leadId
   });
+
 }
 
 const form = document.getElementById('contact-form');
@@ -253,7 +258,7 @@ form.addEventListener('submit', async (e) => {
 
     if (response.ok) {
 
-      reportConversion(); // ✅ CONVERSÃO AQUI
+      reportConversion();
 
       form.style.display = 'none';
       success.style.display = 'block';
