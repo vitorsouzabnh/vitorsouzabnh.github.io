@@ -553,3 +553,148 @@ button[type="submit"]:hover {
     padding: 35px 24px;
   }
 }
+/* ===== CORREÇÕES FINAIS PARA CONSISTÊNCIA ===== */
+
+/* GARANTIR QUE O BOTÃO WHATSAPP SEJA IDÊNTICO EM TODAS AS PÁGINAS */
+.whatsapp-float {
+  /* Reset para garantir consistência */
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 999;
+  
+  background: #25D366;
+  color: #ffffff;
+  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+  padding: 14px 24px;
+  border-radius: 50px;
+  
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  white-space: nowrap;
+  
+  box-shadow: 
+    0 4px 12px rgba(37, 211, 102, 0.4),
+    0 8px 24px rgba(0, 0, 0, 0.15);
+  
+  /* TRANSIÇÃO APENAS NAS PROPRIEDADES SEGURAS */
+  transition: 
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+  
+  /* ANIMAÇÃO DE PULSE SUAVE */
+  animation: whatsappPulse 2.5s ease-in-out infinite;
+}
+
+/* ANIMAÇÃO DE PULSE - IDÊNTICA EM TODAS AS PÁGINAS */
+@keyframes whatsappPulse {
+  0%, 100% {
+    box-shadow: 
+      0 4px 12px rgba(37, 211, 102, 0.4),
+      0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: 
+      0 4px 12px rgba(37, 211, 102, 0.6),
+      0 8px 24px rgba(37, 211, 102, 0.3),
+      0 0 0 8px rgba(37, 211, 102, 0.15);
+  }
+}
+
+/* HOVER - IDÊNTICO EM TODAS AS PÁGINAS */
+.whatsapp-float:hover {
+  background: #20BA5A;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 
+    0 6px 18px rgba(37, 211, 102, 0.5),
+    0 12px 32px rgba(0, 0, 0, 0.2);
+  animation-play-state: paused;
+}
+
+/* MOBILE COMPACTO - IDÊNTICO EM TODAS AS PÁGINAS */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    right: 16px;
+    bottom: 16px;
+    padding: 14px;
+    border-radius: 50%;
+    gap: 0;
+  }
+  
+  .whatsapp-text {
+    display: none;
+  }
+  
+  .whatsapp-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* FOOTER SOCIAL - GARANTIR CONSISTÊNCIA */
+.footer-social {
+  margin-top: 24px;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffffff;
+  transition: all 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.footer-social a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.footer-social i {
+  font-size: 2rem;
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ANIMAÇÃO CARDS CONSISTENTE */
+.card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.35s ease;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ANIMAÇÃO FADE-UP CONSISTENTE */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* AJUSTE FINE-TUNING PARA MOBILE */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    right: 20px;
+    bottom: 20px;
+  }
+}
