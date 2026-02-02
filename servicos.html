@@ -298,8 +298,18 @@
   </div>
 </footer>
 
-<a href="https://wa.me/5511921827683" target="_blank" class="whatsapp-float">
-  Fale conosco
+<!-- BOTÃO WHATSAPP OTIMIZADO -->
+<a 
+  href="https://wa.me/5511921827683?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." 
+  target="_blank" 
+  class="whatsapp-float"
+  aria-label="Falar no WhatsApp"
+>
+  <svg class="whatsapp-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 0C7.164 0 0 7.164 0 16c0 2.824.738 5.48 2.028 7.78L.696 30.2l6.672-1.752A15.93 15.93 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0z" fill="#25D366"/>
+    <path d="M25.36 22.64c-.388 1.092-1.928 2-3.152 2.268-.836.18-1.928.324-5.604-1.204-4.708-1.956-7.748-6.704-7.984-7.016-.228-.312-1.892-2.516-1.892-4.8 0-2.284 1.196-3.404 1.62-3.868.424-.464.924-.58 1.232-.58.308 0 .616.004.884.016.284.012.664-.108.996.76.424.884 1.372 3.34 1.492 3.584.12.244.2.528.04.84-.16.312-.24.508-.476.784-.236.276-.496.616-.708.828-.236.236-.48.492-.208.964.272.472 1.212 1.996 2.6 3.232 1.788 1.592 3.292 2.088 3.76 2.32.468.232.74.196.996-.124.26-.32 1.088-1.272 1.376-1.712.288-.44.58-.368.98-.22.4.148 2.548 1.2 2.984 1.42.436.22.728.328.832.508.104.18.104 1.04-.284 2.132z" fill="#fff"/>
+  </svg>
+  <span class="whatsapp-text">Orçamento no WhatsApp</span>
 </a>
 
 <script>
@@ -320,8 +330,8 @@
   const btn = document.querySelector('.whatsapp-float');
   const footer = document.querySelector('footer');
 
-  const baseBottom = 25; // posição padrão
-  const gap = 20;        // distância entre botão e footer
+  const baseBottom = 24; // Ajustado para 24px (mesmo do CSS)
+  const gap = 20;
 
   function updateButtonPosition() {
     const footerRect = footer.getBoundingClientRect();
