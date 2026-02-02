@@ -485,38 +485,90 @@ footer p {
   transform: translateY(-3px);
 }
 
-/* ===== BOTÃO WHATSAPP FIXO ===== */
+/* ===== BOTÃO WHATSAPP OTIMIZADO PARA CONVERSÃO ===== */
 .whatsapp-float {
   position: fixed;
-  right: 28px;
-  bottom: 28px;
-  background: var(--color-black);
-  color: var(--color-gold);
-  padding: 16px 32px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 999;
+  
+  /* Design WhatsApp oficial */
+  background: #25D366;
+  color: #ffffff;
+  
+  /* Layout flexível */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+  /* Espaçamento e formato */
+  padding: 14px 24px;
   border-radius: 50px;
+  
+  /* Tipografia */
   font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
-  border: 3px solid var(--color-gold);
-  box-shadow: var(--shadow-xl);
-  z-index: 999;
-  /* Removido transition para evitar efeito elástico no scroll */
-  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+  white-space: nowrap;
+  
+  /* Sombra profissional */
+  box-shadow: 
+    0 4px 12px rgba(37, 211, 102, 0.4),
+    0 8px 24px rgba(0, 0, 0, 0.15);
+  
+  /* Transições suaves (SEM transição no bottom para evitar efeito elástico) */
+  transition: 
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+  
+  /* Animação de pulse sutil */
+  animation: whatsappPulse 2.5s ease-in-out infinite;
 }
 
-.whatsapp-float::before {
-  content: '💬';
-  font-size: 1.2rem;
+/* Ícone do WhatsApp */
+.whatsapp-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
 }
 
+/* Texto do botão */
+.whatsapp-text {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* Hover - Efeito de destaque */
 .whatsapp-float:hover {
-  background: var(--gradient-gold);
-  color: var(--color-black);
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 16px 48px rgba(162, 118, 19, 0.5);
+  background: #20BA5A;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 
+    0 6px 18px rgba(37, 211, 102, 0.5),
+    0 12px 32px rgba(0, 0, 0, 0.2);
+  
+  /* Pausa a animação de pulse no hover */
+  animation-play-state: paused;
+}
+
+/* Active - Feedback tátil */
+.whatsapp-float:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+/* Animação de Pulse - Destaque sutil e não invasivo */
+@keyframes whatsappPulse {
+  0%, 100% {
+    box-shadow: 
+      0 4px 12px rgba(37, 211, 102, 0.4),
+      0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow: 
+      0 4px 12px rgba(37, 211, 102, 0.6),
+      0 8px 24px rgba(37, 211, 102, 0.3),
+      0 0 0 8px rgba(37, 211, 102, 0.15);
+  }
 }
 
 /* ===== PÁGINA SOBRE - CARDS GRID ===== */
@@ -775,10 +827,15 @@ button[type="submit"]:hover {
   }
   
   .whatsapp-float {
-    right: 16px;
-    bottom: 16px;
+    right: 20px;
+    bottom: 20px;
     padding: 12px 20px;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+  }
+  
+  .whatsapp-icon {
+    width: 26px;
+    height: 26px;
   }
   
   .form-box {
@@ -786,6 +843,7 @@ button[type="submit"]:hover {
   }
 }
 
+/* Mobile - Versão compacta com apenas ícone */
 @media (max-width: 480px) {
   .brand img {
     height: 60px;
@@ -801,5 +859,40 @@ button[type="submit"]:hover {
   
   .card i {
     font-size: 2rem;
+  }
+  
+  .whatsapp-float {
+    right: 16px;
+    bottom: 16px;
+    padding: 14px;
+    border-radius: 50%;
+    gap: 0;
+  }
+  
+  /* Esconde o texto em mobile */
+  .whatsapp-text {
+    display: none;
+  }
+  
+  .whatsapp-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* ===== ACESSIBILIDADE ===== */
+.whatsapp-float:focus {
+  outline: 3px solid rgba(37, 211, 102, 0.5);
+  outline-offset: 3px;
+}
+
+/* Para usuários que preferem movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float {
+    animation: none;
+  }
+  
+  .whatsapp-float:hover {
+    transform: none;
   }
 }
