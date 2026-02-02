@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11422616490"></script>
 <script>
@@ -11,119 +12,102 @@
   gtag('config', 'AW-11422616490');
 </script>
 
-<!-- Event snippet for Compra conversion page -->
-<script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-11422616490/_80ECNv42PkYEKqX3cYq',
-      'transaction_id': ''
-  });
-</script>
+<meta charset="UTF-8">
+<title>Sobre Nós | Nova Alvorada Serviços</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Conheça a Nova Alvorada Serviços, nossa forma de atuação, compromisso e diferenciais em facilities e terceirização.">
 
-  
-  
-  <meta charset="UTF-8">
-  <title>Sobre Nós | Nova Alvorada Serviços</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conheça a Nova Alvorada Serviços, nossa forma de atuação, compromisso e diferenciais em facilities e terceirização.">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
-  <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
 
-  <style>
-    /* ===============================
-       FADE-UP CONTROLADO
-    ================================ */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-    }
+.fade-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
-    .fade-up.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-    /* ===============================
-       GRID – COMO TRABALHAMOS
-    ================================ */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 24px;
-      margin-top: 35px;
-    }
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 35px;
+}
 
-    .cards-grid .box {
-      margin: 0;
-      transition: all 0.35s ease;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
-    }
+.cards-grid .box {
+  margin: 0;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
 
-    .cards-grid .box:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 14px 32px rgba(0,0,0,0.14);
-    }
+.cards-grid .box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.14);
+}
 
-    .cards-grid h3 {
-      color: #a27613;
-      margin-bottom: 10px;
-    }
+.cards-grid h3 {
+  color: #a27613;
+  margin-bottom: 10px;
+}
 
-    /* ===============================
-       BLOCO INSTITUCIONAL INSTAGRAM
-    ================================ */
-    .instagram-section {
-      background: #ffffff;
-      padding: 55px 25px;
-      margin-top: 80px;
-      border-radius: 14px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
+.instagram-section {
+  background: #ffffff;
+  padding: 55px 25px;
+  margin-top: 80px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
-    .instagram-section h2 {
-      margin-bottom: 15px;
-    }
+.instagram-section h2 {
+  margin-bottom: 15px;
+}
 
-    .instagram-section p {
-      max-width: 620px;
-      margin: 0 auto 28px;
-    }
+.instagram-section p {
+  max-width: 620px;
+  margin: 0 auto 28px;
+}
 
-    .instagram-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 600;
-      font-size: 1em;
-      text-decoration: none;
-      color: #1f2a36;
-      transition: all 0.3s ease;
-    }
+.instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 1em;
+  text-decoration: none;
+  color: #1f2a36;
+  transition: all 0.3s ease;
+}
 
-    .instagram-link i {
-      font-size: 1.8em;
-      background: linear-gradient(
-        45deg,
-        #f09433,
-        #e6683c,
-        #dc2743,
-        #cc2366,
-        #bc1888
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+.instagram-link i {
+  font-size: 1.8em;
+  background: linear-gradient(
+    45deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-    .instagram-link:hover {
-      transform: translateY(-2px);
-      opacity: 0.9;
-    }
-  </style>
+.instagram-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+</style>
 </head>
 
 <body class="sobre">
@@ -133,6 +117,7 @@
     <div class="brand">
       <img src="assets/logo.png" alt="Nova Alvorada Serviços">
     </div>
+
     <div>
       <a href="index.html">Início</a>
       <a href="sobre.html">Sobre</a>
@@ -152,6 +137,7 @@
 
   <div class="box fade-up">
     <h2>Quem Somos</h2>
+
     <p>
       A Nova Alvorada Serviços atua com soluções completas em facilities e terceirização,
       atendendo condomínios, empresas e instituições que buscam organização,
@@ -187,82 +173,167 @@
     </div>
   </div>
 
-  <!-- INSTAGRAM INSTITUCIONAL -->
   <div class="instagram-section fade-up">
+
     <h2>Nova Alvorada no Instagram</h2>
+
     <p>
       Compartilhamos bastidores da operação, rotina das equipes e conteúdos
       que reforçam nosso padrão de gestão e responsabilidade.
     </p>
 
-    <a href="https://www.instagram.com/SEU_USUARIO_AQUI" 
-       target="_blank" 
+    <a href="https://www.instagram.com/novaalvoradaservicos"
+       target="_blank"
        class="instagram-link">
+
       <i class="fa-brands fa-instagram"></i>
       Acompanhe nosso Instagram
+
     </a>
+
   </div>
 
 </section>
 </main>
 
 <footer>
+
   <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
   <p>São Paulo – SP</p>
   <p>contato@novaalvoradaservicos.com.br</p>
+
 </footer>
 
-<!-- BOTÃO WHATSAPP OTIMIZADO -->
+
+<!-- BOTÃO WHATSAPP -->
 <a 
   href="https://wa.me/5511921827683?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." 
   target="_blank" 
   class="whatsapp-float"
   aria-label="Falar no WhatsApp"
 >
-  <svg class="whatsapp-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16 0C7.164 0 0 7.164 0 16c0 2.824.738 5.48 2.028 7.78L.696 30.2l6.672-1.752A15.93 15.93 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0z" fill="#25D366"/>
-    <path d="M25.36 22.64c-.388 1.092-1.928 2-3.152 2.268-.836.18-1.928.324-5.604-1.204-4.708-1.956-7.748-6.704-7.984-7.016-.228-.312-1.892-2.516-1.892-4.8 0-2.284 1.196-3.404 1.62-3.868.424-.464.924-.58 1.232-.58.308 0 .616.004.884.016.284.012.664-.108.996.76.424.884 1.372 3.34 1.492 3.584.12.244.2.528.04.84-.16.312-.24.508-.476.784-.236.276-.496.616-.708.828-.236.236-.48.492-.208.964.272.472 1.212 1.996 2.6 3.232 1.788 1.592 3.292 2.088 3.76 2.32.468.232.74.196.996-.124.26-.32 1.088-1.272 1.376-1.712.288-.44.58-.368.98-.22.4.148 2.548 1.2 2.984 1.42.436.22.728.328.832.508.104.18.104 1.04-.284 2.132z" fill="#fff"/>
-  </svg>
-  <span class="whatsapp-text">Orçamento no WhatsApp</span>
+
+<svg class="whatsapp-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16 0C7.164 0 0 7.164 0 16c0 2.824.738 5.48 2.028 7.78L.696 30.2l6.672-1.752A15.93 15.93 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0z" fill="#25D366"/>
+<path d="M25.36 22.64c-.388 1.092-1.928 2-3.152 2.268-.836.18-1.928.324-5.604-1.204-4.708-1.956-7.748-6.704-7.984-7.016-.228-.312-1.892-2.516-1.892-4.8 0-2.284 1.196-3.404 1.62-3.868.424-.464.924-.58 1.232-.58.308 0 .616.004.884.016.284.012.664-.108.996.76.424.884 1.372 3.34 1.492 3.584.12.244.2.528.04.84-.16.312-.24.508-.476.784-.236.276-.496.616-.708.828-.236.236-.48.492-.208.964.272.472 1.212 1.996 2.6 3.232 1.788 1.592 3.292 2.088 3.76 2.32.468.232.74.196.996-.124.26-.32 1.088-1.272 1.376-1.712.288-.44.58-.368.98-.22.4.148 2.548 1.2 2.984 1.42.436.22.728.328.832.508.104.18.104 1.04-.284 2.132z" fill="#fff"/>
+</svg>
+
+<span class="whatsapp-text">Orçamento no WhatsApp</span>
+
 </a>
 
+
+<!-- FUNÇÃO CONVERSÃO -->
 <script>
-  const elements = document.querySelectorAll('.fade-up');
+function gtag_report_conversion(url) {
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      }
-    });
-  }, { threshold: 0.15 });
+  var callback = function () {
+    if (typeof(url) !== 'undefined') {
+      window.open(url, '_blank');
+    }
+  };
 
-  elements.forEach(el => observer.observe(el));
+  gtag('event', 'conversion', {
+    'send_to': 'AW-11422616490/AJyJCPSMpvEbEKqX3cYq',
+    'event_callback': callback
+  });
+
+  return false;
+}
 </script>
 
+
+<!-- INTEGRAÇÃO WHATSAPP -->
 <script>
-  const btn = document.querySelector('.whatsapp-float');
-  const footer = document.querySelector('footer');
+(function(){
 
-  const baseBottom = 24; // Ajustado para 24px (mesmo do CSS)
-  const gap = 20;
+  function initTracking(){
 
-  function updateButtonPosition() {
-    const footerRect = footer.getBoundingClientRect();
-    const windowHeight = window.innerHeight;
+    const btn = document.querySelector('.whatsapp-float');
 
-    if (footerRect.top < windowHeight) {
-      const overlap = windowHeight - footerRect.top + gap;
-      btn.style.bottom = `${overlap}px`;
-    } else {
-      btn.style.bottom = `${baseBottom}px`;
+    if(!btn){
+      console.warn('Botão WhatsApp não encontrado');
+      return;
     }
+
+    const url = btn.getAttribute('href');
+
+    btn.removeAttribute('href');
+
+    btn.addEventListener('click', function(e){
+
+      e.preventDefault();
+
+      gtag_report_conversion(url);
+
+      setTimeout(function(){
+        window.open(url, '_blank');
+      }, 1000);
+
+    });
+
   }
 
-  window.addEventListener('scroll', updateButtonPosition);
-  window.addEventListener('resize', updateButtonPosition);
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initTracking);
+  } else {
+    initTracking();
+  }
+
+})();
 </script>
 
-  
+
+<!-- ANIMAÇÃO -->
+<script>
+
+const elements = document.querySelectorAll('.fade-up');
+
+const observer = new IntersectionObserver(entries => {
+
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+
+},{ threshold: 0.15 });
+
+elements.forEach(el => observer.observe(el));
+
+</script>
+
+
+<!-- POSIÇÃO BOTÃO -->
+<script>
+
+const btn = document.querySelector('.whatsapp-float');
+const footer = document.querySelector('footer');
+
+const baseBottom = 24;
+const gap = 20;
+
+function updateButtonPosition(){
+
+  const footerRect = footer.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  if (footerRect.top < windowHeight) {
+
+    const overlap = windowHeight - footerRect.top + gap;
+    btn.style.bottom = `${overlap}px`;
+
+  } else {
+
+    btn.style.bottom = `${baseBottom}px`;
+
+  }
+}
+
+window.addEventListener('scroll', updateButtonPosition);
+window.addEventListener('resize', updateButtonPosition);
+
+</script>
+
 </body>
 </html>
