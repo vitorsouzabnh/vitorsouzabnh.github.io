@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<!-- Google tag (gtag.js) - SÓ UMA VEZ NO HEAD -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11422616490"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -119,7 +119,7 @@ Mensagem enviada com sucesso. Em breve entraremos em contato.
   </div>
 </footer>
 
-<!-- BOTÃO WHATSAPP PADRÃO -->
+<!-- CORREÇÃO: BOTÃO WHATSAPP IDÊNTICO ÀS OUTRAS PÁGINAS -->
 <a href="https://wa.me/5511921827683?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." 
    target="_blank" 
    class="whatsapp-float"
@@ -132,58 +132,63 @@ Mensagem enviada com sucesso. Em breve entraremos em contato.
   <span class="whatsapp-text">Orçamento no WhatsApp</span>
 </a>
 
-<!-- SCRIPT UNIFICADO -->
+<!-- CORREÇÃO: SCRIPT IDÊNTICO ÀS OUTRAS PÁGINAS -->
 <script>
+// POSICIONAMENTO ESTÁVEL DO BOTÃO WHATSAPP (MESMO CÓDIGO DAS OUTRAS PÁGINAS)
 document.addEventListener('DOMContentLoaded', function() {
-  // POSICIONAMENTO ESTÁVEL DO BOTÃO WHATSAPP
   const btn = document.getElementById('whatsapp-button');
   const footer = document.querySelector('footer');
   const baseBottom = 24;
   const gap = 20;
   let rafId = null;
   
-  if (btn && footer) {
-    function updateButtonPosition() {
-      const footerRect = footer.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      
-      // SEM transição no bottom - posicionamento instantâneo
-      if (footerRect.top < windowHeight) {
-        const overlap = windowHeight - footerRect.top + gap;
-        btn.style.bottom = `${overlap}px`;
-      } else {
-        btn.style.bottom = `${baseBottom}px`;
+  if (!btn || !footer) return;
+  
+  function updateButtonPosition() {
+    const footerRect = footer.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    
+    // SEM transição no bottom - posicionamento instantâneo
+    if (footerRect.top < windowHeight) {
+      const overlap = windowHeight - footerRect.top + gap;
+      btn.style.bottom = `${overlap}px`;
+    } else {
+      btn.style.bottom = `${baseBottom}px`;
+    }
+    
+    rafId = null;
+  }
+  
+  // Otimizado com requestAnimationFrame
+  function handleScrollResize() {
+    if (rafId) return;
+    rafId = requestAnimationFrame(updateButtonPosition);
+  }
+  
+  // Configurar tracking do WhatsApp
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const url = this.href;
+    
+    // Google Ads Conversion Tracking
+    gtag('event', 'conversion', {
+      'send_to': 'AW-11422616490/AJyJCPSMpvEbEKqX3cYq',
+      'value': 1.0,
+      'currency': 'BRL',
+      'event_callback': function() {
+        window.open(url, '_blank');
       }
-      
-      rafId = null;
-    }
-    
-    function handleScrollResize() {
-      if (rafId) return;
-      rafId = requestAnimationFrame(updateButtonPosition);
-    }
-    
-    // Tracking do WhatsApp
-    btn.addEventListener('click', function(e) {
-      e.preventDefault();
-      const url = this.href;
-      
-      gtag('event', 'conversion', {
-        'send_to': 'AW-11422616490/AJyJCPSMpvEbEKqX3cYq',
-        'value': 1.0,
-        'currency': 'BRL',
-        'event_callback': function() {
-          window.open(url, '_blank');
-        }
-      });
-      
-      return false;
     });
     
-    updateButtonPosition();
-    window.addEventListener('scroll', handleScrollResize, { passive: true });
-    window.addEventListener('resize', handleScrollResize, { passive: true });
-  }
+    return false;
+  });
+  
+  // Inicializar posição
+  updateButtonPosition();
+  
+  // Event listeners otimizados
+  window.addEventListener('scroll', handleScrollResize, { passive: true });
+  window.addEventListener('resize', handleScrollResize, { passive: true });
   
   // FORMULÁRIO COM TRACKING COMPLETO
   const form = document.getElementById('contact-form');
