@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<title>Trabalhe Conosco | Nova Alvorada Serviços – Vagas em São Paulo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Venha trabalhar na Nova Alvorada Serviços. Buscamos profissionais para portaria, limpeza, zeladoria, recepção e apoio operacional em São Paulo e região. Envie seu currículo.">
+<meta name="keywords" content="vagas de emprego São Paulo, porteiro, zelador, limpeza, recepcionista, facilities, terceirização, emprego SP, trabalhe conosco">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Trabalhe Conosco – Nova Alvorada Serviços">
+<meta property="og:description" content="Oportunidades de trabalho em portaria, limpeza, zeladoria e mais. Faça parte da nossa equipe em São Paulo.">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ===== HERO ESPECÍFICO PARA CANDIDATOS ===== */
+.hero-rh {
+  background: linear-gradient(135deg,
+    rgba(0, 0, 0, 0.97) 0%,
+    rgba(31, 42, 54, 0.95) 100%
+  );
+  color: #ffffff;
+  padding: 90px 24px 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-rh::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 130%, rgba(162,118,19,0.18) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.hero-rh .badge {
+  display: inline-block;
+  background: rgba(162,118,19,0.15);
+  border: 1px solid rgba(162,118,19,0.4);
+  color: #d4a124;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 18px;
+  border-radius: 50px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.6s ease both;
+}
+
+.hero-rh h1 {
+  color: #a27613;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  margin-bottom: 18px;
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease 0.1s both;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+.hero-rh p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 680px;
+  margin: 0 auto;
+  opacity: 0.92;
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 0.8s ease 0.2s both;
+  line-height: 1.7;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== ÁREAS / VAGAS ===== */
+.areas-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 80px 24px 0;
+}
+
+.areas-section h2 {
+  color: #000;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 700;
+  margin-bottom: 16px;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.areas-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(135deg, #a27613 0%, #d4a124 100%);
+  border-radius: 2px;
+}
+
+.areas-section > p {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 40px;
+  max-width: 680px;
+  line-height: 1.7;
+}
+
+.vagas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+.vaga-card {
+  background: #fff;
+  border: 1px solid rgba(162,118,19,0.12);
+  border-radius: 16px;
+  padding: 36px 28px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  opacity: 0;
+  transform: translateY(28px);
+  position: relative;
+  overflow: hidden;
+}
+
+.vaga-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(135deg, #a27613, #d4a124);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.vaga-card:hover::before {
+  transform: scaleX(1);
+}
+
+.vaga-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.vaga-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  border-color: #a27613;
+}
+
+.vaga-card i {
+  font-size: 2.2rem;
+  color: #a27613;
+  margin-bottom: 18px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.vaga-card:hover i {
+  transform: scale(1.1) rotate(4deg);
+}
+
+.vaga-card h3 {
+  color: #a27613;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.vaga-card p {
+  color: #2a2a2a;
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+/* ===== DIFERENCIAIS DE SER COLABORADOR ===== */
+.beneficios-section {
+  background: linear-gradient(135deg, #000000 0%, #1f2a36 100%);
+  padding: 70px 24px;
+  margin: 40px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.beneficios-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 160%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(162,118,19,0.12) 0%, transparent 65%);
+  animation: pulse 9s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.08); opacity: 0.5; }
+}
+
+.beneficios-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.beneficios-inner h2 {
+  color: #a27613;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.beneficios-inner h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(135deg, #a27613, #d4a124);
+  border-radius: 2px;
+}
+
+.beneficios-inner > p {
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 40px;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+.beneficio-item {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(162,118,19,0.2);
+  border-radius: 14px;
+  padding: 28px 24px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.beneficio-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.beneficio-item:hover {
+  background: rgba(162,118,19,0.1);
+  border-color: #a27613;
+  transform: translateY(-4px);
+}
+
+.beneficio-item i {
+  font-size: 1.6rem;
+  color: #a27613;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.beneficio-item h3 {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.beneficio-item p {
+  color: rgba(255,255,255,0.75);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* ===== FORMULÁRIO ===== */
+.form-section {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 80px 24px 100px;
+}
+
+.form-section h2 {
+  color: #000;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 700;
+  margin-bottom: 10px;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.form-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(135deg, #a27613, #d4a124);
+  border-radius: 2px;
+}
+
+.form-section > p {
+  color: #555;
+  font-size: 0.97rem;
+  margin: 16px 0 36px;
+  line-height: 1.7;
+}
+
+.form-box-rh {
+  background: #fff;
+  padding: 50px 44px;
+  border-radius: 18px;
+  box-shadow: 0 12px 38px rgba(0,0,0,0.09);
+  border: 1px solid rgba(162,118,19,0.12);
+  animation: fadeInUp 0.7s ease 0.1s both;
+}
+
+.form-group-rh {
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.form-group-rh i {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  color: #a27613;
+  font-size: 0.95rem;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.form-group-rh.textarea-group i {
+  top: 22px;
+  transform: none;
+}
+
+.form-group-rh input,
+.form-group-rh select,
+.form-group-rh textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 16px 15px 46px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 0.93rem;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  background: #fff;
+  transition: all 0.3s ease;
+  color: #2a2a2a;
+  appearance: none;
+}
+
+.form-group-rh textarea {
+  padding-top: 15px;
+  resize: vertical;
+  min-height: 110px;
+}
+
+.form-group-rh input:focus,
+.form-group-rh select:focus,
+.form-group-rh textarea:focus {
+  border-color: #a27613;
+  box-shadow: 0 0 0 4px rgba(162,118,19,0.14);
+}
+
+.form-group-rh label {
+  position: absolute;
+  top: 50%;
+  left: 46px;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 0.88rem;
+  pointer-events: none;
+  background: #fff;
+  padding: 0 6px;
+  transition: all 0.25s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.form-group-rh.textarea-group label {
+  top: 17px;
+  transform: none;
+}
+
+.form-group-rh input:focus + label,
+.form-group-rh input:not(:placeholder-shown) + label,
+.form-group-rh select:focus + label,
+.form-group-rh select.has-value + label,
+.form-group-rh textarea:focus + label,
+.form-group-rh textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 0.73rem;
+  color: #a27613;
+  font-weight: 600;
+}
+
+.form-group-rh.textarea-group input:focus + label,
+.form-group-rh.textarea-group textarea:focus + label,
+.form-group-rh.textarea-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  transform: none;
+}
+
+/* Select estilizado */
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: '\f078';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a27613;
+  pointer-events: none;
+  font-size: 0.8rem;
+}
+
+.form-group-rh select {
+  cursor: pointer;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.submit-btn-rh {
+  width: 100%;
+  padding: 18px;
+  border-radius: 12px;
+  border: 3px solid #a27613;
+  background: #000;
+  color: #a27613;
+  font-size: 1.05rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 8px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+  letter-spacing: 0.3px;
+}
+
+.submit-btn-rh:hover {
+  background: linear-gradient(135deg, #a27613, #d4a124);
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(162,118,19,0.35);
+}
+
+.success-box {
+  display: none;
+  text-align: center;
+  background: linear-gradient(135deg, #e6f4ea 0%, #d4edda 100%);
+  color: #1e7e34;
+  padding: 30px 24px;
+  border-radius: 14px;
+  margin-top: 28px;
+  font-weight: 600;
+  border: 2px solid #28a745;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.success-box i {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ===== NOTA SEPARADORA ===== */
+.nav-separator {
+  background: rgba(162,118,19,0.06);
+  border-top: 1px solid rgba(162,118,19,0.15);
+  padding: 14px 24px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #777;
+}
+
+.nav-separator a {
+  color: #a27613;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-separator a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .form-box-rh {
+    padding: 32px 22px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .vagas-grid,
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .beneficios-section {
+    padding: 55px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-rh {
+    padding: 70px 20px 60px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAV SIMPLIFICADA: apenas logo, sem links internos do site principal -->
+<nav>
+  <div class="container">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Nova Alvorada Serviços">
+    </div>
+    <div style="color: rgba(255,255,255,0.6); font-size: 0.88rem; font-weight: 500;">
+      Recursos Humanos &amp; Oportunidades
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero-rh">
+  <div class="badge">Oportunidades de Trabalho</div>
+  <h1>Faça Parte da Nossa Equipe</h1>
+  <p>
+    A Nova Alvorada Serviços está sempre em busca de pessoas comprometidas, 
+    responsáveis e com vontade de crescer. Se você quer trabalhar em uma empresa 
+    séria e organizada em São Paulo, envie seu cadastro.
+  </p>
+</div>
+
+<!-- ÁREAS COM VAGAS -->
+<div class="areas-section">
+  <h2>Áreas em que Atuamos</h2>
+  <p>Recrutamos para diferentes funções em condomínios, empresas e instituições na Grande São Paulo. Veja as áreas abaixo e candidate-se.</p>
+
+  <div class="vagas-grid">
+
+    <div class="vaga-card">
+      <i class="fa-solid fa-door-open"></i>
+      <h3>Porteiro / Controlador de Acesso</h3>
+      <p>Controle de entrada e saída, atendimento ao visitante e vigilância não armada em condomínios e empresas.</p>
+    </div>
+
+    <div class="vaga-card">
+      <i class="fa-solid fa-broom"></i>
+      <h3>Auxiliar de Limpeza e Conservação</h3>
+      <p>Limpeza e conservação de ambientes corporativos, condominiais e institucionais com padrão técnico.</p>
+    </div>
+
+    <div class="vaga-card">
+      <i class="fa-solid fa-tree"></i>
+      <h3>Zelador / Jardineiro</h3>
+      <p>Manutenção de áreas comuns, jardins e apoio operacional geral nas unidades atendidas.</p>
+    </div>
+
+    <div class="vaga-card">
+      <i class="fa-solid fa-headset"></i>
+      <h3>Recepcionista / Apoio Administrativo</h3>
+      <p>Atendimento presencial, suporte às equipes e rotinas administrativas em empresas e condomínios.</p>
+    </div>
+
+    <div class="vaga-card">
+      <i class="fa-solid fa-gears"></i>
+      <h3>Auxiliar Operacional</h3>
+      <p>Apoio em rotinas essenciais do dia a dia, com treinamento e acompanhamento desde o início.</p>
+    </div>
+
+    <div class="vaga-card">
+      <i class="fa-solid fa-star"></i>
+      <h3>Outras Funções</h3>
+      <p>Não encontrou a área exata? Envie seu currículo mesmo assim — analisamos todos os perfis recebidos.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- BENEFÍCIOS / DIFERENCIAIS -->
+<div class="beneficios-section">
+  <div class="beneficios-inner">
+    <h2>Por que trabalhar na Nova Alvorada?</h2>
+    <p>Somos uma empresa que cuida das pessoas que compõem nossa equipe, com gestão próxima e processos claros desde o primeiro dia.</p>
+
+    <div class="beneficios-grid">
+
+      <div class="beneficio-item">
+        <i class="fa-solid fa-file-contract"></i>
+        <h3>Registro em Carteira</h3>
+        <p>Contratação com todos os direitos trabalhistas garantidos e conformidade legal.</p>
+      </div>
+
+      <div class="beneficio-item">
+        <i class="fa-solid fa-chalkboard-user"></i>
+        <h3>Treinamento e Integração</h3>
+        <p>Orientação completa antes de iniciar, para que você saiba exatamente o que fazer.</p>
+      </div>
+
+      <div class="beneficio-item">
+        <i class="fa-solid fa-people-group"></i>
+        <h3>Ambiente Organizado</h3>
+        <p>Equipes acompanhadas de perto por supervisores presentes e acessíveis.</p>
+      </div>
+
+      <div class="beneficio-item">
+        <i class="fa-solid fa-arrow-trend-up"></i>
+        <h3>Possibilidade de Crescimento</h3>
+        <p>Valorizamos quem se dedica. Bons profissionais têm espaço para evoluir conosco.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FORMULÁRIO DE CANDIDATURA -->
+<div class="form-section">
+
+  <h2>Envie seu Cadastro</h2>
+  <p>Preencha o formulário abaixo e nossa equipe de RH entrará em contato. Não é necessário ter experiência em todas as áreas — avaliamos cada perfil individualmente.</p>
+
+  <div class="form-box-rh">
+
+    <form id="rh-form" action="https://formspree.io/f/mjggdoeq" method="POST">
+
+      <!-- Campo oculto para identificar origem RH -->
+      <input type="hidden" name="_subject" value="Novo cadastro – Trabalhe Conosco">
+      <input type="hidden" name="destinatario" value="adm@novaalvoradaservicos.com.br">
+      <input type="hidden" name="_replyto" value="adm@novaalvoradaservicos.com.br">
+
+      <div class="form-row">
+        <div class="form-group-rh">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" name="nome" placeholder=" " required>
+          <label>Nome completo</label>
+        </div>
+
+        <div class="form-group-rh">
+          <i class="fa-solid fa-phone"></i>
+          <input type="tel" name="telefone" placeholder=" " required>
+          <label>Telefone / WhatsApp</label>
+        </div>
+      </div>
+
+      <div class="form-group-rh">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" name="email" placeholder=" " required>
+        <label>Seu e-mail</label>
+      </div>
+
+      <div class="form-group-rh">
+        <i class="fa-solid fa-location-dot"></i>
+        <input type="text" name="bairro_cidade" placeholder=" " required>
+        <label>Bairro e cidade onde mora</label>
+      </div>
+
+      <div class="form-group-rh">
+        <i class="fa-solid fa-briefcase"></i>
+        <div class="select-wrapper">
+          <select name="area_interesse" id="area_interesse" required>
+            <option value="" disabled selected></option>
+            <option value="Portaria / Controle de Acesso">Portaria / Controle de Acesso</option>
+            <option value="Limpeza e Conservação">Limpeza e Conservação</option>
+            <option value="Zeladoria / Jardinagem">Zeladoria / Jardinagem</option>
+            <option value="Recepção / Apoio Administrativo">Recepção / Apoio Administrativo</option>
+            <option value="Apoio Operacional">Apoio Operacional</option>
+            <option value="Outra área">Outra área</option>
+          </select>
+        </div>
+        <label for="area_interesse">Área de interesse</label>
+      </div>
+
+      <div class="form-group-rh textarea-group">
+        <i class="fa-solid fa-comment-dots"></i>
+        <textarea name="experiencia" rows="4" placeholder=" "></textarea>
+        <label>Conte brevemente sua experiência (opcional)</label>
+      </div>
+
+      <button type="submit" class="submit-btn-rh">
+        <i class="fa-solid fa-paper-plane" style="margin-right: 8px;"></i>
+        Enviar Candidatura
+      </button>
+
+    </form>
+
+    <div class="success-box" id="success-box">
+      <i class="fa-solid fa-circle-check"></i>
+      Cadastro recebido com sucesso!<br>
+      <span style="font-weight: 400; font-size: 0.93rem;">Nossa equipe de RH vai analisar seu perfil e entrar em contato em breve.</span>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER SIMPLIFICADO -->
+<footer>
+  <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
+  <p>São Paulo – SP · <a href="mailto:adm@novaalvoradaservicos.com.br" style="color: #a27613; text-decoration: none;">adm@novaalvoradaservicos.com.br</a></p>
+  <div class="footer-social" style="margin-top: 18px;">
+    <a href="https://www.instagram.com/novaalvoradaservicos" target="_blank" aria-label="Instagram Nova Alvorada Serviços">
+      <i class="fa-brands fa-instagram"></i>
+      <span>novaalvoradaservicos</span>
+    </a>
+  </div>
+  <p style="margin-top: 20px; font-size: 0.78rem; opacity: 0.5;">
+    <a href="index.html" style="color: rgba(255,255,255,0.5); text-decoration: none;">Voltar ao site institucional</a>
+  </p>
+</footer>
+
+<!-- ANIMAÇÃO CARDS -->
+<script>
+const animItems = document.querySelectorAll('.vaga-card, .beneficio-item');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.15 });
+animItems.forEach(el => observer.observe(el));
+</script>
+
+<!-- SELECT: marcar como preenchido para float label -->
+<script>
+const selectEl = document.getElementById('area_interesse');
+selectEl.addEventListener('change', function() {
+  if (this.value) {
+    this.classList.add('has-value');
+  } else {
+    this.classList.remove('has-value');
+  }
+});
+</script>
+
+<!-- ENVIO DO FORMULÁRIO -->
+<script>
+const rhForm = document.getElementById('rh-form');
+const successBox = document.getElementById('success-box');
+
+rhForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const data = new FormData(rhForm);
+
+  // Adiciona o email de destino como campo oculto de fato
+  data.append('_to', 'adm@novaalvoradaservicos.com.br');
+
+  try {
+    const response = await fetch('https://formspree.io/f/mjggdoeq', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      rhForm.style.display = 'none';
+      successBox.style.display = 'block';
+      window.scrollTo({ top: successBox.offsetTop - 80, behavior: 'smooth' });
+    } else {
+      alert('Erro ao enviar. Por favor, tente novamente.');
+    }
+  } catch {
+    alert('Erro de conexão. Verifique sua internet e tente novamente.');
+  }
+});
+</script>
+
+</body>
+</html>
