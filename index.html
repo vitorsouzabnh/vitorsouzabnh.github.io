@@ -31,13 +31,28 @@
     <div class="brand">
       <img src="assets/logo.png" alt="Nova Alvorada Serviços">
     </div>
-    <div>
+    <!-- Links desktop -->
+    <div class="nav-links">
       <a href="index.html" style="color: #a27613;">Início</a>
       <a href="sobre.html">Sobre</a>
       <a href="servicos.html">Serviços</a>
       <a href="contato.html">Contato</a>
       <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
     </div>
+    <!-- Botão sanduíche mobile -->
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <!-- Menu mobile -->
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html" style="color: #a27613;">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="contato.html">Contato</a>
+    <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
   </div>
 </nav>
 
@@ -64,31 +79,26 @@
       <h3>Portaria e Controle de Acesso</h3>
       <p>Controle de entrada, recepção e vigilância não armada.</p>
     </div>
-
     <div class="card">
       <i class="fa-solid fa-broom"></i>
       <h3>Limpeza e Conservação</h3>
       <p>Limpeza técnica e conservação predial.</p>
     </div>
-
     <div class="card">
       <i class="fa-solid fa-tree"></i>
       <h3>Zeladoria e Jardinagem</h3>
       <p>Manutenção de áreas comuns e apoio operacional.</p>
     </div>
-
     <div class="card">
       <i class="fa-solid fa-headset"></i>
       <h3>Recepção e Apoio Administrativo</h3>
       <p>Atendimento profissional e suporte administrativo.</p>
     </div>
-
     <div class="card">
       <i class="fa-solid fa-gears"></i>
       <h3>Apoio Operacional</h3>
       <p>Equipes treinadas para rotinas essenciais.</p>
     </div>
-
     <div class="card">
       <i class="fa-solid fa-building-circle-check"></i>
       <h3>Gestão de Facilities</h3>
@@ -100,7 +110,7 @@
 <div class="cta">
   <h2>Vamos conversar sobre a sua operação?</h2>
   <p>Cada estrutura tem suas particularidades. Entender seu cenário é o primeiro passo para oferecer uma solução eficiente, organizada e segura.</p>
- <a href="https://wa.me/5511921827683?text=Olá!%20Sou%20responsável%20por%20uma%20empresa%20ou%20condomínio%20e%20quero%20orçamento%20de%20terceirização." target="_blank">Falar com a Nova Alvorada</a>
+  <a href="https://wa.me/5511921827683?text=Olá!%20Sou%20responsável%20por%20uma%20empresa%20ou%20condomínio%20e%20quero%20orçamento%20de%20terceirização." target="_blank">Falar com a Nova Alvorada</a>
 </div>
 
 <div class="box">
@@ -138,7 +148,6 @@
   <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
   <p>São Paulo – SP</p>
   <p>contato@novaalvoradaservicos.com.br</p>
-
   <div class="footer-social">
     <a href="https://www.instagram.com/novaalvoradaservicos" target="_blank" aria-label="Instagram Nova Alvorada Serviços">
       <i class="fa-brands fa-instagram"></i>
@@ -161,14 +170,34 @@
   <span class="whatsapp-text">Orçamento no WhatsApp</span>
 </a>
 
+<!-- MENU SANDUÍCHE -->
+<script>
+(function () {
+  const toggle = document.getElementById('navToggle');
+  const menu   = document.getElementById('navMobile');
+
+  toggle.addEventListener('click', function () {
+    const isOpen = menu.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  menu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      menu.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
+
 <!-- ANIMAÇÃO CARDS -->
 <script>
 const cards = document.querySelectorAll('.card');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
+    if (entry.isIntersecting) entry.target.classList.add('show');
   });
 }, { threshold: 0.2 });
 cards.forEach(card => observer.observe(card));
@@ -178,9 +207,7 @@ cards.forEach(card => observer.observe(card));
 <script>
 function gtag_report_conversion(url) {
   var callback = function () {
-    if (typeof(url) !== 'undefined') {
-      window.open(url, '_blank');
-    }
+    if (typeof(url) !== 'undefined') window.open(url, '_blank');
   };
   gtag('event', 'conversion', {
     'send_to': 'AW-11422616490/AJyJCPSMpvEbEKqX3cYq',
@@ -196,20 +223,15 @@ function gtag_report_conversion(url) {
   function initWhatsAppTracking() {
     const whatsappBtn = document.querySelector('.whatsapp-float');
     if (!whatsappBtn) return;
-    
     const whatsappUrl = whatsappBtn.getAttribute('href');
     whatsappBtn.removeAttribute('href');
-    
     whatsappBtn.addEventListener('click', function(e) {
       e.preventDefault();
       gtag_report_conversion(whatsappUrl);
-      setTimeout(function() {
-        window.open(whatsappUrl, '_blank');
-      }, 1000);
+      setTimeout(function() { window.open(whatsappUrl, '_blank'); }, 1000);
       return false;
     });
   }
-  
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initWhatsAppTracking);
   } else {
@@ -218,7 +240,7 @@ function gtag_report_conversion(url) {
 })();
 </script>
 
-<!-- AJUSTE POSIÇÃO BOTÃO (SEM TRANSIÇÃO NO BOTTOM) -->
+<!-- AJUSTE POSIÇÃO BOTÃO -->
 <script>
 const btn = document.querySelector('.whatsapp-float');
 const footer = document.querySelector('footer');
@@ -228,10 +250,8 @@ const gap = 20;
 function updateButtonPosition() {
   const footerRect = footer.getBoundingClientRect();
   const windowHeight = window.innerHeight;
-  
   if (footerRect.top < windowHeight) {
-    const overlap = windowHeight - footerRect.top + gap;
-    btn.style.bottom = `${overlap}px`;
+    btn.style.bottom = `${windowHeight - footerRect.top + gap}px`;
   } else {
     btn.style.bottom = `${baseBottom}px`;
   }
