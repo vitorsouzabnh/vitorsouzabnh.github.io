@@ -29,7 +29,6 @@
   gap: 25px;
   margin-top: 40px;
 }
-
 .card {
   background: #ffffff;
   padding: 35px 30px;
@@ -39,36 +38,11 @@
   opacity: 0;
   transform: translateY(25px);
 }
-
-.card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 35px rgba(0,0,0,0.12);
-}
-
-.card i {
-  font-size: 1.6em;
-  color: #a27613;
-  margin-bottom: 18px;
-  display: block;
-}
-
-.card h3 {
-  color: #a27613;
-  margin-bottom: 15px;
-  font-size: 1.15em;
-}
-
-.card p {
-  font-size: 0.95em;
-  line-height: 1.7;
-  color: #2a2a2a;
-}
-
+.card.show { opacity: 1; transform: translateY(0); }
+.card:hover { transform: translateY(-6px); box-shadow: 0 14px 35px rgba(0,0,0,0.12); }
+.card i { font-size: 1.6em; color: #a27613; margin-bottom: 18px; display: block; }
+.card h3 { color: #a27613; margin-bottom: 15px; font-size: 1.15em; }
+.card p { font-size: 0.95em; line-height: 1.7; color: #2a2a2a; }
 .cta {
   background: linear-gradient(135deg, #000000, #1f2a36);
   color: #ffffff;
@@ -78,20 +52,8 @@
   margin: 70px 0;
   box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
-
-.cta h2 {
-  color: #a27613;
-  margin-bottom: 20px;
-  font-size: 1.8em;
-}
-
-.cta p {
-  max-width: 720px;
-  margin: 0 auto 30px;
-  line-height: 1.7;
-  font-size: 1.05em;
-}
-
+.cta h2 { color: #a27613; margin-bottom: 20px; font-size: 1.8em; }
+.cta p { max-width: 720px; margin: 0 auto 30px; line-height: 1.7; font-size: 1.05em; }
 .cta a {
   display: inline-block;
   background-color: #a27613;
@@ -102,13 +64,7 @@
   text-decoration: none;
   transition: all 0.3s ease;
 }
-
-.cta a:hover {
-  background-color: #ffffff;
-  color: #000;
-  transform: scale(1.05);
-}
-
+.cta a:hover { background-color: #ffffff; color: #000; transform: scale(1.05); }
 .cta-final {
   background-color: #ffffff;
   border: 2px solid #a27613;
@@ -118,21 +74,8 @@
   margin-top: 90px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
-
-.cta-final h2 {
-  color: #1f2a36;
-  font-size: 1.9em;
-  margin-bottom: 20px;
-}
-
-.cta-final p {
-  max-width: 760px;
-  margin: 0 auto 35px;
-  font-size: 1.05em;
-  line-height: 1.7;
-  color: #2a2a2a;
-}
-
+.cta-final h2 { color: #1f2a36; font-size: 1.9em; margin-bottom: 20px; }
+.cta-final p { max-width: 760px; margin: 0 auto 35px; font-size: 1.05em; line-height: 1.7; color: #2a2a2a; }
 .cta-final a {
   display: inline-block;
   background-color: #000;
@@ -144,22 +87,10 @@
   border: 2px solid #a27613;
   transition: all 0.3s ease;
 }
-
-.cta-final a:hover {
-  background-color: #a27613;
-  color: #000;
-  transform: translateY(-3px);
-}
-
+.cta-final a:hover { background-color: #a27613; color: #000; transform: translateY(-3px); }
 @media (max-width: 900px) {
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .cta h2,
-  .cta-final h2 {
-    font-size: 1.5em;
-  }
+  .cards { grid-template-columns: 1fr; }
+  .cta h2, .cta-final h2 { font-size: 1.5em; }
 }
 </style>
 
@@ -172,13 +103,28 @@
     <div class="brand">
       <img src="assets/logo.png" alt="Nova Alvorada Serviços">
     </div>
-    <div>
+    <!-- Links desktop -->
+    <div class="nav-links">
       <a href="index.html">Início</a>
       <a href="sobre.html">Sobre</a>
       <a href="servicos.html" style="color: #a27613;">Serviços</a>
       <a href="contato.html">Contato</a>
       <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
     </div>
+    <!-- Botão sanduíche mobile -->
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <!-- Menu mobile -->
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="servicos.html" style="color: #a27613;">Serviços</a>
+    <a href="contato.html">Contato</a>
+    <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
   </div>
 </nav>
 
@@ -214,43 +160,36 @@
 
   <div class="box">
     <div class="cards">
-
       <div class="card">
         <i class="fa-solid fa-door-open"></i>
         <h3>Portaria e Controle de Acesso</h3>
         <p>Controle de entrada, recepção e vigilância não armada.</p>
       </div>
-
       <div class="card">
         <i class="fa-solid fa-broom"></i>
         <h3>Limpeza e Conservação</h3>
         <p>Limpeza técnica e conservação predial.</p>
       </div>
-
       <div class="card">
         <i class="fa-solid fa-tree"></i>
         <h3>Zeladoria e Jardinagem</h3>
         <p>Manutenção de áreas comuns e apoio operacional.</p>
       </div>
-
       <div class="card">
         <i class="fa-solid fa-headset"></i>
         <h3>Recepção e Apoio Administrativo</h3>
         <p>Atendimento profissional e suporte administrativo.</p>
       </div>
-
       <div class="card">
         <i class="fa-solid fa-gears"></i>
         <h3>Apoio Operacional</h3>
         <p>Equipes treinadas para rotinas essenciais.</p>
       </div>
-
       <div class="card">
         <i class="fa-solid fa-building-circle-check"></i>
         <h3>Gestão de Facilities</h3>
         <p>Planejamento, supervisão e controle dos serviços.</p>
       </div>
-
     </div>
   </div>
 
@@ -260,9 +199,7 @@
       Se você busca mais organização, redução de riscos e um parceiro confiável
       para cuidar da sua estrutura, o próximo passo é simples.
     </p>
-    <a href="contato.html">
-      Solicitar contato
-    </a>
+    <a href="contato.html">Solicitar contato</a>
   </div>
 
 </section>
@@ -271,7 +208,6 @@
   <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
   <p>São Paulo – SP</p>
   <p>contato@novaalvoradaservicos.com.br</p>
-
   <div class="footer-social">
     <a href="https://www.instagram.com/novaalvoradaservicos" target="_blank" aria-label="Instagram Nova Alvorada Serviços">
       <i class="fa-brands fa-instagram"></i>
@@ -294,14 +230,34 @@
   <span class="whatsapp-text">Orçamento no WhatsApp</span>
 </a>
 
+<!-- MENU SANDUÍCHE -->
+<script>
+(function () {
+  const toggle = document.getElementById('navToggle');
+  const menu   = document.getElementById('navMobile');
+
+  toggle.addEventListener('click', function () {
+    const isOpen = menu.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  menu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      menu.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
+
 <!-- ANIMAÇÃO CARDS -->
 <script>
 const cards = document.querySelectorAll('.card');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
+    if (entry.isIntersecting) entry.target.classList.add('show');
   });
 }, { threshold: 0.2 });
 cards.forEach(card => observer.observe(card));
@@ -311,9 +267,7 @@ cards.forEach(card => observer.observe(card));
 <script>
 function gtag_report_conversion(url) {
   var callback = function () {
-    if (typeof(url) !== 'undefined') {
-      window.open(url, '_blank');
-    }
+    if (typeof(url) !== 'undefined') window.open(url, '_blank');
   };
   gtag('event', 'conversion', {
     'send_to': 'AW-11422616490/AJyJCPSMpvEbEKqX3cYq',
@@ -329,20 +283,15 @@ function gtag_report_conversion(url) {
   function initWhatsAppTracking() {
     const whatsappBtn = document.querySelector('.whatsapp-float');
     if (!whatsappBtn) return;
-    
     const whatsappUrl = whatsappBtn.getAttribute('href');
     whatsappBtn.removeAttribute('href');
-    
     whatsappBtn.addEventListener('click', function(e) {
       e.preventDefault();
       gtag_report_conversion(whatsappUrl);
-      setTimeout(function() {
-        window.open(whatsappUrl, '_blank');
-      }, 1000);
+      setTimeout(function() { window.open(whatsappUrl, '_blank'); }, 1000);
       return false;
     });
   }
-  
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initWhatsAppTracking);
   } else {
@@ -351,7 +300,7 @@ function gtag_report_conversion(url) {
 })();
 </script>
 
-<!-- AJUSTE POSIÇÃO BOTÃO (SEM TRANSIÇÃO NO BOTTOM) -->
+<!-- AJUSTE POSIÇÃO BOTÃO -->
 <script>
 const btn = document.querySelector('.whatsapp-float');
 const footer = document.querySelector('footer');
@@ -361,10 +310,8 @@ const gap = 20;
 function updateButtonPosition() {
   const footerRect = footer.getBoundingClientRect();
   const windowHeight = window.innerHeight;
-  
   if (footerRect.top < windowHeight) {
-    const overlap = windowHeight - footerRect.top + gap;
-    btn.style.bottom = `${overlap}px`;
+    btn.style.bottom = `${windowHeight - footerRect.top + gap}px`;
   } else {
     btn.style.bottom = `${baseBottom}px`;
   }
