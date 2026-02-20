@@ -28,25 +28,14 @@ section {
   margin: 70px auto;
   padding: 0 20px;
 }
-
 .form-box {
   background: #ffffff;
   padding: 45px 40px;
   border-radius: 18px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.08);
 }
-
-.form-box h2 {
-  text-align: center;
-  margin-bottom: 35px;
-  font-size: 1.8em;
-}
-
-.form-group {
-  position: relative;
-  margin-bottom: 22px;
-}
-
+.form-box h2 { text-align: center; margin-bottom: 35px; font-size: 1.8em; }
+.form-group { position: relative; margin-bottom: 22px; }
 .form-group i {
   position: absolute;
   top: 50%;
@@ -54,7 +43,6 @@ section {
   transform: translateY(-50%);
   color: #a27613;
 }
-
 .form-group input,
 .form-group textarea {
   width: 100%;
@@ -64,17 +52,12 @@ section {
   font-size: 0.95em;
   outline: none;
 }
-
-.form-group textarea {
-  resize: vertical;
-}
-
+.form-group textarea { resize: vertical; }
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: #a27613;
   box-shadow: 0 0 0 4px rgba(162,118,19,0.15);
 }
-
 .form-group label {
   position: absolute;
   top: 50%;
@@ -87,7 +70,6 @@ section {
   pointer-events: none;
   transition: all 0.25s ease;
 }
-
 .form-group input:focus + label,
 .form-group input:not(:placeholder-shown) + label,
 .form-group textarea:focus + label,
@@ -96,7 +78,6 @@ section {
   font-size: 0.75em;
   color: #a27613;
 }
-
 button {
   width: 100%;
   padding: 16px;
@@ -107,12 +88,7 @@ button {
   font-weight: bold;
   cursor: pointer;
 }
-
-button:hover {
-  background: #a27613;
-  color: #000;
-}
-
+button:hover { background: #a27613; color: #000; }
 .success-message {
   display: none;
   text-align: center;
@@ -134,13 +110,28 @@ button:hover {
     <div class="brand">
       <img src="assets/logo.png" alt="Nova Alvorada Serviços">
     </div>
-    <div>
+    <!-- Links desktop -->
+    <div class="nav-links">
       <a href="index.html">Início</a>
       <a href="sobre.html">Sobre</a>
       <a href="servicos.html">Serviços</a>
       <a href="contato.html" style="color: #a27613;">Contato</a>
       <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
     </div>
+    <!-- Botão sanduíche mobile -->
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <!-- Menu mobile -->
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="contato.html" style="color: #a27613;">Contato</a>
+    <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
   </div>
 </nav>
 
@@ -197,7 +188,6 @@ Mensagem enviada com sucesso. Em breve entraremos em contato.
   <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
   <p>São Paulo – SP</p>
   <p>contato@novaalvoradaservicos.com.br</p>
-
   <div class="footer-social">
     <a href="https://www.instagram.com/novaalvoradaservicos" target="_blank" aria-label="Instagram Nova Alvorada Serviços">
       <i class="fa-brands fa-instagram"></i>
@@ -220,6 +210,28 @@ Mensagem enviada com sucesso. Em breve entraremos em contato.
   <span class="whatsapp-text">Orçamento no WhatsApp</span>
 </a>
 
+<!-- MENU SANDUÍCHE -->
+<script>
+(function () {
+  const toggle = document.getElementById('navToggle');
+  const menu   = document.getElementById('navMobile');
+
+  toggle.addEventListener('click', function () {
+    const isOpen = menu.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  menu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      menu.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
+
 <!-- TRACKING CONVERSÃO FORMULÁRIO -->
 <script>
 function reportFormConversion() {
@@ -236,14 +248,12 @@ const success = document.getElementById('success-message');
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const data = new FormData(form);
-
   try {
     const response = await fetch(form.action, {
       method: form.method,
       body: data,
       headers: { 'Accept': 'application/json' }
     });
-
     if (response.ok) {
       reportFormConversion();
       form.style.display = 'none';
@@ -261,9 +271,7 @@ form.addEventListener('submit', async (e) => {
 <script>
 function gtag_report_conversion(url) {
   var callback = function () {
-    if (typeof(url) !== 'undefined') {
-      window.open(url, '_blank');
-    }
+    if (typeof(url) !== 'undefined') window.open(url, '_blank');
   };
   gtag('event', 'conversion', {
     'send_to': 'AW-11422616490/AJyJCPSMpvEbEKqX3cYq',
@@ -279,20 +287,15 @@ function gtag_report_conversion(url) {
   function initWhatsAppTracking() {
     const whatsappBtn = document.querySelector('.whatsapp-float');
     if (!whatsappBtn) return;
-    
     const whatsappUrl = whatsappBtn.getAttribute('href');
     whatsappBtn.removeAttribute('href');
-    
     whatsappBtn.addEventListener('click', function(e) {
       e.preventDefault();
       gtag_report_conversion(whatsappUrl);
-      setTimeout(function() {
-        window.open(whatsappUrl, '_blank');
-      }, 1000);
+      setTimeout(function() { window.open(whatsappUrl, '_blank'); }, 1000);
       return false;
     });
   }
-  
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initWhatsAppTracking);
   } else {
@@ -301,7 +304,7 @@ function gtag_report_conversion(url) {
 })();
 </script>
 
-<!-- AJUSTE POSIÇÃO BOTÃO (SEM TRANSIÇÃO NO BOTTOM) -->
+<!-- AJUSTE POSIÇÃO BOTÃO -->
 <script>
 const btn = document.querySelector('.whatsapp-float');
 const footer = document.querySelector('footer');
@@ -311,10 +314,8 @@ const gap = 20;
 function updateButtonPosition() {
   const footerRect = footer.getBoundingClientRect();
   const windowHeight = window.innerHeight;
-  
   if (footerRect.top < windowHeight) {
-    const overlap = windowHeight - footerRect.top + gap;
-    btn.style.bottom = `${overlap}px`;
+    btn.style.bottom = `${windowHeight - footerRect.top + gap}px`;
   } else {
     btn.style.bottom = `${baseBottom}px`;
   }
