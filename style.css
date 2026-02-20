@@ -83,6 +83,7 @@ nav .container {
   align-items: center;
   transition: var(--transition);
   box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
 }
 
 .brand:hover {
@@ -95,7 +96,14 @@ nav .container {
   display: block;
 }
 
-nav a {
+/* ===== LINKS DESKTOP ===== */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-links a {
   color: var(--color-white);
   text-decoration: none;
   font-weight: 600;
@@ -104,10 +112,9 @@ nav a {
   border-radius: 8px;
   transition: var(--transition);
   position: relative;
-  margin-left: 4px;
 }
 
-nav a::after {
+.nav-links a::after {
   content: '';
   position: absolute;
   bottom: 4px;
@@ -119,13 +126,97 @@ nav a::after {
   transition: transform 0.3s ease;
 }
 
-nav a:hover {
+.nav-links a:hover {
   color: var(--color-gold);
   background: rgba(162, 118, 19, 0.1);
 }
 
-nav a:hover::after {
+.nav-links a:hover::after {
   transform: translateX(-50%) scaleX(1);
+}
+
+/* ===== BOTÃO SANDUÍCHE (oculto no desktop) ===== */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 2px solid rgba(162, 118, 19, 0.5);
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 8px;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+
+.nav-toggle:hover {
+  border-color: var(--color-gold);
+  background: rgba(162, 118, 19, 0.1);
+}
+
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-gold);
+  border-radius: 2px;
+  transition: transform 0.35s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+
+/* Animação do X ao abrir */
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ===== MENU MOBILE DROPDOWN ===== */
+.nav-mobile {
+  display: none;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.97);
+  border-top: 1px solid rgba(162, 118, 19, 0.2);
+  padding: 12px 0 20px;
+  animation: menuFadeIn 0.25s ease;
+}
+
+@keyframes menuFadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.nav-mobile.open {
+  display: flex;
+}
+
+.nav-mobile a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-bottom: 1px solid rgba(162, 118, 19, 0.08);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-mobile a:last-child {
+  border-bottom: none;
+}
+
+.nav-mobile a:hover,
+.nav-mobile a:active {
+  background: rgba(162, 118, 19, 0.1);
+  color: var(--color-gold);
 }
 
 /* ===== HEADER HERO ===== */
@@ -491,72 +582,51 @@ footer p {
   right: 24px;
   bottom: 24px;
   z-index: 999;
-  
-  /* Design WhatsApp oficial */
   background: #25D366;
   color: #ffffff;
-  
-  /* Layout flexível */
   display: flex;
   align-items: center;
   gap: 10px;
-  
-  /* Espaçamento e formato */
   padding: 14px 24px;
   border-radius: 50px;
-  
-  /* Tipografia */
   font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
   white-space: nowrap;
-  
-  /* Sombra profissional */
   box-shadow: 
     0 4px 12px rgba(37, 211, 102, 0.4),
     0 8px 24px rgba(0, 0, 0, 0.15);
-  
-  /* Transições suaves (SEM transição no bottom para evitar efeito elástico) */
   transition: 
     transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.3s ease,
     background 0.3s ease;
-  
-  /* Animação de pulse sutil */
   animation: whatsappPulse 2.5s ease-in-out infinite;
 }
 
-/* Ícone do WhatsApp */
 .whatsapp-icon {
   width: 28px;
   height: 28px;
   flex-shrink: 0;
 }
 
-/* Texto do botão */
 .whatsapp-text {
   font-weight: 700;
   letter-spacing: 0.3px;
 }
 
-/* Hover - Efeito de destaque */
 .whatsapp-float:hover {
   background: #20BA5A;
   transform: translateY(-4px) scale(1.03);
   box-shadow: 
     0 6px 18px rgba(37, 211, 102, 0.5),
     0 12px 32px rgba(0, 0, 0, 0.2);
-  
-  /* Pausa a animação de pulse no hover */
   animation-play-state: paused;
 }
 
-/* Active - Feedback tátil */
 .whatsapp-float:active {
   transform: translateY(-2px) scale(0.98);
 }
 
-/* Animação de Pulse - Destaque sutil e não invasivo */
 @keyframes whatsappPulse {
   0%, 100% {
     box-shadow: 
@@ -776,7 +846,7 @@ button[type="submit"]:hover {
   box-shadow: var(--shadow-sm);
 }
 
-/* ===== RESPONSIVIDADE ===== */
+/* ===== RESPONSIVIDADE DESKTOP ===== */
 @media (max-width: 1024px) {
   .cards {
     grid-template-columns: repeat(2, 1fr);
@@ -787,80 +857,89 @@ button[type="submit"]:hover {
   }
 }
 
+/* ===== RESPONSIVIDADE MOBILE ===== */
 @media (max-width: 768px) {
-  nav .container {
-    flex-direction: column;
-    gap: 16px;
+
+  /* Mostra o botão sanduíche */
+  .nav-toggle {
+    display: flex;
   }
-  
-  nav .brand img {
+
+  /* Oculta os links inline */
+  .nav-links {
+    display: none;
+  }
+
+  /* Ajusta a nav para não empilhar mais */
+  nav .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brand img {
     height: 70px;
   }
-  
-  nav a {
-    font-size: 0.85rem;
-    padding: 6px 12px;
-    margin-left: 2px;
-  }
-  
+
   header {
     padding: 60px 20px;
   }
-  
+
   section {
     padding: 60px 20px;
   }
-  
+
   .box {
     padding: 32px 24px;
   }
-  
+
   .cards,
   .cards-grid,
   body.sobre .cards-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .cta,
   .cta-final {
     padding: 50px 24px;
   }
-  
+
   .whatsapp-float {
     right: 20px;
     bottom: 20px;
     padding: 12px 20px;
     font-size: 0.9rem;
   }
-  
+
   .whatsapp-icon {
     width: 26px;
     height: 26px;
   }
-  
+
   .form-box {
     padding: 35px 24px;
   }
 }
 
-/* Mobile - Versão compacta com apenas ícone */
+/* ===== MOBILE COMPACTO ===== */
 @media (max-width: 480px) {
   .brand img {
     height: 60px;
   }
-  
+
   h2 {
     font-size: 1.5rem;
   }
-  
+
   .card {
     padding: 28px 20px;
   }
-  
+
   .card i {
     font-size: 2rem;
   }
-  
+
   .whatsapp-float {
     right: 16px;
     bottom: 16px;
@@ -868,12 +947,11 @@ button[type="submit"]:hover {
     border-radius: 50%;
     gap: 0;
   }
-  
-  /* Esconde o texto em mobile */
+
   .whatsapp-text {
     display: none;
   }
-  
+
   .whatsapp-icon {
     width: 32px;
     height: 32px;
@@ -886,12 +964,11 @@ button[type="submit"]:hover {
   outline-offset: 3px;
 }
 
-/* Para usuários que preferem movimento reduzido */
 @media (prefers-reduced-motion: reduce) {
   .whatsapp-float {
     animation: none;
   }
-  
+
   .whatsapp-float:hover {
     transform: none;
   }
