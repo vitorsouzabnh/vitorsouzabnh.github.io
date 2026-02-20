@@ -28,35 +28,29 @@
   transform: translateY(22px);
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
-
 .fade-up.show {
   opacity: 1;
   transform: translateY(0);
 }
-
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 24px;
   margin-top: 35px;
 }
-
 .cards-grid .box {
   margin: 0;
   transition: all 0.35s ease;
   box-shadow: 0 8px 22px rgba(0,0,0,0.08);
 }
-
 .cards-grid .box:hover {
   transform: translateY(-6px);
   box-shadow: 0 14px 32px rgba(0,0,0,0.14);
 }
-
 .cards-grid h3 {
   color: #a27613;
   margin-bottom: 10px;
 }
-
 .instagram-section {
   background: #ffffff;
   padding: 55px 25px;
@@ -65,16 +59,8 @@
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
-
-.instagram-section h2 {
-  margin-bottom: 15px;
-}
-
-.instagram-section p {
-  max-width: 620px;
-  margin: 0 auto 28px;
-}
-
+.instagram-section h2 { margin-bottom: 15px; }
+.instagram-section p { max-width: 620px; margin: 0 auto 28px; }
 .instagram-link {
   display: inline-flex;
   align-items: center;
@@ -85,18 +71,13 @@
   color: #1f2a36;
   transition: all 0.3s ease;
 }
-
 .instagram-link i {
   font-size: 1.8em;
   background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-.instagram-link:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-}
+.instagram-link:hover { transform: translateY(-2px); opacity: 0.9; }
 </style>
 
 </head>
@@ -108,13 +89,28 @@
     <div class="brand">
       <img src="assets/logo.png" alt="Nova Alvorada Serviços">
     </div>
-    <div>
+    <!-- Links desktop -->
+    <div class="nav-links">
       <a href="index.html">Início</a>
       <a href="sobre.html" style="color: #a27613;">Sobre</a>
       <a href="servicos.html">Serviços</a>
       <a href="contato.html">Contato</a>
       <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
     </div>
+    <!-- Botão sanduíche mobile -->
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <!-- Menu mobile -->
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html">Início</a>
+    <a href="sobre.html" style="color: #a27613;">Sobre</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="contato.html">Contato</a>
+    <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
   </div>
 </nav>
 
@@ -137,23 +133,19 @@
 
   <div class="box fade-up">
     <h2>Como Trabalhamos</h2>
-
     <div class="cards-grid">
       <div class="box fade-up">
         <h3>Gestão Próxima</h3>
         <p>Acompanhamento constante das operações e presença ativa.</p>
       </div>
-
       <div class="box fade-up">
         <h3>Processos Claros</h3>
         <p>Definições objetivas e alinhamento desde o início.</p>
       </div>
-
       <div class="box fade-up">
         <h3>Pessoas Preparadas</h3>
         <p>Equipes treinadas e acompanhadas.</p>
       </div>
-
       <div class="box fade-up">
         <h3>Responsabilidade Legal</h3>
         <p>Conformidade trabalhista e operacional.</p>
@@ -196,14 +188,34 @@
   <span class="whatsapp-text">Orçamento no WhatsApp</span>
 </a>
 
+<!-- MENU SANDUÍCHE -->
+<script>
+(function () {
+  const toggle = document.getElementById('navToggle');
+  const menu   = document.getElementById('navMobile');
+
+  toggle.addEventListener('click', function () {
+    const isOpen = menu.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  menu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      menu.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
+
 <!-- ANIMAÇÃO FADE-UP -->
 <script>
 const elements = document.querySelectorAll('.fade-up');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
+    if (entry.isIntersecting) entry.target.classList.add('show');
   });
 }, { threshold: 0.15 });
 elements.forEach(el => observer.observe(el));
@@ -213,9 +225,7 @@ elements.forEach(el => observer.observe(el));
 <script>
 function gtag_report_conversion(url) {
   var callback = function () {
-    if (typeof(url) !== 'undefined') {
-      window.open(url, '_blank');
-    }
+    if (typeof(url) !== 'undefined') window.open(url, '_blank');
   };
   gtag('event', 'conversion', {
     'send_to': 'AW-11422616490/AJyJCPSMpvEbEKqX3cYq',
@@ -231,20 +241,15 @@ function gtag_report_conversion(url) {
   function initWhatsAppTracking() {
     const whatsappBtn = document.querySelector('.whatsapp-float');
     if (!whatsappBtn) return;
-    
     const whatsappUrl = whatsappBtn.getAttribute('href');
     whatsappBtn.removeAttribute('href');
-    
     whatsappBtn.addEventListener('click', function(e) {
       e.preventDefault();
       gtag_report_conversion(whatsappUrl);
-      setTimeout(function() {
-        window.open(whatsappUrl, '_blank');
-      }, 1000);
+      setTimeout(function() { window.open(whatsappUrl, '_blank'); }, 1000);
       return false;
     });
   }
-  
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initWhatsAppTracking);
   } else {
@@ -253,7 +258,7 @@ function gtag_report_conversion(url) {
 })();
 </script>
 
-<!-- AJUSTE POSIÇÃO BOTÃO (SEM TRANSIÇÃO NO BOTTOM) -->
+<!-- AJUSTE POSIÇÃO BOTÃO -->
 <script>
 const btn = document.querySelector('.whatsapp-float');
 const footer = document.querySelector('footer');
@@ -263,10 +268,8 @@ const gap = 20;
 function updateButtonPosition() {
   const footerRect = footer.getBoundingClientRect();
   const windowHeight = window.innerHeight;
-  
   if (footerRect.top < windowHeight) {
-    const overlap = windowHeight - footerRect.top + gap;
-    btn.style.bottom = `${overlap}px`;
+    btn.style.bottom = `${windowHeight - footerRect.top + gap}px`;
   } else {
     btn.style.bottom = `${baseBottom}px`;
   }
