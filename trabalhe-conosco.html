@@ -34,7 +34,6 @@
   position: relative;
   overflow: hidden;
 }
-
 .hero-rh::before {
   content: '';
   position: absolute;
@@ -42,7 +41,6 @@
   background: radial-gradient(ellipse at 50% 130%, rgba(162,118,19,0.18) 0%, transparent 65%);
   pointer-events: none;
 }
-
 .hero-rh .badge {
   display: inline-block;
   background: rgba(162,118,19,0.15);
@@ -59,7 +57,6 @@
   z-index: 1;
   animation: fadeInUp 0.6s ease both;
 }
-
 .hero-rh h1 {
   color: #a27613;
   font-size: clamp(2rem, 5vw, 3.2rem);
@@ -71,7 +68,6 @@
   animation: fadeInUp 0.8s ease 0.1s both;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
 }
-
 .hero-rh p {
   font-size: clamp(1rem, 2vw, 1.2rem);
   max-width: 680px;
@@ -82,7 +78,6 @@
   animation: fadeInUp 0.8s ease 0.2s both;
   line-height: 1.7;
 }
-
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(28px); }
   to { opacity: 1; transform: translateY(0); }
@@ -94,7 +89,6 @@
   margin: 0 auto;
   padding: 80px 24px 0;
 }
-
 .areas-section h2 {
   color: #000;
   font-size: clamp(1.6rem, 3vw, 2.1rem);
@@ -103,7 +97,6 @@
   position: relative;
   padding-bottom: 16px;
 }
-
 .areas-section h2::after {
   content: '';
   position: absolute;
@@ -114,7 +107,6 @@
   background: linear-gradient(135deg, #a27613 0%, #d4a124 100%);
   border-radius: 2px;
 }
-
 .areas-section > p {
   color: #444;
   font-size: 1rem;
@@ -122,14 +114,12 @@
   max-width: 680px;
   line-height: 1.7;
 }
-
 .vagas-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   margin-bottom: 60px;
 }
-
 .vaga-card {
   background: #fff;
   border: 1px solid rgba(162,118,19,0.12);
@@ -142,7 +132,6 @@
   position: relative;
   overflow: hidden;
 }
-
 .vaga-card::before {
   content: '';
   position: absolute;
@@ -155,22 +144,13 @@
   transform-origin: left;
   transition: transform 0.4s ease;
 }
-
-.vaga-card:hover::before {
-  transform: scaleX(1);
-}
-
-.vaga-card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+.vaga-card:hover::before { transform: scaleX(1); }
+.vaga-card.show { opacity: 1; transform: translateY(0); }
 .vaga-card:hover {
   transform: translateY(-7px);
   box-shadow: 0 16px 40px rgba(0,0,0,0.12);
   border-color: #a27613;
 }
-
 .vaga-card i {
   font-size: 2.2rem;
   color: #a27613;
@@ -178,23 +158,9 @@
   display: block;
   transition: all 0.3s ease;
 }
-
-.vaga-card:hover i {
-  transform: scale(1.1) rotate(4deg);
-}
-
-.vaga-card h3 {
-  color: #a27613;
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.vaga-card p {
-  color: #2a2a2a;
-  font-size: 0.93rem;
-  line-height: 1.65;
-}
+.vaga-card:hover i { transform: scale(1.1) rotate(4deg); }
+.vaga-card h3 { color: #a27613; font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; }
+.vaga-card p { color: #2a2a2a; font-size: 0.93rem; line-height: 1.65; }
 
 /* ===== DIFERENCIAIS DE SER COLABORADOR ===== */
 .beneficios-section {
@@ -204,7 +170,6 @@
   position: relative;
   overflow: hidden;
 }
-
 .beneficios-section::before {
   content: '';
   position: absolute;
@@ -215,19 +180,16 @@
   background: radial-gradient(circle, rgba(162,118,19,0.12) 0%, transparent 65%);
   animation: pulse 9s ease-in-out infinite;
 }
-
 @keyframes pulse {
   0%, 100% { transform: scale(1); opacity: 0.3; }
   50% { transform: scale(1.08); opacity: 0.5; }
 }
-
 .beneficios-inner {
   max-width: 1100px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
 }
-
 .beneficios-inner h2 {
   color: #a27613;
   font-size: clamp(1.6rem, 3vw, 2.1rem);
@@ -236,7 +198,6 @@
   padding-bottom: 16px;
   position: relative;
 }
-
 .beneficios-inner h2::after {
   content: '';
   position: absolute;
@@ -247,7 +208,6 @@
   background: linear-gradient(135deg, #a27613, #d4a124);
   border-radius: 2px;
 }
-
 .beneficios-inner > p {
   color: rgba(255,255,255,0.85);
   margin-bottom: 40px;
@@ -255,13 +215,11 @@
   line-height: 1.7;
   max-width: 620px;
 }
-
 .beneficios-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 22px;
 }
-
 .beneficio-item {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(162,118,19,0.2);
@@ -271,37 +229,15 @@
   opacity: 0;
   transform: translateY(22px);
 }
-
-.beneficio-item.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
+.beneficio-item.show { opacity: 1; transform: translateY(0); }
 .beneficio-item:hover {
   background: rgba(162,118,19,0.1);
   border-color: #a27613;
   transform: translateY(-4px);
 }
-
-.beneficio-item i {
-  font-size: 1.6rem;
-  color: #a27613;
-  margin-bottom: 14px;
-  display: block;
-}
-
-.beneficio-item h3 {
-  color: #ffffff;
-  font-size: 1rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.beneficio-item p {
-  color: rgba(255,255,255,0.75);
-  font-size: 0.88rem;
-  line-height: 1.6;
-}
+.beneficio-item i { font-size: 1.6rem; color: #a27613; margin-bottom: 14px; display: block; }
+.beneficio-item h3 { color: #ffffff; font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+.beneficio-item p { color: rgba(255,255,255,0.75); font-size: 0.88rem; line-height: 1.6; }
 
 /* ===== FORMULÁRIO ===== */
 .form-section {
@@ -309,7 +245,6 @@
   margin: 0 auto;
   padding: 80px 24px 100px;
 }
-
 .form-section h2 {
   color: #000;
   font-size: clamp(1.6rem, 3vw, 2.1rem);
@@ -318,7 +253,6 @@
   position: relative;
   padding-bottom: 16px;
 }
-
 .form-section h2::after {
   content: '';
   position: absolute;
@@ -329,14 +263,12 @@
   background: linear-gradient(135deg, #a27613, #d4a124);
   border-radius: 2px;
 }
-
 .form-section > p {
   color: #555;
   font-size: 0.97rem;
   margin: 16px 0 36px;
   line-height: 1.7;
 }
-
 .form-box-rh {
   background: #fff;
   padding: 50px 44px;
@@ -345,12 +277,10 @@
   border: 1px solid rgba(162,118,19,0.12);
   animation: fadeInUp 0.7s ease 0.1s both;
 }
-
 .form-group-rh {
   position: relative;
   margin-bottom: 26px;
 }
-
 .form-group-rh i {
   position: absolute;
   top: 50%;
@@ -361,12 +291,7 @@
   pointer-events: none;
   z-index: 2;
 }
-
-.form-group-rh.textarea-group i {
-  top: 22px;
-  transform: none;
-}
-
+.form-group-rh.textarea-group i { top: 22px; transform: none; }
 .form-group-rh input,
 .form-group-rh select,
 .form-group-rh textarea {
@@ -383,20 +308,13 @@
   color: #2a2a2a;
   appearance: none;
 }
-
-.form-group-rh textarea {
-  padding-top: 15px;
-  resize: vertical;
-  min-height: 110px;
-}
-
+.form-group-rh textarea { padding-top: 15px; resize: vertical; min-height: 110px; }
 .form-group-rh input:focus,
 .form-group-rh select:focus,
 .form-group-rh textarea:focus {
   border-color: #a27613;
   box-shadow: 0 0 0 4px rgba(162,118,19,0.14);
 }
-
 .form-group-rh label {
   position: absolute;
   top: 50%;
@@ -410,12 +328,7 @@
   transition: all 0.25s ease;
   font-family: 'Poppins', sans-serif;
 }
-
-.form-group-rh.textarea-group label {
-  top: 17px;
-  transform: none;
-}
-
+.form-group-rh.textarea-group label { top: 17px; transform: none; }
 .form-group-rh input:focus + label,
 .form-group-rh input:not(:placeholder-shown) + label,
 .form-group-rh select:focus + label,
@@ -427,19 +340,13 @@
   color: #a27613;
   font-weight: 600;
 }
-
 .form-group-rh.textarea-group input:focus + label,
 .form-group-rh.textarea-group textarea:focus + label,
 .form-group-rh.textarea-group textarea:not(:placeholder-shown) + label {
   top: -10px;
   transform: none;
 }
-
-/* Select estilizado */
-.select-wrapper {
-  position: relative;
-}
-
+.select-wrapper { position: relative; }
 .select-wrapper::after {
   content: '\f078';
   font-family: 'Font Awesome 6 Free';
@@ -452,8 +359,6 @@
   pointer-events: none;
   font-size: 0.8rem;
 }
-
-/* Label dentro do select-wrapper */
 .select-wrapper label {
   position: absolute;
   top: 50%;
@@ -468,7 +373,6 @@
   font-family: 'Poppins', sans-serif;
   z-index: 1;
 }
-
 .select-wrapper select:focus + label,
 .select-wrapper select.has-value + label {
   top: -10px;
@@ -477,13 +381,11 @@
   font-weight: 600;
   transform: none;
 }
-
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 18px;
 }
-
 .submit-btn-rh {
   width: 100%;
   padding: 18px;
@@ -500,14 +402,12 @@
   box-shadow: 0 8px 22px rgba(0,0,0,0.15);
   letter-spacing: 0.3px;
 }
-
 .submit-btn-rh:hover {
   background: linear-gradient(135deg, #a27613, #d4a124);
   color: #000;
   transform: translateY(-3px);
   box-shadow: 0 12px 32px rgba(162,118,19,0.35);
 }
-
 .success-message {
   display: none;
   text-align: center;
@@ -519,71 +419,49 @@
   font-weight: 600;
 }
 
-/* ===== NOTA SEPARADORA ===== */
-.nav-separator {
-  background: rgba(162,118,19,0.06);
-  border-top: 1px solid rgba(162,118,19,0.15);
-  padding: 14px 24px;
-  text-align: center;
-  font-size: 0.82rem;
-  color: #777;
-}
-
-.nav-separator a {
-  color: #a27613;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.nav-separator a:hover {
-  text-decoration: underline;
-}
-
 /* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
-  .form-box-rh {
-    padding: 32px 22px;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .vagas-grid,
-  .beneficios-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .beneficios-section {
-    padding: 55px 20px;
-  }
+  .form-box-rh { padding: 32px 22px; }
+  .form-row { grid-template-columns: 1fr; }
+  .vagas-grid, .beneficios-grid { grid-template-columns: 1fr; }
+  .beneficios-section { padding: 55px 20px; }
 }
-
 @media (max-width: 480px) {
-  .hero-rh {
-    padding: 70px 20px 60px;
-  }
+  .hero-rh { padding: 70px 20px 60px; }
 }
-
 </style>
 
 </head>
 
 <body>
 
-<!-- NAV COMPLETA -->
 <nav>
   <div class="container">
     <div class="brand">
       <img src="assets/logo.png" alt="Nova Alvorada Serviços">
     </div>
-    <div>
+    <!-- Links desktop -->
+    <div class="nav-links">
       <a href="index.html">Início</a>
       <a href="sobre.html">Sobre</a>
       <a href="servicos.html">Serviços</a>
       <a href="contato.html">Contato</a>
       <a href="trabalhe-conosco.html" style="color: #a27613;">Trabalhe Conosco</a>
     </div>
+    <!-- Botão sanduíche mobile -->
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <!-- Menu mobile -->
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="contato.html">Contato</a>
+    <a href="trabalhe-conosco.html" style="color: #a27613;">Trabalhe Conosco</a>
   </div>
 </nav>
 
@@ -604,43 +482,36 @@
   <p>Recrutamos para diferentes funções em condomínios, empresas e instituições na Grande São Paulo. Veja as áreas abaixo e candidate-se.</p>
 
   <div class="vagas-grid">
-
     <div class="vaga-card">
       <i class="fa-solid fa-door-open"></i>
       <h3>Porteiro / Controlador de Acesso</h3>
       <p>Controle de entrada e saída, atendimento ao visitante e vigilância não armada em condomínios e empresas.</p>
     </div>
-
     <div class="vaga-card">
       <i class="fa-solid fa-broom"></i>
       <h3>Auxiliar de Limpeza e Conservação</h3>
       <p>Limpeza e conservação de ambientes corporativos, condominiais e institucionais com padrão técnico.</p>
     </div>
-
     <div class="vaga-card">
       <i class="fa-solid fa-tree"></i>
       <h3>Zelador / Jardineiro</h3>
       <p>Manutenção de áreas comuns, jardins e apoio operacional geral nas unidades atendidas.</p>
     </div>
-
     <div class="vaga-card">
       <i class="fa-solid fa-headset"></i>
       <h3>Recepcionista / Apoio Administrativo</h3>
       <p>Atendimento presencial, suporte às equipes e rotinas administrativas em empresas e condomínios.</p>
     </div>
-
     <div class="vaga-card">
       <i class="fa-solid fa-gears"></i>
       <h3>Auxiliar Operacional</h3>
       <p>Apoio em rotinas essenciais do dia a dia, com treinamento e acompanhamento desde o início.</p>
     </div>
-
     <div class="vaga-card">
       <i class="fa-solid fa-star"></i>
       <h3>Outras Funções</h3>
       <p>Não encontrou a área exata? Envie seu currículo mesmo assim — analisamos todos os perfis recebidos.</p>
     </div>
-
   </div>
 </div>
 
@@ -651,31 +522,26 @@
     <p>Somos uma empresa que cuida das pessoas que compõem nossa equipe, com gestão próxima e processos claros desde o primeiro dia.</p>
 
     <div class="beneficios-grid">
-
       <div class="beneficio-item">
         <i class="fa-solid fa-file-contract"></i>
         <h3>Registro em Carteira</h3>
         <p>Contratação com todos os direitos trabalhistas garantidos e conformidade legal.</p>
       </div>
-
       <div class="beneficio-item">
         <i class="fa-solid fa-chalkboard-user"></i>
         <h3>Treinamento e Integração</h3>
         <p>Orientação completa antes de iniciar, para que você saiba exatamente o que fazer.</p>
       </div>
-
       <div class="beneficio-item">
         <i class="fa-solid fa-people-group"></i>
         <h3>Ambiente Organizado</h3>
         <p>Equipes acompanhadas de perto por supervisores presentes e acessíveis.</p>
       </div>
-
       <div class="beneficio-item">
         <i class="fa-solid fa-arrow-trend-up"></i>
         <h3>Possibilidade de Crescimento</h3>
         <p>Valorizamos quem se dedica. Bons profissionais têm espaço para evoluir conosco.</p>
       </div>
-
     </div>
   </div>
 </div>
@@ -700,7 +566,6 @@
           <input type="text" name="nome" placeholder=" " required>
           <label>Nome completo</label>
         </div>
-
         <div class="form-group-rh">
           <i class="fa-solid fa-phone"></i>
           <input type="tel" name="telefone" placeholder=" " required>
@@ -756,11 +621,11 @@
   </div>
 </div>
 
-<!-- FOOTER COMPLETO -->
+<!-- FOOTER -->
 <footer>
   <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
   <p>São Paulo – SP</p>
-  <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7110151c311f1e0710101d071e031015100214030718121e025f121e1c5f1303">[email&#160;protected]</a></p>
+  <p>contato@novaalvoradaservicos.com.br</p>
   <div class="footer-social" style="margin-top: 18px;">
     <a href="https://www.instagram.com/novaalvoradaservicos" target="_blank" aria-label="Instagram Nova Alvorada Serviços">
       <i class="fa-brands fa-instagram"></i>
@@ -769,14 +634,34 @@
   </div>
 </footer>
 
+<!-- MENU SANDUÍCHE -->
+<script>
+(function () {
+  const toggle = document.getElementById('navToggle');
+  const menu   = document.getElementById('navMobile');
+
+  toggle.addEventListener('click', function () {
+    const isOpen = menu.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  menu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      menu.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
+
 <!-- ANIMAÇÃO CARDS -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 const animItems = document.querySelectorAll('.vaga-card, .beneficio-item');
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    }
+    if (entry.isIntersecting) entry.target.classList.add('show');
   });
 }, { threshold: 0.15 });
 animItems.forEach(el => observer.observe(el));
@@ -826,3 +711,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+
+</body>
+</html>
