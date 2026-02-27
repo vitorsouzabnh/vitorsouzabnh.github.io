@@ -12,15 +12,46 @@
 </script>
 
 <meta charset="UTF-8">
-<title>Nova Alvorada Serviços | Facilities e Terceirização</title>
+<title>Nova Alvorada Serviços | Facilities e Terceirização em São Paulo e Região</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Soluções completas em facilities e terceirização para condomínios, empresas e instituições em São Paulo.">
+<meta name="description" content="Empresa de facilities e terceirização em São Paulo e região metropolitana. Portaria, limpeza, zeladoria e apoio operacional com gestão próxima e mais de 30 anos de experiência. Solicite orçamento.">
 
+<link rel="canonical" href="https://novaalvoradaservicos.com.br/index.html">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Schema Markup: LocalBusiness -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Nova Alvorada Serviços",
+  "description": "Empresa de facilities e terceirização em São Paulo e região metropolitana. Portaria, limpeza, zeladoria, recepção e apoio operacional com gestão próxima.",
+  "url": "https://novaalvoradaservicos.com.br",
+  "logo": "https://novaalvoradaservicos.com.br/assets/logo.png",
+  "email": "contato@novaalvoradaservicos.com.br",
+  "taxID": "61.944.793/0001-91",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
+  },
+  "areaServed": [
+    "São Paulo",
+    "Grande São Paulo",
+    "Região Metropolitana de São Paulo"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/novaalvoradaservicos"
+  ],
+  "priceRange": "$$",
+  "openingHours": "Mo-Fr 08:00-18:00"
+}
+</script>
 
 </head>
 
@@ -29,9 +60,8 @@
 <nav>
   <div class="container">
     <div class="brand">
-      <img src="assets/logo.png" alt="Nova Alvorada Serviços">
+      <img src="assets/logo.png" alt="Nova Alvorada Serviços - Facilities e Terceirização em São Paulo">
     </div>
-    <!-- Links desktop -->
     <div class="nav-links">
       <a href="index.html" style="color: #a27613;">Início</a>
       <a href="sobre.html">Sobre</a>
@@ -39,14 +69,12 @@
       <a href="contato.html">Contato</a>
       <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
     </div>
-    <!-- Botão sanduíche mobile -->
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
     </button>
   </div>
-  <!-- Menu mobile -->
   <div class="nav-mobile" id="navMobile">
     <a href="index.html" style="color: #a27613;">Início</a>
     <a href="sobre.html">Sobre</a>
@@ -57,7 +85,7 @@
 </nav>
 
 <header>
-  <h1>Bem-vindo à Nova Alvorada Serviços</h1>
+  <h1>Facilities e Terceirização de Funcionários em São Paulo e Região</h1>
   <p>Soluções completas em facilities e terceirização, com gestão próxima, processos claros e responsabilidade operacional.</p>
 </header>
 
@@ -67,8 +95,10 @@
 <div class="box">
   <h2>Por que escolher a Nova Alvorada?</h2>
   <p>
-    Atuamos com soluções completas em facilities e terceirização, garantindo organização, previsibilidade e tranquilidade operacional. 
-    Cada serviço é acompanhado de perto e adaptado à realidade do cliente.
+    A Nova Alvorada Serviços oferece soluções completas de facilities e terceirização para empresas e condomínios em São Paulo e região metropolitana. Atuamos com portaria e controle de acesso, limpeza e conservação, zeladoria, recepção e apoio operacional — sempre com gestão próxima, supervisão ativa e responsabilidade total sobre as equipes terceirizadas.
+  </p>
+  <p style="margin-top: 16px;">
+    Com raízes em mais de 30 anos de experiência no setor, incluindo 25 anos à frente da Ypê Assessoria de Recursos Humanos, a Nova Alvorada entrega previsibilidade operacional, conformidade trabalhista e interlocução direta com o cliente. Cada contrato é acompanhado de perto — sem intermediários, sem ruído.
   </p>
 </div>
 
@@ -146,7 +176,7 @@
 
 <footer>
   <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
-  <p>São Paulo – SP</p>
+  <p>São Paulo – SP · CNPJ: 61.944.793/0001-91</p>
   <p>contato@novaalvoradaservicos.com.br</p>
   <div class="footer-social">
     <a href="https://www.instagram.com/novaalvoradaservicos" target="_blank" aria-label="Instagram Nova Alvorada Serviços">
@@ -157,9 +187,9 @@
 </footer>
 
 <!-- BOTÃO WHATSAPP -->
-<a 
-  href="https://wa.me/5511921827683?text=Olá!%20Sou%20responsável%20por%20uma%20empresa%2Fcondomínio%20e%20quero%20orçamento%20de%20terceirização." 
-  target="_blank" 
+<a
+  href="https://wa.me/5511921827683?text=Olá!%20Sou%20responsável%20por%20uma%20empresa%2Fcondomínio%20e%20quero%20orçamento%20de%20terceirização."
+  target="_blank"
   class="whatsapp-float"
   aria-label="Orçamento no WhatsApp"
 >
@@ -175,13 +205,11 @@
 (function () {
   const toggle = document.getElementById('navToggle');
   const menu   = document.getElementById('navMobile');
-
   toggle.addEventListener('click', function () {
     const isOpen = menu.classList.toggle('open');
     toggle.classList.toggle('open', isOpen);
     toggle.setAttribute('aria-expanded', isOpen);
   });
-
   menu.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', function () {
       menu.classList.remove('open');
@@ -246,7 +274,6 @@ const btn = document.querySelector('.whatsapp-float');
 const footer = document.querySelector('footer');
 const baseBottom = 24;
 const gap = 20;
-
 function updateButtonPosition() {
   const footerRect = footer.getBoundingClientRect();
   const windowHeight = window.innerHeight;
@@ -256,7 +283,6 @@ function updateButtonPosition() {
     btn.style.bottom = `${baseBottom}px`;
   }
 }
-
 window.addEventListener('scroll', updateButtonPosition);
 window.addEventListener('resize', updateButtonPosition);
 </script>
