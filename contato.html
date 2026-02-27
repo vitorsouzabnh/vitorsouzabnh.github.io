@@ -12,10 +12,11 @@
 </script>
 
 <meta charset="UTF-8">
-<title>Contato | Nova Alvorada Serviços</title>
+<title>Contato | Nova Alvorada Serviços — Facilities em São Paulo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Entre em contato com a Nova Alvorada Serviços para soluções em facilities e terceirização.">
+<meta name="description" content="Entre em contato com a Nova Alvorada Serviços para orçamentos de facilities e terceirização em São Paulo e região metropolitana. Atendemos empresas e condomínios.">
 
+<link rel="canonical" href="https://novaalvoradaservicos.com.br/contato.html">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
@@ -34,7 +35,17 @@ section {
   border-radius: 18px;
   box-shadow: 0 12px 35px rgba(0,0,0,0.08);
 }
-.form-box h2 { text-align: center; margin-bottom: 35px; font-size: 1.8em; }
+.form-box h2 { text-align: center; margin-bottom: 16px; font-size: 1.8em; }
+.form-intro {
+  text-align: center;
+  color: #555;
+  font-size: 0.97rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .form-group { position: relative; margin-bottom: 22px; }
 .form-group i {
   position: absolute;
@@ -108,9 +119,8 @@ button:hover { background: #a27613; color: #000; }
 <nav>
   <div class="container">
     <div class="brand">
-      <img src="assets/logo.png" alt="Nova Alvorada Serviços">
+      <img src="assets/logo.png" alt="Nova Alvorada Serviços - Facilities e Terceirização em São Paulo">
     </div>
-    <!-- Links desktop -->
     <div class="nav-links">
       <a href="index.html">Início</a>
       <a href="sobre.html">Sobre</a>
@@ -118,14 +128,12 @@ button:hover { background: #a27613; color: #000; }
       <a href="contato.html" style="color: #a27613;">Contato</a>
       <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
     </div>
-    <!-- Botão sanduíche mobile -->
     <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
     </button>
   </div>
-  <!-- Menu mobile -->
   <div class="nav-mobile" id="navMobile">
     <a href="index.html">Início</a>
     <a href="sobre.html">Sobre</a>
@@ -136,49 +144,52 @@ button:hover { background: #a27613; color: #000; }
 </nav>
 
 <header>
-  <h1>Fale Conosco</h1>
-  <p>Vamos entender sua necessidade e construir a melhor solução.</p>
+  <h1>Fale com a Nova Alvorada</h1>
+  <p>Atendemos empresas e condomínios em São Paulo e região metropolitana.</p>
 </header>
 
 <section>
 
 <div class="form-box">
 
-<h2>Formulário de Contato</h2>
+  <h2>Formulário de Contato</h2>
+  <p class="form-intro">
+    Se você busca um parceiro para facilities, terceirização de portaria, limpeza, zeladoria ou apoio operacional, o primeiro passo é entender a sua estrutura. Fale conosco pelo WhatsApp, e-mail ou formulário.
+  </p>
 
-<form id="contact-form" action="https://formspree.io/f/mjggdoeq" method="POST">
+  <form id="contact-form" action="https://formspree.io/f/mjggdoeq" method="POST">
 
-  <div class="form-group">
-    <i class="fa-solid fa-user"></i>
-    <input type="text" name="nome" placeholder=" " required>
-    <label>Seu nome</label>
+    <div class="form-group">
+      <i class="fa-solid fa-user"></i>
+      <input type="text" name="nome" placeholder=" " required>
+      <label>Seu nome</label>
+    </div>
+
+    <div class="form-group">
+      <i class="fa-solid fa-envelope"></i>
+      <input type="email" name="email" placeholder=" " required>
+      <label>Seu e-mail</label>
+    </div>
+
+    <div class="form-group">
+      <i class="fa-solid fa-phone"></i>
+      <input type="tel" name="telefone" placeholder=" " required>
+      <label>Seu telefone</label>
+    </div>
+
+    <div class="form-group">
+      <i class="fa-solid fa-message"></i>
+      <textarea name="mensagem" rows="4" placeholder=" " required></textarea>
+      <label>Sua mensagem</label>
+    </div>
+
+    <button type="submit">Enviar Mensagem</button>
+
+  </form>
+
+  <div class="success-message" id="success-message">
+    Mensagem enviada com sucesso. Em breve entraremos em contato.
   </div>
-
-  <div class="form-group">
-    <i class="fa-solid fa-envelope"></i>
-    <input type="email" name="email" placeholder=" " required>
-    <label>Seu e-mail</label>
-  </div>
-
-  <div class="form-group">
-    <i class="fa-solid fa-phone"></i>
-    <input type="tel" name="telefone" placeholder=" " required>
-    <label>Seu telefone</label>
-  </div>
-
-  <div class="form-group">
-    <i class="fa-solid fa-message"></i>
-    <textarea name="mensagem" rows="4" placeholder=" " required></textarea>
-    <label>Sua mensagem</label>
-  </div>
-
-  <button type="submit">Enviar Mensagem</button>
-
-</form>
-
-<div class="success-message" id="success-message">
-Mensagem enviada com sucesso. Em breve entraremos em contato.
-</div>
 
 </div>
 
@@ -186,7 +197,7 @@ Mensagem enviada com sucesso. Em breve entraremos em contato.
 
 <footer>
   <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
-  <p>São Paulo – SP</p>
+  <p>São Paulo – SP · CNPJ: 61.944.793/0001-91</p>
   <p>contato@novaalvoradaservicos.com.br</p>
   <div class="footer-social">
     <a href="https://www.instagram.com/novaalvoradaservicos" target="_blank" aria-label="Instagram Nova Alvorada Serviços">
@@ -197,9 +208,9 @@ Mensagem enviada com sucesso. Em breve entraremos em contato.
 </footer>
 
 <!-- BOTÃO WHATSAPP -->
-<a 
-  href="https://wa.me/5511921827683?text=Olá!%20Sou%20responsável%20por%20uma%20empresa%2Fcondomínio%20e%20quero%20orçamento%20de%20terceirização." 
-  target="_blank" 
+<a
+  href="https://wa.me/5511921827683?text=Olá!%20Sou%20responsável%20por%20uma%20empresa%2Fcondomínio%20e%20quero%20orçamento%20de%20terceirização."
+  target="_blank"
   class="whatsapp-float"
   aria-label="Orçamento no WhatsApp"
 >
@@ -215,13 +226,11 @@ Mensagem enviada com sucesso. Em breve entraremos em contato.
 (function () {
   const toggle = document.getElementById('navToggle');
   const menu   = document.getElementById('navMobile');
-
   toggle.addEventListener('click', function () {
     const isOpen = menu.classList.toggle('open');
     toggle.classList.toggle('open', isOpen);
     toggle.setAttribute('aria-expanded', isOpen);
   });
-
   menu.querySelectorAll('a').forEach(function (link) {
     link.addEventListener('click', function () {
       menu.classList.remove('open');
@@ -241,10 +250,8 @@ function reportFormConversion() {
     'transaction_id': leadId
   });
 }
-
 const form = document.getElementById('contact-form');
 const success = document.getElementById('success-message');
-
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const data = new FormData(form);
@@ -310,7 +317,6 @@ const btn = document.querySelector('.whatsapp-float');
 const footer = document.querySelector('footer');
 const baseBottom = 24;
 const gap = 20;
-
 function updateButtonPosition() {
   const footerRect = footer.getBoundingClientRect();
   const windowHeight = window.innerHeight;
@@ -320,7 +326,6 @@ function updateButtonPosition() {
     btn.style.bottom = `${baseBottom}px`;
   }
 }
-
 window.addEventListener('scroll', updateButtonPosition);
 window.addEventListener('resize', updateButtonPosition);
 </script>
