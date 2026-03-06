@@ -142,15 +142,15 @@
     transform: translateY(-2px);
   }
 
-  /* Botão candidato — contorno sutil */
+  /* Botão candidato — branco com borda dourada */
   .audience-btn-candidate {
-    background: rgba(255,255,255,0.07);
-    color: rgba(255,255,255,0.85);
-    border: 1px solid rgba(255,255,255,0.15);
+    background: #ffffff;
+    color: #000000;
+    border: 1.5px solid #a27613;
   }
 
   .audience-btn-candidate:hover {
-    background: rgba(255,255,255,0.12);
+    background: #f5f0e8;
     transform: translateY(-2px);
   }
 }
@@ -309,7 +309,7 @@
 <footer>
   <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
   <p>São Paulo – SP · CNPJ: 61.944.793/0001-91</p>
-  <p>contato@novaalvoradaservicos.com.br</p>
+  <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f4979b9a8095809bb49a9b82959598829b86959095879186829d979b87da979b99da9686">[email&#160;protected]</a></p>
   <div class="footer-social">
     <a href="https://www.instagram.com/novaalvoradaservicos" target="_blank" aria-label="Instagram Nova Alvorada Serviços">
       <i class="fa-brands fa-instagram"></i>
@@ -334,7 +334,7 @@
 </a>
 
 <!-- AUDIENCE BAR: lógica + ajuste posição whatsapp -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function () {
   var bar      = document.getElementById('audienceBar');
   var closeBtn = document.getElementById('audienceBarClose');
@@ -459,15 +459,4 @@ function updateWaPosition() {
   var windowHeight = window.innerHeight;
 
   if (footerRect.top < windowHeight) {
-    waBtn2.style.bottom = (windowHeight - footerRect.top + 20) + 'px';
-  } else {
-    waBtn2.style.bottom = baseBottom + 'px';
-  }
-}
-
-window.addEventListener('scroll', updateWaPosition);
-window.addEventListener('resize', updateWaPosition);
-</script>
-
-</body>
-</html>
+    waBtn2.style.bott
