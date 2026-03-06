@@ -48,94 +48,116 @@
 </script>
 
 <style>
-/* ===== BOTTOM BAR — TRABALHE CONOSCO (só mobile) ===== */
+/* ===== AUDIENCE BAR — só mobile ===== */
 @media (max-width: 768px) {
 
-  .jobs-bar {
+  .audience-bar {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 998;
-    background: #000;
+    background: #0d0d0d;
     border-top: 2px solid #a27613;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 20px;
-    gap: 12px;
+    padding: 12px 16px 14px;
     transform: translateY(100%);
     opacity: 0;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 0.4s ease;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.35);
+                opacity 0.35s ease;
+    box-shadow: 0 -6px 24px rgba(0,0,0,0.5);
   }
 
-  .jobs-bar.visible {
+  .audience-bar.visible {
     transform: translateY(0);
     opacity: 1;
   }
 
-  .jobs-bar-text {
+  .audience-bar-header {
     display: flex;
     align-items: center;
-    gap: 10px;
-    flex: 1;
-    min-width: 0;
+    justify-content: space-between;
+    margin-bottom: 10px;
   }
 
-  .jobs-bar-text i {
-    color: #a27613;
-    font-size: 1.1rem;
-    flex-shrink: 0;
+  .audience-bar-label {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 
-  .jobs-bar-text span {
-    color: rgba(255,255,255,0.85);
-    font-size: 0.82rem;
-    line-height: 1.3;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .jobs-bar-link {
-    flex-shrink: 0;
-    background: #a27613;
-    color: #000;
-    font-size: 0.8rem;
-    font-weight: 700;
-    padding: 8px 16px;
-    border-radius: 6px;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: background 0.2s ease, transform 0.2s ease;
-  }
-
-  .jobs-bar-link:hover,
-  .jobs-bar-link:active {
-    background: #d4a124;
-    transform: scale(1.03);
-  }
-
-  .jobs-bar-close {
-    flex-shrink: 0;
+  .audience-bar-close {
     background: transparent;
     border: none;
-    color: rgba(255,255,255,0.4);
-    font-size: 1rem;
+    color: rgba(255,255,255,0.35);
+    font-size: 0.95rem;
     cursor: pointer;
-    padding: 4px;
+    padding: 2px 4px;
     line-height: 1;
     transition: color 0.2s ease;
   }
 
-  .jobs-bar-close:hover { color: rgba(255,255,255,0.8); }
+  .audience-bar-close:hover { color: rgba(255,255,255,0.7); }
+
+  .audience-bar-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .audience-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 12px 8px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 1.3;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    border: none;
+  }
+
+  .audience-btn:active { transform: scale(0.97); }
+
+  .audience-btn i {
+    font-size: 1.2rem;
+  }
+
+  /* Botão contratante — dourado */
+  .audience-btn-contractor {
+    background: linear-gradient(135deg, #a27613, #d4a124);
+    color: #000;
+    box-shadow: 0 4px 14px rgba(162,118,19,0.35);
+  }
+
+  .audience-btn-contractor:hover {
+    box-shadow: 0 6px 20px rgba(162,118,19,0.5);
+    transform: translateY(-2px);
+  }
+
+  /* Botão candidato — contorno sutil */
+  .audience-btn-candidate {
+    background: rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.85);
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .audience-btn-candidate:hover {
+    background: rgba(255,255,255,0.12);
+    transform: translateY(-2px);
+  }
 }
 
 /* Desktop: nunca exibe */
 @media (min-width: 769px) {
-  .jobs-bar { display: none !important; }
+  .audience-bar { display: none !important; }
 }
 </style>
 
@@ -143,14 +165,22 @@
 
 <body>
 
-<!-- BOTTOM BAR — TRABALHE CONOSCO (mobile only) -->
-<div class="jobs-bar" id="jobsBar" role="complementary" aria-label="Oportunidades de trabalho">
-  <div class="jobs-bar-text">
-    <i class="fa-solid fa-briefcase"></i>
-    <span>Procurando emprego? Veja nossas vagas.</span>
+<!-- AUDIENCE BAR (mobile only) -->
+<div class="audience-bar" id="audienceBar" role="complementary" aria-label="Para quem é este site">
+  <div class="audience-bar-header">
+    <span class="audience-bar-label">O que você busca?</span>
+    <button class="audience-bar-close" id="audienceBarClose" aria-label="Fechar">✕</button>
   </div>
-  <a href="trabalhe-conosco.html" class="jobs-bar-link">Ver vagas</a>
-  <button class="jobs-bar-close" id="jobsBarClose" aria-label="Fechar">✕</button>
+  <div class="audience-bar-buttons">
+    <a href="contato.html" class="audience-btn audience-btn-contractor" id="audienceBtnContractor">
+      <i class="fa-solid fa-building"></i>
+      Contratar serviços
+    </a>
+    <a href="trabalhe-conosco.html" class="audience-btn audience-btn-candidate">
+      <i class="fa-solid fa-user-tie"></i>
+      Trabalhar conosco
+    </a>
+  </div>
 </div>
 
 <nav>
@@ -293,6 +323,7 @@
   href="https://wa.me/5511921827683?text=Olá!%20Sou%20responsável%20por%20uma%20empresa%2Fcondomínio%20e%20quero%20orçamento%20de%20terceirização."
   target="_blank"
   class="whatsapp-float"
+  id="whatsappBtn"
   aria-label="Orçamento no WhatsApp"
 >
   <svg class="whatsapp-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -302,26 +333,46 @@
   <span class="whatsapp-text">Orçamento no WhatsApp</span>
 </a>
 
-<!-- BOTTOM BAR: lógica -->
+<!-- AUDIENCE BAR: lógica + ajuste posição whatsapp -->
 <script>
 (function () {
-  var bar   = document.getElementById('jobsBar');
-  var close = document.getElementById('jobsBarClose');
+  var bar      = document.getElementById('audienceBar');
+  var closeBtn = document.getElementById('audienceBarClose');
+  var waBtn    = document.getElementById('whatsappBtn');
+  var BASE_WA  = 24; // bottom padrão do botão whatsapp (px)
 
-  // Não exibe se já foi fechado nesta sessão
-  if (sessionStorage.getItem('jobsBarDismissed')) return;
-
-  // Aparece só em mobile
+  if (sessionStorage.getItem('audienceBarDismissed')) return;
   if (window.innerWidth > 768) return;
 
-  // Delay de 1,5s para não brigar com o carregamento
+  // Empurra o botão WhatsApp para cima conforme a altura do bar
+  function liftWhatsApp() {
+    var barH = bar.offsetHeight;
+    waBtn.style.bottom = (BASE_WA + barH + 8) + 'px';
+    waBtn.style.transition = 'bottom 0.4s cubic-bezier(0.4,0,0.2,1)';
+  }
+
+  function resetWhatsApp() {
+    waBtn.style.bottom = BASE_WA + 'px';
+  }
+
   setTimeout(function () {
     bar.classList.add('visible');
+    liftWhatsApp();
   }, 1500);
 
-  close.addEventListener('click', function () {
+  function dismiss() {
     bar.classList.remove('visible');
-    sessionStorage.setItem('jobsBarDismissed', '1');
+    resetWhatsApp();
+    sessionStorage.setItem('audienceBarDismissed', '1');
+  }
+
+  closeBtn.addEventListener('click', dismiss);
+
+  // Ao clicar em qualquer botão de destino, fecha o bar
+  bar.querySelectorAll('.audience-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      sessionStorage.setItem('audienceBarDismissed', '1');
+    });
   });
 })();
 </script>
@@ -349,12 +400,12 @@
 <!-- ANIMAÇÃO CARDS -->
 <script>
 var cards = document.querySelectorAll('.card');
-var observer = new IntersectionObserver(function(entries) {
-  entries.forEach(function(entry) {
+var cardObserver = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
     if (entry.isIntersecting) entry.target.classList.add('show');
   });
 }, { threshold: 0.2 });
-cards.forEach(function(card) { observer.observe(card); });
+cards.forEach(function (card) { cardObserver.observe(card); });
 </script>
 
 <!-- GOOGLE ADS CONVERSÃO WHATSAPP -->
@@ -394,23 +445,28 @@ function gtag_report_conversion(url) {
 })();
 </script>
 
-<!-- AJUSTE POSIÇÃO BOTÃO WHATSAPP -->
+<!-- AJUSTE POSIÇÃO WHATSAPP AO ROLAR (footer) -->
 <script>
-var btn    = document.querySelector('.whatsapp-float');
-var footer = document.querySelector('footer');
-var baseBottom = 24;
-var gap = 20;
-function updateButtonPosition() {
-  var footerRect  = footer.getBoundingClientRect();
+var waBtn2  = document.getElementById('whatsappBtn');
+var footer2 = document.querySelector('footer');
+var audienceBar2 = document.getElementById('audienceBar');
+
+function updateWaPosition() {
+  var barVisible   = audienceBar2 && audienceBar2.classList.contains('visible');
+  var barH         = barVisible ? (audienceBar2.offsetHeight + 8) : 0;
+  var baseBottom   = 24 + barH;
+  var footerRect   = footer2.getBoundingClientRect();
   var windowHeight = window.innerHeight;
+
   if (footerRect.top < windowHeight) {
-    btn.style.bottom = (windowHeight - footerRect.top + gap) + 'px';
+    waBtn2.style.bottom = (windowHeight - footerRect.top + 20) + 'px';
   } else {
-    btn.style.bottom = baseBottom + 'px';
+    waBtn2.style.bottom = baseBottom + 'px';
   }
 }
-window.addEventListener('scroll', updateButtonPosition);
-window.addEventListener('resize', updateButtonPosition);
+
+window.addEventListener('scroll', updateWaPosition);
+window.addEventListener('resize', updateWaPosition);
 </script>
 
 </body>
