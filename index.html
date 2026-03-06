@@ -12,9 +12,9 @@
 </script>
 
 <meta charset="UTF-8">
-<title>Nova Alvorada Serviços | Facilities e Terceirização em São Paulo e Região</title>
+<title>Serviços Terceirizados para Condomínios em São Paulo | Nova Alvorada</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Empresa de facilities e terceirização em São Paulo e região metropolitana. Portaria, limpeza, zeladoria e apoio operacional com gestão próxima e mais de 30 anos de experiência. Solicite orçamento.">
+<meta name="description" content="Serviços terceirizados para condomínios em São Paulo: portaria, limpeza, zeladoria e facilities. Equipes treinadas e supervisão ativa. Solicite sua proposta agora.">
 
 <link rel="canonical" href="https://novaalvoradaservicos.com.br/index.html">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -40,22 +40,118 @@
     "addressRegion": "SP",
     "addressCountry": "BR"
   },
-  "areaServed": [
-    "São Paulo",
-    "Grande São Paulo",
-    "Região Metropolitana de São Paulo"
-  ],
-  "sameAs": [
-    "https://www.instagram.com/novaalvoradaservicos"
-  ],
+  "areaServed": ["São Paulo", "Grande São Paulo", "Região Metropolitana de São Paulo"],
+  "sameAs": ["https://www.instagram.com/novaalvoradaservicos"],
   "priceRange": "$$",
   "openingHours": "Mo-Fr 08:00-18:00"
 }
 </script>
 
+<style>
+/* ===== BOTTOM BAR — TRABALHE CONOSCO (só mobile) ===== */
+@media (max-width: 768px) {
+
+  .jobs-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    background: #000;
+    border-top: 2px solid #a27613;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    gap: 12px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.4s ease;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.35);
+  }
+
+  .jobs-bar.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .jobs-bar-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .jobs-bar-text i {
+    color: #a27613;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .jobs-bar-text span {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.82rem;
+    line-height: 1.3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .jobs-bar-link {
+    flex-shrink: 0;
+    background: #a27613;
+    color: #000;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .jobs-bar-link:hover,
+  .jobs-bar-link:active {
+    background: #d4a124;
+    transform: scale(1.03);
+  }
+
+  .jobs-bar-close {
+    flex-shrink: 0;
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.4);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 4px;
+    line-height: 1;
+    transition: color 0.2s ease;
+  }
+
+  .jobs-bar-close:hover { color: rgba(255,255,255,0.8); }
+}
+
+/* Desktop: nunca exibe */
+@media (min-width: 769px) {
+  .jobs-bar { display: none !important; }
+}
+</style>
+
 </head>
 
 <body>
+
+<!-- BOTTOM BAR — TRABALHE CONOSCO (mobile only) -->
+<div class="jobs-bar" id="jobsBar" role="complementary" aria-label="Oportunidades de trabalho">
+  <div class="jobs-bar-text">
+    <i class="fa-solid fa-briefcase"></i>
+    <span>Procurando emprego? Veja nossas vagas.</span>
+  </div>
+  <a href="trabalhe-conosco.html" class="jobs-bar-link">Ver vagas</a>
+  <button class="jobs-bar-close" id="jobsBarClose" aria-label="Fechar">✕</button>
+</div>
 
 <nav>
   <div class="container">
@@ -85,8 +181,8 @@
 </nav>
 
 <header>
-  <h1>Facilities e Terceirização de Funcionários em São Paulo e Região</h1>
-  <p>Soluções completas em facilities e terceirização, com gestão próxima, processos claros e responsabilidade operacional.</p>
+  <h1>Serviços Terceirizados para Condomínios em São Paulo: Portaria, Limpeza e Facilities</h1>
+  <p>Gestão próxima, processos claros e responsabilidade operacional total sobre cada equipe.</p>
 </header>
 
 <main>
@@ -95,7 +191,7 @@
 <div class="box">
   <h2>Por que escolher a Nova Alvorada?</h2>
   <p>
-    A Nova Alvorada Serviços oferece soluções completas de facilities e terceirização para empresas e condomínios em São Paulo e região metropolitana. Atuamos com portaria e controle de acesso, limpeza e conservação, zeladoria, recepção e apoio operacional — sempre com gestão próxima, supervisão ativa e responsabilidade total sobre as equipes terceirizadas.
+    A Nova Alvorada Serviços oferece serviços terceirizados para condomínios em São Paulo, incluindo portaria, controle de acesso, limpeza de áreas comuns, zeladoria, facilities e apoio administrativo. Com equipes treinadas, supervisão ativa e cobertura integral, garantimos eficiência operacional e tranquilidade para síndicos, administradoras e gestores de condomínios residenciais e comerciais.
   </p>
   <p style="margin-top: 16px;">
     Com raízes em mais de 30 anos de experiência no setor, incluindo 25 anos à frente da Ypê Assessoria de Recursos Humanos, a Nova Alvorada entrega previsibilidade operacional, conformidade trabalhista e interlocução direta com o cliente. Cada contrato é acompanhado de perto — sem intermediários, sem ruído.
@@ -103,21 +199,25 @@
 </div>
 
 <div class="box">
-  <div class="cards">
+  <h2>Soluções Completas para Condomínios em São Paulo</h2>
+  <p>
+    Atendemos condomínios residenciais e comerciais com serviços integrados, gerenciados diretamente pela Nova Alvorada. Conheça nossa <a href="condominios.html" style="color: #a27613; font-weight: 600;">página especializada em serviços para condomínios</a>.
+  </p>
+  <div class="cards" style="margin-top: 32px;">
     <div class="card">
       <i class="fa-solid fa-door-open"></i>
       <h3>Portaria e Controle de Acesso</h3>
-      <p>Controle de entrada, recepção e vigilância não armada.</p>
+      <p>Equipes treinadas para recepcionar moradores, prestadores e visitantes, com registro e monitoramento contínuo.</p>
     </div>
     <div class="card">
       <i class="fa-solid fa-broom"></i>
       <h3>Limpeza e Conservação</h3>
-      <p>Limpeza técnica e conservação predial.</p>
+      <p>Manutenção de halls, corredores, áreas de lazer, fachada e entorno do condomínio.</p>
     </div>
     <div class="card">
       <i class="fa-solid fa-tree"></i>
       <h3>Zeladoria e Jardinagem</h3>
-      <p>Manutenção de áreas comuns e apoio operacional.</p>
+      <p>Apoio ao síndico e administradora em demandas operacionais do dia a dia.</p>
     </div>
     <div class="card">
       <i class="fa-solid fa-headset"></i>
@@ -132,7 +232,7 @@
     <div class="card">
       <i class="fa-solid fa-building-circle-check"></i>
       <h3>Gestão de Facilities</h3>
-      <p>Planejamento, supervisão e controle dos serviços.</p>
+      <p>Coordenação de múltiplos serviços em um único parceiro confiável.</p>
     </div>
   </div>
 </div>
@@ -167,8 +267,10 @@
 
 <div class="cta-final">
   <h2>Pronto para profissionalizar sua operação?</h2>
-  <p>Se você busca mais organização, redução de riscos e um parceiro confiável para cuidar da sua estrutura, o próximo passo é simples.</p>
-  <a href="contato.html">Solicitar contato</a>
+  <p>
+    Se você é síndico, administrador ou gestor de condomínio em São Paulo e deseja terceirizar portaria, limpeza, zeladoria e facilities com confiança, conheça nossa solução completa ou solicite contato direto.
+  </p>
+  <a href="condominios.html">Serviços para Condomínios</a>
 </div>
 
 </section>
@@ -200,13 +302,37 @@
   <span class="whatsapp-text">Orçamento no WhatsApp</span>
 </a>
 
+<!-- BOTTOM BAR: lógica -->
+<script>
+(function () {
+  var bar   = document.getElementById('jobsBar');
+  var close = document.getElementById('jobsBarClose');
+
+  // Não exibe se já foi fechado nesta sessão
+  if (sessionStorage.getItem('jobsBarDismissed')) return;
+
+  // Aparece só em mobile
+  if (window.innerWidth > 768) return;
+
+  // Delay de 1,5s para não brigar com o carregamento
+  setTimeout(function () {
+    bar.classList.add('visible');
+  }, 1500);
+
+  close.addEventListener('click', function () {
+    bar.classList.remove('visible');
+    sessionStorage.setItem('jobsBarDismissed', '1');
+  });
+})();
+</script>
+
 <!-- MENU SANDUÍCHE -->
 <script>
 (function () {
-  const toggle = document.getElementById('navToggle');
-  const menu   = document.getElementById('navMobile');
+  var toggle = document.getElementById('navToggle');
+  var menu   = document.getElementById('navMobile');
   toggle.addEventListener('click', function () {
-    const isOpen = menu.classList.toggle('open');
+    var isOpen = menu.classList.toggle('open');
     toggle.classList.toggle('open', isOpen);
     toggle.setAttribute('aria-expanded', isOpen);
   });
@@ -222,13 +348,13 @@
 
 <!-- ANIMAÇÃO CARDS -->
 <script>
-const cards = document.querySelectorAll('.card');
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
+var cards = document.querySelectorAll('.card');
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
     if (entry.isIntersecting) entry.target.classList.add('show');
   });
 }, { threshold: 0.2 });
-cards.forEach(card => observer.observe(card));
+cards.forEach(function(card) { observer.observe(card); });
 </script>
 
 <!-- GOOGLE ADS CONVERSÃO WHATSAPP -->
@@ -247,16 +373,16 @@ function gtag_report_conversion(url) {
 
 <!-- INTEGRAÇÃO TRACKING WHATSAPP -->
 <script>
-(function() {
+(function () {
   function initWhatsAppTracking() {
-    const whatsappBtn = document.querySelector('.whatsapp-float');
+    var whatsappBtn = document.querySelector('.whatsapp-float');
     if (!whatsappBtn) return;
-    const whatsappUrl = whatsappBtn.getAttribute('href');
+    var whatsappUrl = whatsappBtn.getAttribute('href');
     whatsappBtn.removeAttribute('href');
-    whatsappBtn.addEventListener('click', function(e) {
+    whatsappBtn.addEventListener('click', function (e) {
       e.preventDefault();
       gtag_report_conversion(whatsappUrl);
-      setTimeout(function() { window.open(whatsappUrl, '_blank'); }, 1000);
+      setTimeout(function () { window.open(whatsappUrl, '_blank'); }, 1000);
       return false;
     });
   }
@@ -268,19 +394,19 @@ function gtag_report_conversion(url) {
 })();
 </script>
 
-<!-- AJUSTE POSIÇÃO BOTÃO -->
+<!-- AJUSTE POSIÇÃO BOTÃO WHATSAPP -->
 <script>
-const btn = document.querySelector('.whatsapp-float');
-const footer = document.querySelector('footer');
-const baseBottom = 24;
-const gap = 20;
+var btn    = document.querySelector('.whatsapp-float');
+var footer = document.querySelector('footer');
+var baseBottom = 24;
+var gap = 20;
 function updateButtonPosition() {
-  const footerRect = footer.getBoundingClientRect();
-  const windowHeight = window.innerHeight;
+  var footerRect  = footer.getBoundingClientRect();
+  var windowHeight = window.innerHeight;
   if (footerRect.top < windowHeight) {
-    btn.style.bottom = `${windowHeight - footerRect.top + gap}px`;
+    btn.style.bottom = (windowHeight - footerRect.top + gap) + 'px';
   } else {
-    btn.style.bottom = `${baseBottom}px`;
+    btn.style.bottom = baseBottom + 'px';
   }
 }
 window.addEventListener('scroll', updateButtonPosition);
