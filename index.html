@@ -155,9 +155,121 @@
   }
 }
 
-/* Desktop: nunca exibe */
+/* Mobile bottom bar: nunca exibe no desktop */
 @media (min-width: 769px) {
   .audience-bar { display: none !important; }
+}
+
+/* ===== TOP BAR — só desktop ===== */
+@media (min-width: 769px) {
+
+  .top-audience-bar {
+    width: 100%;
+    background: #0d0d0d;
+    border-bottom: 2px solid #a27613;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 9px 32px;
+    position: relative;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.35s ease;
+    box-shadow: 0 3px 16px rgba(0,0,0,0.35);
+    z-index: 1001;
+  }
+
+  .top-audience-bar.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .top-bar-label {
+    color: rgba(255,255,255,0.55);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .top-bar-divider {
+    width: 1px;
+    height: 18px;
+    background: rgba(255,255,255,0.12);
+    flex-shrink: 0;
+  }
+
+  .top-bar-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .top-audience-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 6px 18px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    cursor: pointer;
+    border: none;
+  }
+
+  .top-audience-btn i { font-size: 0.85rem; }
+
+  .top-btn-contractor {
+    background: linear-gradient(135deg, #a27613, #d4a124);
+    color: #000;
+    box-shadow: 0 3px 10px rgba(162,118,19,0.3);
+  }
+
+  .top-btn-contractor:hover {
+    box-shadow: 0 5px 16px rgba(162,118,19,0.5);
+    transform: translateY(-1px);
+  }
+
+  .top-btn-candidate {
+    background: #ffffff;
+    color: #000000;
+    border: 1.5px solid #a27613;
+  }
+
+  .top-btn-candidate:hover {
+    background: #f5f0e8;
+    transform: translateY(-1px);
+  }
+
+  .top-bar-close {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.3);
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 4px 6px;
+    line-height: 1;
+    transition: color 0.2s ease;
+  }
+
+  .top-bar-close:hover { color: rgba(255,255,255,0.7); }
+}
+
+/* Top bar: nunca exibe no mobile */
+@media (max-width: 768px) {
+  .top-audience-bar { display: none !important; }
 }
 </style>
 
@@ -165,7 +277,24 @@
 
 <body>
 
-<!-- AUDIENCE BAR (mobile only) -->
+<!-- TOP BAR — desktop only -->
+<div class="top-audience-bar" id="topAudienceBar" role="complementary" aria-label="Para quem é este site">
+  <span class="top-bar-label">O que você busca?</span>
+  <div class="top-bar-divider"></div>
+  <div class="top-bar-buttons">
+    <a href="contato.html" class="top-audience-btn top-btn-contractor" id="topBtnContractor">
+      <i class="fa-solid fa-building"></i>
+      Contratar serviços
+    </a>
+    <a href="trabalhe-conosco.html" class="top-audience-btn top-btn-candidate">
+      <i class="fa-solid fa-user-tie"></i>
+      Trabalhar conosco
+    </a>
+  </div>
+  <button class="top-bar-close" id="topBarClose" aria-label="Fechar">✕</button>
+</div>
+
+<!-- BOTTOM BAR — mobile only -->
 <div class="audience-bar" id="audienceBar" role="complementary" aria-label="Para quem é este site">
   <div class="audience-bar-header">
     <span class="audience-bar-label">O que você busca?</span>
@@ -333,18 +462,18 @@
   <span class="whatsapp-text">Orçamento no WhatsApp</span>
 </a>
 
-<!-- AUDIENCE BAR: lógica + ajuste posição whatsapp -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<!-- AUDIENCE BAR: lógica mobile (bottom) + desktop (top) -->
+<script>
+// ── MOBILE: bottom bar ──
 (function () {
   var bar      = document.getElementById('audienceBar');
   var closeBtn = document.getElementById('audienceBarClose');
   var waBtn    = document.getElementById('whatsappBtn');
-  var BASE_WA  = 24; // bottom padrão do botão whatsapp (px)
+  var BASE_WA  = 24;
 
   if (sessionStorage.getItem('audienceBarDismissed')) return;
   if (window.innerWidth > 768) return;
 
-  // Empurra o botão WhatsApp para cima conforme a altura do bar
   function liftWhatsApp() {
     var barH = bar.offsetHeight;
     waBtn.style.bottom = (BASE_WA + barH + 8) + 'px';
@@ -368,8 +497,34 @@
 
   closeBtn.addEventListener('click', dismiss);
 
-  // Ao clicar em qualquer botão de destino, fecha o bar
   bar.querySelectorAll('.audience-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      sessionStorage.setItem('audienceBarDismissed', '1');
+    });
+  });
+})();
+
+// ── DESKTOP: top bar ──
+(function () {
+  var bar      = document.getElementById('topAudienceBar');
+  var closeBtn = document.getElementById('topBarClose');
+
+  if (!bar) return;
+  if (sessionStorage.getItem('audienceBarDismissed')) return;
+  if (window.innerWidth <= 768) return;
+
+  setTimeout(function () {
+    bar.classList.add('visible');
+  }, 1500);
+
+  function dismiss() {
+    bar.classList.remove('visible');
+    sessionStorage.setItem('audienceBarDismissed', '1');
+  }
+
+  closeBtn.addEventListener('click', dismiss);
+
+  bar.querySelectorAll('.top-audience-btn').forEach(function (btn) {
     btn.addEventListener('click', function () {
       sessionStorage.setItem('audienceBarDismissed', '1');
     });
