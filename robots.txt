@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://novaalvoradaservicos.com.br/sitemap.xml
