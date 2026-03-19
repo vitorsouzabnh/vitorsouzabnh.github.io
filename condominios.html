@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11422616490"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-11422616490');
+</script>
+
+<meta charset="UTF-8">
+<title>Serviços Terceirizados para Condomínios em São Paulo | Nova Alvorada</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portaria, limpeza, zeladoria e facilities para condomínios em São Paulo. Equipes treinadas, supervisão ativa, cobertura total. Solicite sua proposta de terceirização agora.">
+
+<link rel="canonical" href="https://novaalvoradaservicos.com.br/condominios.html">
+
+<meta property="og:title" content="Serviços Terceirizados para Condomínios em São Paulo | Nova Alvorada">
+<meta property="og:description" content="Portaria, limpeza, zeladoria e facilities para condomínios em São Paulo. Equipes treinadas, supervisão ativa, cobertura total.">
+<meta property="og:url" content="https://novaalvoradaservicos.com.br/condominios.html">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://novaalvoradaservicos.com.br/assets/logo.png">
+<meta property="og:site_name" content="Nova Alvorada Serviços">
+
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ===== SEÇÃO DE CONTEÚDO RICO ===== */
+.content-section {
+  background: #ffffff;
+  padding: 48px;
+  margin-bottom: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  border: 1px solid rgba(162,118,19,0.1);
+  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+.content-section:hover {
+  box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+  transform: translateY(-2px);
+}
+
+.content-section h2 {
+  color: #000;
+  font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  position: relative;
+}
+
+.content-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 80px; height: 4px;
+  background: linear-gradient(135deg, #a27613 0%, #d4a124 100%);
+  border-radius: 2px;
+}
+
+.content-section p {
+  font-size: 0.97rem;
+  line-height: 1.8;
+  color: #2a2a2a;
+  margin-bottom: 14px;
+}
+
+.content-section p:last-child { margin-bottom: 0; }
+
+/* ===== LISTA DE PASSOS NUMERADOS ===== */
+.steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  counter-reset: steps;
+}
+
+.steps-list li {
+  counter-increment: steps;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 20px 24px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 4px solid #a27613;
+  transition: all 0.3s ease;
+}
+
+.steps-list li:hover {
+  background: rgba(162,118,19,0.06);
+  transform: translateX(4px);
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #a27613, #d4a124);
+  color: #000;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-content strong {
+  display: block;
+  color: #a27613;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.step-content span {
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== GRID DE SERVIÇOS DETALHADOS ===== */
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.servico-item {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 28px 24px;
+  border-left: 4px solid #a27613;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.servico-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.servico-item:hover {
+  background: rgba(162,118,19,0.06);
+  transform: translateX(4px);
+}
+
+.servico-item i {
+  font-size: 1.5rem;
+  color: #a27613;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.servico-item strong {
+  display: block;
+  color: #1f2a36;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.servico-item p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== GRID DE BENEFÍCIOS ===== */
+.beneficios-grid-cond {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 28px;
+}
+
+.beneficio-card {
+  background: linear-gradient(135deg, #000 0%, #1f2a36 100%);
+  border-radius: 14px;
+  padding: 28px 24px;
+  border: 1px solid rgba(162,118,19,0.2);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.beneficio-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.beneficio-card:hover {
+  border-color: #a27613;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+}
+
+.beneficio-card i {
+  font-size: 1.6rem;
+  color: #a27613;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.beneficio-card strong {
+  display: block;
+  color: #fff;
+  font-size: 0.97rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.beneficio-card p {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===== DEPOIMENTO ===== */
+.depoimento-box {
+  background: linear-gradient(135deg, #000 0%, #1f2a36 100%);
+  border-radius: 16px;
+  padding: 48px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.2);
+}
+
+.depoimento-box::before {
+  content: '\201C';
+  position: absolute;
+  top: -20px; left: 24px;
+  font-size: 10rem;
+  color: rgba(162,118,19,0.15);
+  font-family: Georgia, serif;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.depoimento-box blockquote {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.9);
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+.depoimento-box cite {
+  display: block;
+  margin-top: 20px;
+  color: #a27613;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* ===== REGIÕES ===== */
+.regioes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.regiao-item {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 18px 20px;
+  border-left: 3px solid #a27613;
+  transition: all 0.3s ease;
+}
+
+.regiao-item:hover {
+  background: rgba(162,118,19,0.06);
+  transform: translateX(4px);
+}
+
+.regiao-item strong {
+  display: block;
+  color: #a27613;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.regiao-item span {
+  font-size: 0.85rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ===== LINK INTERNO ===== */
+.link-interno {
+  color: #a27613;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(162,118,19,0.3);
+  transition: border-color 0.2s ease;
+}
+
+.link-interno:hover {
+  border-color: #a27613;
+}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px 0;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.breadcrumb a {
+  color: #a27613;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb span { margin: 0 6px; }
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .content-section { padding: 32px 24px; }
+  .depoimento-box { padding: 36px 24px; }
+  .steps-list li { flex-direction: column; gap: 10px; }
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+  <div class="container">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Nova Alvorada Serviços - Facilities e Terceirização em São Paulo">
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="contato.html">Contato</a>
+      <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html">Início</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="contato.html">Contato</a>
+    <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <a href="index.html">Início</a>
+  <span>›</span>
+  <span>Serviços Terceirizados para Condomínios</span>
+</div>
+
+<header>
+  <h1>Serviços Terceirizados para Condomínios em São Paulo</h1>
+  <p>Portaria, limpeza, zeladoria e facilities com supervisão ativa e responsabilidade trabalhista total.</p>
+</header>
+
+<main>
+<section>
+
+  <!-- INTRODUÇÃO -->
+  <div class="content-section">
+    <h2>Terceirização Completa para Condomínios Residenciais e Comerciais</h2>
+    <p>
+      A Nova Alvorada Serviços é especializada em terceirização completa para condomínios residenciais e comerciais em São Paulo. Oferecemos portaria profissional, limpeza de áreas comuns, zeladoria, controle de acesso e gestão de facilities integrada.
+    </p>
+    <p>
+      Nossa equipe é treinada, supervisionada e disponível para cobrir faltas e necessidades emergenciais, permitindo que síndicos e administradoras foquem na gestão estratégica do condomínio — não nos detalhes operacionais do dia a dia.
+    </p>
+    <p>
+      Conheça também nossa <a href="servicos.html" class="link-interno">página completa de serviços</a> ou <a href="contato.html" class="link-interno">solicite uma proposta personalizada</a>.
+    </p>
+  </div>
+
+  <!-- COMO FUNCIONA -->
+  <div class="content-section">
+    <h2>Como Funciona a Terceirização no Seu Condomínio</h2>
+    <p>Implementar serviços terceirizados em um condomínio é simples e seguro com a Nova Alvorada:</p>
+
+    <ul class="steps-list">
+      <li>
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <strong>Diagnóstico Inicial</strong>
+          <span>Visitamos o condomínio e identificamos demandas em portaria, limpeza, zeladoria e outras necessidades específicas da sua estrutura.</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <strong>Proposta Personalizada</strong>
+          <span>Preparamos uma proposta com escala de equipes, horários, responsabilidades e acordos de nível de serviço (SLAs).</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <strong>Implantação e Treinamento</strong>
+          <span>Nossa equipe é integrada ao condomínio com treinamento sobre regras, padrões e contato com síndicos e administradores.</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <strong>Supervisão Contínua</strong>
+          <span>Um supervisor dedicado monitora qualidade, frequência e atendimento, com relatórios mensais para o síndico ou administradora.</span>
+        </div>
+      </li>
+      <li>
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <strong>Ajustes Conforme Necessário</strong>
+          <span>Revisamos contratos semestralmente para adaptar à evolução do condomínio e às necessidades que surgem ao longo do tempo.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- SERVIÇOS DETALHADOS -->
+  <div class="content-section">
+    <h2>Serviços que Oferecemos para Condomínios</h2>
+    <p>
+      Atendemos condomínios em São Paulo com serviços integrados e gerenciados diretamente. Saiba mais sobre cada solução na nossa <a href="servicos.html" class="link-interno">página de serviços</a>.
+    </p>
+
+    <div class="servicos-grid">
+      <div class="servico-item">
+        <i class="fa-solid fa-door-open"></i>
+        <strong>Portaria e Recepção</strong>
+        <p>Equipes uniformizadas para recepcionar moradores, visitantes e prestadores de serviço em horários compatíveis com sua necessidade — período parcial ou 24 horas.</p>
+      </div>
+      <div class="servico-item">
+        <i class="fa-solid fa-shield-halved"></i>
+        <strong>Controle de Acesso</strong>
+        <p>Gerenciamento de portões, interfones, catracas e sistemas de acesso eletrônico em condomínios modernos.</p>
+      </div>
+      <div class="servico-item">
+        <i class="fa-solid fa-broom"></i>
+        <strong>Limpeza de Áreas Comuns</strong>
+        <p>Limpeza e conservação de halls, corredores, escadas, áreas de lazer (piscina, churrasqueira, academia), garagens e fachada.</p>
+      </div>
+      <div class="servico-item">
+        <i class="fa-solid fa-wrench"></i>
+        <strong>Zeladoria e Manutenção Leve</strong>
+        <p>Pequenos reparos, ajustes, limpeza de calhas, revisão de áreas externas e apoio ao síndico em demandas do dia a dia.</p>
+      </div>
+      <div class="servico-item">
+        <i class="fa-solid fa-tree"></i>
+        <strong>Jardinagem e Paisagismo</strong>
+        <p>Manutenção de plantas, podas, limpeza e conservação de áreas verdes do condomínio.</p>
+      </div>
+      <div class="servico-item">
+        <i class="fa-solid fa-building-circle-check"></i>
+        <strong>Gestão Integrada de Facilities</strong>
+        <p>Coordenação de todos os serviços em um único parceiro, reduzindo interfaces e complexidade para a administração do condomínio.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BENEFÍCIOS -->
+  <div class="content-section">
+    <h2>Benefícios dos Serviços Terceirizados para Seu Condomínio</h2>
+
+    <div class="beneficios-grid-cond">
+      <div class="beneficio-card">
+        <i class="fa-solid fa-scale-balanced"></i>
+        <strong>Redução de Riscos Trabalhistas</strong>
+        <p>A Nova Alvorada é responsável por encargos, impostos, seguros e conformidade trabalhista de toda a equipe, protegendo o condomínio legalmente.</p>
+      </div>
+      <div class="beneficio-card">
+        <i class="fa-solid fa-rotate"></i>
+        <strong>Cobertura Total de Faltas</strong>
+        <p>Se um funcionário falta, nossa equipe substitui automaticamente, garantindo continuidade do serviço sem impacto na rotina do condomínio.</p>
+      </div>
+      <div class="beneficio-card">
+        <i class="fa-solid fa-chalkboard-user"></i>
+        <strong>Equipes Treinadas e Padronizadas</strong>
+        <p>Todos os profissionais recebem treinamento contínuo em atendimento, segurança e procedimentos específicos do condomínio.</p>
+      </div>
+      <div class="beneficio-card">
+        <i class="fa-solid fa-circle-down"></i>
+        <strong>Redução de Custos Operacionais</strong>
+        <p>Terceirizar é mais eficiente do que manter funcionários próprios — sem os custos ocultos de gestão, férias, benefícios e rescisões.</p>
+      </div>
+      <div class="beneficio-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <strong>Supervisão e Relatórios</strong>
+        <p>Você recebe relatórios mensais sobre qualidade, frequência, incidências e sugestões de melhoria para a gestão do condomínio.</p>
+      </div>
+      <div class="beneficio-card">
+        <i class="fa-solid fa-bullseye"></i>
+        <strong>Foco na Gestão Estratégica</strong>
+        <p>O síndico fica livre para focar na gestão financeira, manutenção predial e relacionamento com moradores, não em detalhes operacionais.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEPOIMENTO -->
+  <div class="depoimento-box">
+    <blockquote>
+      "Após três anos com a Nova Alvorada, reduzimos custos em 25% com terceirização, ganhamos cobertura integral de faltas e melhoramos muito o atendimento na portaria. A supervisão ativa fez diferença."
+      <cite>— Síndico · Condomínio residencial de 80 unidades · Zona Sul, São Paulo</cite>
+    </blockquote>
+  </div>
+
+  <!-- REGIÕES -->
+  <div class="content-section">
+    <h2>Regiões de Atuação em São Paulo</h2>
+    <p>Atendemos condomínios em toda a região metropolitana de São Paulo, com foco especial nas seguintes áreas:</p>
+
+    <div class="regioes-grid">
+      <div class="regiao-item">
+        <strong>Zona Sul</strong>
+        <span>Vila Madalena, Pinheiros, Itaim Bibi, Moema, Planalto Paulista, Santo Amaro</span>
+      </div>
+      <div class="regiao-item">
+        <strong>Zona Oeste</strong>
+        <span>Pinheiros, Lapa, Perdizes, Butantã</span>
+      </div>
+      <div class="regiao-item">
+        <strong>Centro e Centro-Oeste</strong>
+        <span>Consolação, Bela Vista, República</span>
+      </div>
+      <div class="regiao-item">
+        <strong>ABC Paulista</strong>
+        <span>Santo André, São Bernardo do Campo, São Caetano do Sul</span>
+      </div>
+    </div>
+
+    <p style="margin-top: 24px;">
+      Entre em contato para verificar cobertura na sua região. Atendemos também outras regiões da Grande São Paulo conforme demanda.
+    </p>
+  </div>
+
+  <!-- CTA FINAL -->
+  <div class="cta">
+    <h2>Próximos Passos: Solicite Sua Proposta de Terceirização</h2>
+    <p>
+      Se você é síndico, administrador ou gestor de condomínio em São Paulo e deseja terceirizar portaria, limpeza, zeladoria e facilities com confiança, entre em contato com a Nova Alvorada Serviços. Agende uma visita diagnóstica sem compromisso e receba uma proposta personalizada em até 48 horas.
+    </p>
+    <a href="https://wa.me/5511921827683?text=Olá!%20Sou%20responsável%20por%20uma%20empresa%20ou%20condomínio%20e%20quero%20orçamento%20de%20terceirização." target="_blank">Solicitar Proposta pelo WhatsApp</a>
+  </div>
+
+  <div class="cta-final">
+    <h2>Conheça mais sobre a Nova Alvorada</h2>
+    <p>
+      Saiba mais sobre nossa história, diferenciais e todos os serviços disponíveis para sua estrutura.
+    </p>
+    <a href="index.html">Voltar para a Home</a>
+  </div>
+
+</section>
+</main>
+
+<footer>
+  <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
+  <p>São Paulo – SP · CNPJ: 61.944.793/0001-91</p>
+  <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4b2824253f2a3f240b25243d2a2a273d24392a2f2a382e393d2228243865282426652939">[email&#160;protected]</a></p>
+  <div class="footer-social">
+    <a href="https://www.instagram.com/novaalvoradaservicos" target="_blank" aria-label="Instagram Nova Alvorada Serviços">
+      <i class="fa-brands fa-instagram"></i>
+      <span>novaalvoradaservicos</span>
+    </a>
+  </div>
+</footer>
+
+<!-- BOTÃO WHATSAPP -->
+<a
+  href="https://wa.me/5511921827683?text=Olá!%20Sou%20responsável%20por%20uma%20empresa%2Fcondomínio%20e%20quero%20orçamento%20de%20terceirização."
+  target="_blank"
+  class="whatsapp-float"
+  aria-label="Orçamento no WhatsApp"
+>
+  <svg class="whatsapp-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 0C7.164 0 0 7.164 0 16c0 2.824.738 5.48 2.028 7.78L.696 30.2l6.672-1.752A15.93 15.93 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0z" fill="#25D366"/>
+    <path d="M25.36 22.64c-.388 1.092-1.928 2-3.152 2.268-.836.18-1.928.324-5.604-1.204-4.708-1.956-7.748-6.704-7.984-7.016-.228-.312-1.892-2.516-1.892-4.8 0-2.284 1.196-3.404 1.62-3.868.424-.464.924-.58 1.232-.58.308 0 .616.004.884.016.284.012.664-.108.996.76.424.884 1.372 3.34 1.492 3.584.12.244.2.528.04.84-.16.312-.24.508-.476.784-.236.276-.496.616-.708.828-.236.236-.48.492-.208.964.272.472 1.212 1.996 2.6 3.232 1.788 1.592 3.292 2.088 3.76 2.32.468.232.74.196.996-.124.26-.32 1.088-1.272 1.376-1.712.288-.44.58-.368.98-.22.4.148 2.548 1.2 2.984 1.42.436.22.728.328.832.508.104.18.104 1.04-.284 2.132z" fill="#fff"/>
+  </svg>
+  <span class="whatsapp-text">Orçamento no WhatsApp</span>
+</a>
+
+<!-- MENU SANDUÍCHE -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+(function () {
+  const toggle = document.getElementById('navToggle');
+  const menu   = document.getElementById('navMobile');
+  toggle.addEventListener('click', function () {
+    const isOpen = menu.classList.toggle('open');
+    toggle.classList.toggle('open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+  menu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      menu.classList.remove('open');
+      toggle.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+})();
+</script>
+
+<!-- ANIMAÇÃO ELEMENTOS -->
+<script>
+const animItems = document.querySelectorAll('.servico-item, .beneficio-card');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('show');
+  });
+}, { threshold: 0.15 });
+animItems.forEach(el => observer.observe(el));
+</script>
+
+<!-- GOOGLE ADS CONVERSÃO WHATSAPP -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) !== 'undefined') window.open(url, '_blank');
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-11422616490/AJyJCPSMpvEbEKqX3cYq',
+    'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+<!-- INTEGRAÇÃO TRACKING WHATSAPP -->
+<script>
+(function() {
+  function initWhatsAppTracking() {
+    const whatsappBtn = document.querySelector('.whatsapp-float');
+    if (!whatsappBtn) return;
+    const whatsappUrl = whatsappBtn.getAttribute('href');
+    whatsappBtn.removeAttribute('href');
+    whatsappBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      gtag_report_conversion(whatsappUrl);
+      setTimeout(function() { window.open(whatsappUrl, '_blank'); }, 1000);
+      return false;
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initWhatsAppTracking);
+  } else {
+    initWhatsAppTracking();
+  }
+})();
+</script>
+
+<!-- AJUSTE POSIÇÃO BOTÃO -->
+<script>
+const btn = document.querySelector('.whatsapp-float');
+const footer = document.querySelector('footer');
+const baseBottom = 24;
+const gap = 20;
+function updateButtonPosition() {
+  const footerRect = footer.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+  if (footerRect.top < windowHeight) {
+    btn.style.bottom 
