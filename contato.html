@@ -131,19 +131,9 @@ button:hover { background: #a27613; color: #000; }
     <div class="nav-links">
       <a href="index.html">Início</a>
       <a href="sobre.html">Sobre</a>
-      <div class="nav-has-dropdown">
-        <div class="mobile-parent">
-      <a href="servicos.html">Serviços</a>
-      <span class="mobile-caret">&#xf107;</span>
-    </div>
-    <div class="mobile-submenu">
-      <a href="terceirizacao-portaria-sao-paulo.html">Portaria Terceirizada</a>
-      <a href="limpeza-condominio-sao-paulo.html">Limpeza de Condomínio</a>
-      <a href="zeladoria-sao-paulo.html">Zeladoria</a>
-      <a href="facilities-sao-paulo.html">Gestão de Facilities</a>
-      <a href="condominios.html">Serviços para Condomínios</a>
-    </div>
-        <div class="nav-dropdown">
+      <div class="nav-has-dropdown" id="navDropdown">
+        <a href="servicos.html">Serviços <span class="caret">&#xf107;</span></a>
+        <div class="nav-dropdown" id="dropPanel">
           <a href="terceirizacao-portaria-sao-paulo.html">Portaria Terceirizada</a>
           <a href="limpeza-condominio-sao-paulo.html">Limpeza de Condomínio</a>
           <a href="zeladoria-sao-paulo.html">Zeladoria</a>
@@ -164,11 +154,11 @@ button:hover { background: #a27613; color: #000; }
   <div class="nav-mobile" id="navMobile">
     <a href="index.html">Início</a>
     <a href="sobre.html">Sobre</a>
-    <div class="mobile-parent">
+    <div class="mobile-parent" id="mobileParent">
       <a href="servicos.html">Serviços</a>
-      <span class="mobile-caret">&#xf107;</span>
+      <span class="mobile-caret" id="mobileCaret">&#xf107;</span>
     </div>
-    <div class="mobile-submenu">
+    <div class="mobile-submenu" id="mobileSubmenu">
       <a href="terceirizacao-portaria-sao-paulo.html">Portaria Terceirizada</a>
       <a href="limpeza-condominio-sao-paulo.html">Limpeza de Condomínio</a>
       <a href="zeladoria-sao-paulo.html">Zeladoria</a>
@@ -235,7 +225,7 @@ button:hover { background: #a27613; color: #000; }
 <footer>
   <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
   <p>São Paulo – SP · CNPJ: 61.944.793/0001-91</p>
-  <p>contato@novaalvoradaservicos.com.br</p>
+  <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ec8f8382988d9883ac82839a8d8d809a839e8d888d9f899e9a858f839fc28f8381c28e9e">[email&#160;protected]</a></p>
   <div class="footer-social">
     <a href="https://www.instagram.com/novaalvoradaservicos" target="_blank" aria-label="Instagram Nova Alvorada Serviços">
       <i class="fa-brands fa-instagram"></i>
@@ -259,7 +249,7 @@ button:hover { background: #a27613; color: #000; }
 </a>
 
 <!-- MENU SANDUÍCHE -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function () {
   const toggle = document.getElementById('navToggle');
   const menu   = document.getElementById('navMobile');
@@ -341,14 +331,4 @@ function gtag_report_conversion(url) {
     });
   }
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initWhatsAppTracking);
-  } else {
-    initWhatsAppTracking();
-  }
-})();
-</script>
-
-<!-- AJUSTE POSIÇÃO BOTÃO -->
-<script>
-const btn = document.querySelector('.whatsapp-float');
-const footer = document.querySel
+    document.add
