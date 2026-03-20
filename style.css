@@ -194,8 +194,18 @@ nav .container {
   to   { opacity: 1; transform: translateX(-50%) translateY(0); }
 }
 
-.nav-has-dropdown:hover .nav-dropdown {
+.nav-has-dropdown:hover .nav-dropdown,
+.nav-has-dropdown .nav-dropdown.drop-open {
   display: block;
+}
+
+.nav-has-dropdown.drop-active > a {
+  color: var(--color-gold);
+  background: rgba(162, 118, 19, 0.1);
+}
+
+.nav-has-dropdown.drop-active > a .caret {
+  transform: rotate(180deg);
 }
 
 .nav-dropdown a {
