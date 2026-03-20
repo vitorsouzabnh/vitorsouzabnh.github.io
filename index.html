@@ -280,28 +280,6 @@
   .top-audience-bar { display: none !important; }
 }
 </style>
-
-<style>
-/* ===== NAV DROPDOWN — SERVIÇOS ===== */
-.nav-has-dropdown { position: relative; }
-.nav-has-dropdown > a { display: inline-flex; align-items: center; gap: 5px; }
-.nav-has-dropdown > a::after { content: '\f078'; font-family: 'Font Awesome 6 Free'; font-weight: 900; font-size: 0.6rem; opacity: 0.7; transition: transform 0.25s ease; }
-.nav-has-dropdown:hover > a::after { transform: rotate(180deg); }
-.nav-dropdown { display: none; position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.97); border: 1px solid rgba(162,118,19,0.25); border-radius: 10px; padding: 8px 0; min-width: 240px; box-shadow: 0 12px 32px rgba(0,0,0,0.4); z-index: 2000; animation: dropFade 0.2s ease; }
-@keyframes dropFade { from { opacity: 0; transform: translateX(-50%) translateY(-6px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
-.nav-has-dropdown:hover .nav-dropdown { display: block; }
-.nav-dropdown a { display: block !important; padding: 10px 20px !important; font-size: 0.88rem !important; color: rgba(255,255,255,0.85) !important; border-bottom: 1px solid rgba(162,118,19,0.08) !important; transition: background 0.2s ease, color 0.2s ease !important; white-space: nowrap; }
-.nav-dropdown a:last-child { border-bottom: none !important; }
-.nav-dropdown a:hover { background: rgba(162,118,19,0.12) !important; color: #d4a124 !important; }
-.nav-dropdown a::after { display: none !important; }
-.nav-mobile .mobile-submenu { display: none; flex-direction: column; background: rgba(162,118,19,0.06); border-left: 3px solid rgba(162,118,19,0.3); margin: 0; }
-.nav-mobile .mobile-submenu.open { display: flex; }
-.nav-mobile .mobile-submenu a { padding: 11px 28px 11px 36px !important; font-size: 0.88rem !important; color: rgba(255,255,255,0.75) !important; border-bottom: 1px solid rgba(162,118,19,0.06) !important; }
-.nav-mobile .mobile-submenu a:hover { color: #d4a124 !important; background: rgba(162,118,19,0.08) !important; }
-.nav-mobile .mobile-parent { display: flex !important; justify-content: space-between; align-items: center; }
-.nav-mobile .mobile-parent .toggle-sub { padding: 0 28px; font-size: 0.75rem; color: rgba(255,255,255,0.4); transition: transform 0.25s ease, color 0.2s ease; }
-.nav-mobile .mobile-parent.open .toggle-sub { transform: rotate(180deg); color: #a27613; }
-</style>
 </head>
 
 <body>
@@ -352,7 +330,7 @@
       <div class="nav-has-dropdown">
         <div class="mobile-parent">
       <a href="servicos.html">Serviços</a>
-      <span class="toggle-sub">&#xf078;</span>
+      <span class="mobile-caret">&#xf107;</span>
     </div>
     <div class="mobile-submenu">
       <a href="terceirizacao-portaria-sao-paulo.html">Portaria Terceirizada</a>
@@ -384,7 +362,7 @@
     <a href="sobre.html">Sobre</a>
     <div class="mobile-parent">
       <a href="servicos.html">Serviços</a>
-      <span class="toggle-sub">&#xf078;</span>
+      <span class="mobile-caret">&#xf107;</span>
     </div>
     <div class="mobile-submenu">
       <a href="terceirizacao-portaria-sao-paulo.html">Portaria Terceirizada</a>
@@ -497,7 +475,7 @@
 <footer>
   <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
   <p>São Paulo – SP · CNPJ: 61.944.793/0001-91</p>
-  <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="44272b2a3025302b042a2b32252528322b36252025372136322d272b376a272b296a2636">[email&#160;protected]</a></p>
+  <p>contato@novaalvoradaservicos.com.br</p>
   <div class="footer-social">
     <a href="https://www.instagram.com/novaalvoradaservicos" target="_blank" aria-label="Instagram Nova Alvorada Serviços">
       <i class="fa-brands fa-instagram"></i>
