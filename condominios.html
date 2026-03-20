@@ -237,6 +237,27 @@
 }
 </style>
 
+<style>
+/* ===== NAV DROPDOWN — SERVIÇOS ===== */
+.nav-has-dropdown { position: relative; }
+.nav-has-dropdown > a { display: inline-flex; align-items: center; gap: 5px; }
+.nav-has-dropdown > a::after { content: '\f078'; font-family: 'Font Awesome 6 Free'; font-weight: 900; font-size: 0.6rem; opacity: 0.7; transition: transform 0.25s ease; }
+.nav-has-dropdown:hover > a::after { transform: rotate(180deg); }
+.nav-dropdown { display: none; position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.97); border: 1px solid rgba(162,118,19,0.25); border-radius: 10px; padding: 8px 0; min-width: 240px; box-shadow: 0 12px 32px rgba(0,0,0,0.4); z-index: 2000; animation: dropFade 0.2s ease; }
+@keyframes dropFade { from { opacity: 0; transform: translateX(-50%) translateY(-6px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+.nav-has-dropdown:hover .nav-dropdown { display: block; }
+.nav-dropdown a { display: block !important; padding: 10px 20px !important; font-size: 0.88rem !important; color: rgba(255,255,255,0.85) !important; border-bottom: 1px solid rgba(162,118,19,0.08) !important; transition: background 0.2s ease, color 0.2s ease !important; white-space: nowrap; }
+.nav-dropdown a:last-child { border-bottom: none !important; }
+.nav-dropdown a:hover { background: rgba(162,118,19,0.12) !important; color: #d4a124 !important; }
+.nav-dropdown a::after { display: none !important; }
+.nav-mobile .mobile-submenu { display: none; flex-direction: column; background: rgba(162,118,19,0.06); border-left: 3px solid rgba(162,118,19,0.3); margin: 0; }
+.nav-mobile .mobile-submenu.open { display: flex; }
+.nav-mobile .mobile-submenu a { padding: 11px 28px 11px 36px !important; font-size: 0.88rem !important; color: rgba(255,255,255,0.75) !important; border-bottom: 1px solid rgba(162,118,19,0.06) !important; }
+.nav-mobile .mobile-submenu a:hover { color: #d4a124 !important; background: rgba(162,118,19,0.08) !important; }
+.nav-mobile .mobile-parent { display: flex !important; justify-content: space-between; align-items: center; }
+.nav-mobile .mobile-parent .toggle-sub { padding: 0 28px; font-size: 0.75rem; color: rgba(255,255,255,0.4); transition: transform 0.25s ease, color 0.2s ease; }
+.nav-mobile .mobile-parent.open .toggle-sub { transform: rotate(180deg); color: #a27613; }
+</style>
 </head>
 
 <body>
@@ -249,7 +270,27 @@
     <div class="nav-links">
       <a href="index.html">Início</a>
       <a href="sobre.html">Sobre</a>
+      <div class="nav-has-dropdown">
+        <div class="mobile-parent">
       <a href="servicos.html">Serviços</a>
+      <span class="toggle-sub">&#xf078;</span>
+    </div>
+    <div class="mobile-submenu">
+      <a href="terceirizacao-portaria-sao-paulo.html">Portaria Terceirizada</a>
+      <a href="limpeza-condominio-sao-paulo.html">Limpeza de Condomínio</a>
+      <a href="zeladoria-sao-paulo.html">Zeladoria</a>
+      <a href="facilities-sao-paulo.html">Gestão de Facilities</a>
+      <a href="condominios.html">Serviços para Condomínios</a>
+    </div>
+        <div class="nav-dropdown">
+          <a href="terceirizacao-portaria-sao-paulo.html">Portaria Terceirizada</a>
+          <a href="limpeza-condominio-sao-paulo.html">Limpeza de Condomínio</a>
+          <a href="zeladoria-sao-paulo.html">Zeladoria</a>
+          <a href="facilities-sao-paulo.html">Gestão de Facilities</a>
+          <a href="condominios.html">Serviços para Condomínios</a>
+          <a href="servicos.html">Ver todos os serviços</a>
+        </div>
+      </div>
       <a href="contato.html">Contato</a>
       <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
     </div>
@@ -262,7 +303,17 @@
   <div class="nav-mobile" id="navMobile">
     <a href="index.html">Início</a>
     <a href="sobre.html">Sobre</a>
-    <a href="servicos.html">Serviços</a>
+    <div class="mobile-parent">
+      <a href="servicos.html">Serviços</a>
+      <span class="toggle-sub">&#xf078;</span>
+    </div>
+    <div class="mobile-submenu">
+      <a href="terceirizacao-portaria-sao-paulo.html">Portaria Terceirizada</a>
+      <a href="limpeza-condominio-sao-paulo.html">Limpeza de Condomínio</a>
+      <a href="zeladoria-sao-paulo.html">Zeladoria</a>
+      <a href="facilities-sao-paulo.html">Gestão de Facilities</a>
+      <a href="condominios.html">Serviços para Condomínios</a>
+    </div>
     <a href="contato.html">Contato</a>
     <a href="trabalhe-conosco.html">Trabalhe Conosco</a>
   </div>
@@ -339,6 +390,7 @@
         <i class="fa-solid fa-door-open"></i>
         <strong>Portaria e Recepção</strong>
         <p>Equipes uniformizadas para recepcionar moradores, visitantes e prestadores de serviço em horários compatíveis com sua necessidade — período parcial ou 24 horas.</p>
+        <p style="margin-top:10px;"><a href="terceirizacao-portaria-sao-paulo.html" style="color:#a27613;font-weight:600;font-size:0.88rem;">Saiba mais →</a></p>
       </div>
       <div class="servico-item">
         <i class="fa-solid fa-shield-halved"></i>
@@ -349,11 +401,13 @@
         <i class="fa-solid fa-broom"></i>
         <strong>Limpeza de Áreas Comuns</strong>
         <p>Limpeza e conservação de halls, corredores, escadas, áreas de lazer (piscina, churrasqueira, academia), garagens e fachada.</p>
+        <p style="margin-top:10px;"><a href="limpeza-condominio-sao-paulo.html" style="color:#a27613;font-weight:600;font-size:0.88rem;">Saiba mais →</a></p>
       </div>
       <div class="servico-item">
         <i class="fa-solid fa-wrench"></i>
         <strong>Zeladoria e Manutenção Leve</strong>
         <p>Pequenos reparos, ajustes, limpeza de calhas, revisão de áreas externas e apoio ao síndico em demandas do dia a dia.</p>
+        <p style="margin-top:10px;"><a href="zeladoria-sao-paulo.html" style="color:#a27613;font-weight:600;font-size:0.88rem;">Saiba mais →</a></p>
       </div>
       <div class="servico-item">
         <i class="fa-solid fa-tree"></i>
@@ -364,6 +418,7 @@
         <i class="fa-solid fa-building-circle-check"></i>
         <strong>Gestão Integrada de Facilities</strong>
         <p>Coordenação de todos os serviços em um único parceiro, reduzindo interfaces e complexidade para a administração do condomínio.</p>
+        <p style="margin-top:10px;"><a href="facilities-sao-paulo.html" style="color:#a27613;font-weight:600;font-size:0.88rem;">Saiba mais →</a></p>
       </div>
     </div>
   </div>
@@ -453,7 +508,7 @@
 <footer>
   <p>© 2026 Nova Alvorada Serviços · Todos os direitos reservados</p>
   <p>São Paulo – SP · CNPJ: 61.944.793/0001-91</p>
-  <p>contato@novaalvoradaservicos.com.br</p>
+  <p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5f3c30312b3e2b301f3130293e3e3329302d3e3b3e2c3a2d29363c302c713c3032713d2d">[email&#160;protected]</a></p>
   <div class="footer-social">
     <a href="https://www.instagram.com/novaalvoradaservicos" target="_blank" aria-label="Instagram Nova Alvorada Serviços">
       <i class="fa-brands fa-instagram"></i>
@@ -478,7 +533,7 @@
 </a>
 
 <!-- MENU SANDUÍCHE -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function () {
   var toggle = document.getElementById('navToggle');
   var menu = document.getElementById('navMobile');
@@ -548,11 +603,4 @@ function gtag_report_conversion(url) {
 <!-- AJUSTE POSIÇÃO BOTÃO WHATSAPP -->
 <script>
 var btnCond = document.getElementById('whatsappBtnCond');
-var footerCond = document.querySelector('footer');
-var baseBottomCond = 24;
-var gapCond = 20;
-function updateBtnPosCond() {
-  var footerRect = footerCond.getBoundingClientRect();
-  var windowHeight = window.innerHeight;
-  if (footerRect.top < windowHeight) {
-    btnCond.style.bottom = (win
+var footerCond = document.querySelector('foo
