@@ -555,14 +555,4 @@ function updateBtnPosCond() {
   var footerRect = footerCond.getBoundingClientRect();
   var windowHeight = window.innerHeight;
   if (footerRect.top < windowHeight) {
-    btnCond.style.bottom = (windowHeight - footerRect.top + gapCond) + 'px';
-  } else {
-    btnCond.style.bottom = baseBottomCond + 'px';
-  }
-}
-window.addEventListener('scroll', updateBtnPosCond);
-window.addEventListener('resize', updateBtnPosCond);
-</script>
-
-</body>
-</html>
+    btnCond.style.bottom = (win
