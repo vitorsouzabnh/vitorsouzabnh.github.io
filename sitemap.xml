@@ -3,42 +3,70 @@
 
   <url>
     <loc>https://novaalvoradaservicos.com.br/</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://novaalvoradaservicos.com.br/terceirizacao-portaria-sao-paulo.html</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://novaalvoradaservicos.com.br/condominios.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
 
   <url>
-    <loc>https://novaalvoradaservicos.com.br/servicos.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <loc>https://novaalvoradaservicos.com.br/limpeza-condominio-sao-paulo.html</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://novaalvoradaservicos.com.br/sobre.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <loc>https://novaalvoradaservicos.com.br/zeladoria-sao-paulo.html</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://novaalvoradaservicos.com.br/facilities-sao-paulo.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://novaalvoradaservicos.com.br/servicos.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://novaalvoradaservicos.com.br/sobre.html</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://novaalvoradaservicos.com.br/contato.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://novaalvoradaservicos.com.br/trabalhe-conosco.html</loc>
-    <lastmod>2026-03-19</lastmod>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
