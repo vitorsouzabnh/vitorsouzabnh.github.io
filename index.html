@@ -636,4 +636,15 @@ function gtag_report_conversion(url) {
 
 <!-- AJUSTE POSIÇÃO WHATSAPP AO ROLAR (footer) -->
 <script>
-var waBtn2  = document.getElementById('w
+var waBtn2  = document.querySelector('.whatsapp-float');
+var footerEl = document.querySelector('footer');
+if (waBtn2 && footerEl) {
+  window.addEventListener('scroll', function () {
+    var fr = footerEl.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    waBtn2.style.bottom = (fr.top < vh) ? (vh - fr.top + 16) + 'px' : '';
+  }, { passive: true });
+}
+</script>
+</body>
+</html>

@@ -374,6 +374,18 @@ function gtag_report_conversion(url){var cb=function(){if(typeof(url)!=='undefin
 <script>
 (function(){
   function init(){
-    var b=document.getElementById('waBtn1');if(!b)return;
-    var u=b.getAttribute('href');b.removeAttribute('href');
-    b.addEventListener('click',function(e){e.preventDefault();gtag_report_conversion(u);setTimeout(function(){windo
+    var b=document.querySelector('.whatsapp-float');
+    if(!b) return;
+    var u=b.getAttribute('href');
+    b.removeAttribute('href');
+    b.addEventListener('click',function(e){
+      e.preventDefault();
+      gtag_report_conversion(u);
+      setTimeout(function(){window.open(u,'_blank');},600);
+    });
+  }
+  if(document.readyState!=='loading'){init();}else{document.addEventListener('DOMContentLoaded',init);}
+})();
+</script>
+</body>
+</html>

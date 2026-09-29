@@ -644,4 +644,14 @@ document.addEventListener('DOMContentLoaded', function() {
 <script>
 var btnTC = document.querySelector('.whatsapp-float');
 var footerTC = document.querySelector('footer');
-var bas
+var baseBottom = btnTC ? (btnTC.style.bottom || '') : '';
+if (btnTC && footerTC) {
+  window.addEventListener('scroll', function () {
+    var fr = footerTC.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    btnTC.style.bottom = (fr.top < vh) ? (vh - fr.top + 16) + 'px' : baseBottom;
+  }, { passive: true });
+}
+</script>
+</body>
+</html>

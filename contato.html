@@ -334,4 +334,11 @@ function gtag_report_conversion(url) {
     });
   }
   if (document.readyState === 'loading') {
-    document.add
+    document.addEventListener('DOMContentLoaded', initWhatsAppTracking);
+  } else {
+    initWhatsAppTracking();
+  }
+})();
+</script>
+</body>
+</html>

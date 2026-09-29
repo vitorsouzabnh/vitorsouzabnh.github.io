@@ -550,18 +550,25 @@ function gtag_report_conversion(url) {
 
 <!-- INTEGRAÇÃO TRACKING WHATSAPP -->
 <script>
-(function () {
+(function() {
   function initWhatsAppTracking() {
-    var whatsappBtn = document.getElementById('whatsappBtnCond');
+    const whatsappBtn = document.querySelector('.whatsapp-float');
     if (!whatsappBtn) return;
-    var whatsappUrl = whatsappBtn.getAttribute('href');
+    const whatsappUrl = whatsappBtn.getAttribute('href');
     whatsappBtn.removeAttribute('href');
-    whatsappBtn.addEventListener('click', function (e) {
+    whatsappBtn.addEventListener('click', function(e) {
       e.preventDefault();
       gtag_report_conversion(whatsappUrl);
-      setTimeout(function () { window.open(whatsappUrl, '_blank'); }, 1000);
+      setTimeout(function() { window.open(whatsappUrl, '_blank'); }, 1000);
       return false;
     });
   }
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMConten
+    document.addEventListener('DOMContentLoaded', initWhatsAppTracking);
+  } else {
+    initWhatsAppTracking();
+  }
+})();
+</script>
+</body>
+</html>

@@ -355,4 +355,15 @@ var ai2=document.querySelectorAll('.area-item,.feature-item');var ao2=new Inters
 function gtag_report_conversion(url){var cb=function(){if(typeof(url)!=='undefined')window.open(url,'_blank');};gtag('event','conversion',{'send_to':'AW-11422616490/AJyJCPSMpvEbEKqX3cYq','event_callback':cb});return false;}
 </script>
 <script>
-(function(){function init(){var b=document.getElementById('waBtn2');if(!b)return;var u=b.getAttribute('href');b.removeAttribute('href');b.addEventListener('click',function(e){e.preventDefault();gtag_report_conversion(u);setTimeout(function(){window
+var waBtn2  = document.querySelector('.whatsapp-float');
+var footerEl = document.querySelector('footer');
+if (waBtn2 && footerEl) {
+  window.addEventListener('scroll', function () {
+    var fr = footerEl.getBoundingClientRect();
+    var vh = window.innerHeight || document.documentElement.clientHeight;
+    waBtn2.style.bottom = (fr.top < vh) ? (vh - fr.top + 16) + 'px' : '';
+  }, { passive: true });
+}
+</script>
+</body>
+</html>
