@@ -3,7 +3,7 @@
 
   <url>
     <loc>https://novaalvoradaservicos.com.br/</loc>
-    <lastmod>2026-03-20</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,6 +13,27 @@
     <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://novaalvoradaservicos.com.br/portaria-sao-bernardo-do-campo.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://novaalvoradaservicos.com.br/portaria-santo-andre.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://novaalvoradaservicos.com.br/portaria-sao-caetano-diadema.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
 
   <url>
@@ -31,14 +52,14 @@
 
   <url>
     <loc>https://novaalvoradaservicos.com.br/zeladoria-sao-paulo.html</loc>
-    <lastmod>2026-03-20</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://novaalvoradaservicos.com.br/facilities-sao-paulo.html</loc>
-    <lastmod>2026-03-20</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
